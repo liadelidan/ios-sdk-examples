@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jUG-Zb-oQs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Infinite Table View Controller-->
+        <scene sceneID="kpy-aG-kJs">
+            <objects>
+                <tableViewController id="jUG-Zb-oQs" customClass="InfiniteTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eLX-a1-kUk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="8q9-A7-V06">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="648"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofg-bw-PEZ">
+                                    <rect key="frame" x="5" y="5" width="365" height="638"/>
+                                    <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla diam at magna posuere gravida. Morbi dignissim placerat ullamcorper. Nulla fringilla, neque non molestie iaculis, sapien magna aliquet massa, id gravida urna ligula pretium odio. Integer interdum feugiat gravida. Nunc ac ipsum a justo convallis elementum. Donec pulvinar id lacus et vulputate. Vivamus eu imperdiet dolor, ac ullamcorper lorem.
+
+Pellentesque vehicula mauris eget est dignissim malesuada. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse nec nisl non ligula auctor accumsan. Nullam ultrices porttitor nisi, quis auctor neque. Nunc placerat, eros eu mattis ullamcorper, nisl diam auctor elit, in fermentum enim orci vel metus. Integer eget scelerisque sem, a bibendum felis. Nullam maximus est ac ligula sagittis congue quis in erat.
+
+Ut mollis quam sed mauris cursus euismod. Donec eget urna turpis. Praesent vel lectus ut lacus placerat lacinia et vitae leo. Suspendisse auctor dignissim massa sit amet mollis. Donec cursus metus tortor, vel interdum enim pulvinar vel. Vivamus tincidunt nisi fermentum nisl hendrerit vehicula. Pellentesque ultricies diam ipsum, quis dignissim nunc ornare nec. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut cursus erat quam, ac maximus ex condimentum vel.
+
+Sed dolor est, tincidunt in neque sit amet, posuere ullamcorper arcu. Sed convallis ligula sapien, eget porttitor ipsum porta in. Curabitur ornare posuere eleifend. Sed interdum, magna id consequat lobortis, lacus est consequat mi, eget dictum velit mauris non urna. Donec a tempus odio. Phasellus fringilla eros arcu, a vulputate dui tristique in. Curabitur magna est, ullamcorper eu maximus tristique, bibendum a orci. Nullam non nunc a sapien molestie ultricies. Maecenas blandit elit quis dapibus pulvinar.
+
+Ut nec fermentum urna. Sed at nunc viverra odio mattis efficitur. Aenean elementum in enim quis rutrum. Duis sagittis, nunc ut malesuada ornare, nunc est bibendum tortor, et molestie justo lectus vel ipsum. Fusce id sapien nisi. Nullam libero massa, porttitor non suscipit quis, suscipit et leo. Donec sit amet orci ac erat venenatis consectetur. Etiam pharetra sapien eget facilisis egestas. Maecenas nisl sapien, pharetra eget venenatis eget, laoreet ac mi. Integer sit amet felis convallis, efficitur tortor ut, feugiat sem. Curabitur aliquet magna eu lectus consequat ullamcorper. Phasellus eros orci, gravida sed pretium a, bibendum a velit. Donec ullamcorper tortor sed tempor porttitor.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="ofg-bw-PEZ" secondAttribute="bottom" constant="5" id="Dd0-Ap-GV6"/>
+                                <constraint firstItem="ofg-bw-PEZ" firstAttribute="leading" secondItem="8q9-A7-V06" secondAttribute="leading" constant="5" id="Mm7-je-36V"/>
+                                <constraint firstAttribute="trailing" secondItem="ofg-bw-PEZ" secondAttribute="trailing" constant="5" id="Shd-OL-AZD"/>
+                                <constraint firstItem="ofg-bw-PEZ" firstAttribute="top" secondItem="8q9-A7-V06" secondAttribute="top" constant="5" id="aVp-Dd-037"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="placementCell" rowHeight="350" id="av2-Hh-Kse" customClass="TBPlacementTableViewCell">
+                                <rect key="frame" x="0.0" y="676" width="375" height="350"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="av2-Hh-Kse" id="7F1-ac-kvq">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5c-Az-GfM" customClass="TBTitleLabel">
+                                            <rect key="frame" x="8" y="274" width="359" height="52"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSs-e7-tzM" customClass="TBBrandingLabel">
+                                            <rect key="frame" x="8" y="328" width="359" height="13.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N70-uC-I6e" customClass="TBImageView">
+                                            <rect key="frame" x="8" y="26" width="359" height="240"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="240" id="t84-1i-z0V"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="931-OP-RRG">
+                                            <rect key="frame" x="222" y="8" width="145" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="Dgx-v5-8L8"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <state key="normal" title="Promoted by Taboola" image="attributionIcon.png">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="attributionButtonClicked:" destination="av2-Hh-Kse" eventType="touchUpInside" id="3W7-3G-eor"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ZSs-e7-tzM" secondAttribute="trailing" constant="8" id="3WZ-9X-Nfm"/>
+                                        <constraint firstAttribute="bottom" secondItem="ZSs-e7-tzM" secondAttribute="bottom" constant="8" id="5Xf-7C-KKu"/>
+                                        <constraint firstItem="ZSs-e7-tzM" firstAttribute="top" secondItem="u5c-Az-GfM" secondAttribute="bottom" constant="2" id="Ji2-1O-ofj"/>
+                                        <constraint firstItem="N70-uC-I6e" firstAttribute="leading" secondItem="7F1-ac-kvq" secondAttribute="leadingMargin" id="N6i-0U-1uT"/>
+                                        <constraint firstItem="u5c-Az-GfM" firstAttribute="top" secondItem="N70-uC-I6e" secondAttribute="bottom" constant="8" id="N88-e4-WEv"/>
+                                        <constraint firstItem="N70-uC-I6e" firstAttribute="trailing" secondItem="7F1-ac-kvq" secondAttribute="trailingMargin" id="QH3-FT-RHt"/>
+                                        <constraint firstItem="u5c-Az-GfM" firstAttribute="trailing" secondItem="7F1-ac-kvq" secondAttribute="trailingMargin" id="SoV-Rp-Dcw"/>
+                                        <constraint firstItem="u5c-Az-GfM" firstAttribute="leading" secondItem="7F1-ac-kvq" secondAttribute="leadingMargin" id="buX-Aa-nzf"/>
+                                        <constraint firstItem="931-OP-RRG" firstAttribute="trailing" secondItem="7F1-ac-kvq" secondAttribute="trailingMargin" id="iyS-3H-ECn"/>
+                                        <constraint firstItem="ZSs-e7-tzM" firstAttribute="leading" secondItem="7F1-ac-kvq" secondAttribute="leading" constant="8" id="loX-rS-ool"/>
+                                        <constraint firstItem="N70-uC-I6e" firstAttribute="top" secondItem="931-OP-RRG" secondAttribute="bottom" constant="3" id="qic-Xl-26D"/>
+                                        <constraint firstItem="931-OP-RRG" firstAttribute="top" secondItem="7F1-ac-kvq" secondAttribute="topMargin" id="yPR-lb-xte"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="attributionButton" destination="931-OP-RRG" id="RNx-KG-KOr"/>
+                                    <outlet property="brandingView" destination="ZSs-e7-tzM" id="qRt-wx-qQz"/>
+                                    <outlet property="tbImageView" destination="N70-uC-I6e" id="Axb-7q-Wfb"/>
+                                    <outlet property="titleView" destination="u5c-Az-GfM" id="4LM-TA-jJu"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jUG-Zb-oQs" id="cqa-lc-wtP"/>
+                            <outlet property="delegate" destination="jUG-Zb-oQs" id="FDY-e5-O0a"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hV7-Kb-05q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="141"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="attributionIcon.png" width="16" height="16"/>
+    </resources>
+</document>

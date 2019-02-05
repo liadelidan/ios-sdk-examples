@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9EA19F63262223DB2851E91 /* libPods-EndlessFeedExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ABEF8F50FC24CFC0FE816E /* libPods-EndlessFeedExample.a */; };
+		DC17038F1F3AE943008F2485 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC17038E1F3AE943008F2485 /* main.m */; };
+		DC1703921F3AE943008F2485 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1703911F3AE943008F2485 /* AppDelegate.m */; };
+		DC1703981F3AE943008F2485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1703961F3AE943008F2485 /* Main.storyboard */; };
+		DC17039A1F3AE943008F2485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1703991F3AE943008F2485 /* Assets.xcassets */; };
+		DC17039D1F3AE943008F2485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC17039B1F3AE943008F2485 /* LaunchScreen.storyboard */; };
+		DC1703AF1F3AEE7F008F2485 /* TBPlacementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1703AD1F3AEE7F008F2485 /* TBPlacementTableViewCell.m */; };
+		DC33F8A71F3B04B90037B568 /* InfiniteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC33F8A61F3B04B90037B568 /* InfiniteTableViewController.m */; };
+		DC33F8A91F3B14030037B568 /* imageIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DC33F8A81F3B14030037B568 /* imageIcon.png */; };
+		DC33F8D01F3B31DA0037B568 /* attributionIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DC33F8CF1F3B31DA0037B568 /* attributionIcon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32E34BC4CCEB13FF004568FA /* Pods-EndlessFeedExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessFeedExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessFeedExample/Pods-EndlessFeedExample.release.xcconfig"; sourceTree = "<group>"; };
+		6A395F66EA6299A450AB3CBF /* Pods-EndlessFeedExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessFeedExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessFeedExample/Pods-EndlessFeedExample.debug.xcconfig"; sourceTree = "<group>"; };
+		93ABEF8F50FC24CFC0FE816E /* libPods-EndlessFeedExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EndlessFeedExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC17038A1F3AE943008F2485 /* EndlessFeedExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EndlessFeedExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC17038E1F3AE943008F2485 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC1703901F3AE943008F2485 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DC1703911F3AE943008F2485 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DC1703971F3AE943008F2485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC1703991F3AE943008F2485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC17039C1F3AE943008F2485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC17039E1F3AE943008F2485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC1703A51F3AEA40008F2485 /* TaboolaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TaboolaSDK.framework; sourceTree = "<group>"; };
+		DC1703AC1F3AEE7F008F2485 /* TBPlacementTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBPlacementTableViewCell.h; sourceTree = "<group>"; };
+		DC1703AD1F3AEE7F008F2485 /* TBPlacementTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBPlacementTableViewCell.m; sourceTree = "<group>"; };
+		DC33F8A51F3B04B90037B568 /* InfiniteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteTableViewController.h; sourceTree = "<group>"; };
+		DC33F8A61F3B04B90037B568 /* InfiniteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteTableViewController.m; sourceTree = "<group>"; };
+		DC33F8A81F3B14030037B568 /* imageIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageIcon.png; sourceTree = "<group>"; };
+		DC33F8CF1F3B31DA0037B568 /* attributionIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attributionIcon.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC1703871F3AE943008F2485 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EA19F63262223DB2851E91 /* libPods-EndlessFeedExample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		890531D16E723ECCED938025 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A395F66EA6299A450AB3CBF /* Pods-EndlessFeedExample.debug.xcconfig */,
+				32E34BC4CCEB13FF004568FA /* Pods-EndlessFeedExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC1703811F3AE943008F2485 = {
+			isa = PBXGroup;
+			children = (
+				DC17038C1F3AE943008F2485 /* EndlessFeedExample */,
+				DC17038B1F3AE943008F2485 /* Products */,
+				DC1703A41F3AEA40008F2485 /* Frameworks */,
+				890531D16E723ECCED938025 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		DC17038B1F3AE943008F2485 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC17038A1F3AE943008F2485 /* EndlessFeedExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC17038C1F3AE943008F2485 /* EndlessFeedExample */ = {
+			isa = PBXGroup;
+			children = (
+				DC1703901F3AE943008F2485 /* AppDelegate.h */,
+				DC1703911F3AE943008F2485 /* AppDelegate.m */,
+				DC33F8AA1F3B2B410037B568 /* TBPlacementTableViewCell */,
+				DC33F8A51F3B04B90037B568 /* InfiniteTableViewController.h */,
+				DC33F8A61F3B04B90037B568 /* InfiniteTableViewController.m */,
+				DC1703961F3AE943008F2485 /* Main.storyboard */,
+				DC1703991F3AE943008F2485 /* Assets.xcassets */,
+				DC33F8A81F3B14030037B568 /* imageIcon.png */,
+				DC33F8CF1F3B31DA0037B568 /* attributionIcon.png */,
+				DC17039B1F3AE943008F2485 /* LaunchScreen.storyboard */,
+				DC17039E1F3AE943008F2485 /* Info.plist */,
+				DC17038D1F3AE943008F2485 /* Supporting Files */,
+			);
+			path = EndlessFeedExample;
+			sourceTree = "<group>";
+		};
+		DC17038D1F3AE943008F2485 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC17038E1F3AE943008F2485 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC1703A41F3AEA40008F2485 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC1703A51F3AEA40008F2485 /* TaboolaSDK.framework */,
+				93ABEF8F50FC24CFC0FE816E /* libPods-EndlessFeedExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC33F8AA1F3B2B410037B568 /* TBPlacementTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DC1703AC1F3AEE7F008F2485 /* TBPlacementTableViewCell.h */,
+				DC1703AD1F3AEE7F008F2485 /* TBPlacementTableViewCell.m */,
+			);
+			name = TBPlacementTableViewCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC1703891F3AE943008F2485 /* EndlessFeedExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC1703A11F3AE943008F2485 /* Build configuration list for PBXNativeTarget "EndlessFeedExample" */;
+			buildPhases = (
+				FD3CE689AFBD9C091B9486D2 /* [CP] Check Pods Manifest.lock */,
+				DC1703861F3AE943008F2485 /* Sources */,
+				DC1703871F3AE943008F2485 /* Frameworks */,
+				DC1703881F3AE943008F2485 /* Resources */,
+				DF3D550320AB4EE13AC8DD22 /* [CP] Embed Pods Frameworks */,
+				AA813C1C221A4445792E5646 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EndlessFeedExample;
+			productName = EndlessFeedExample;
+			productReference = DC17038A1F3AE943008F2485 /* EndlessFeedExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC1703821F3AE943008F2485 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Taboola;
+				TargetAttributes = {
+					DC1703891F3AE943008F2485 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = QMJ5T4LTHY;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DC1703851F3AE943008F2485 /* Build configuration list for PBXProject "EndlessFeedExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC1703811F3AE943008F2485;
+			productRefGroup = DC17038B1F3AE943008F2485 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC1703891F3AE943008F2485 /* EndlessFeedExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC1703881F3AE943008F2485 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC33F8A91F3B14030037B568 /* imageIcon.png in Resources */,
+				DC17039D1F3AE943008F2485 /* LaunchScreen.storyboard in Resources */,
+				DC17039A1F3AE943008F2485 /* Assets.xcassets in Resources */,
+				DC1703981F3AE943008F2485 /* Main.storyboard in Resources */,
+				DC33F8D01F3B31DA0037B568 /* attributionIcon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AA813C1C221A4445792E5646 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EndlessFeedExample/Pods-EndlessFeedExample-resources.sh",
+				"${PODS_ROOT}/TaboolaSDK/TaboolaSDK.framework/Versions/A/TaboolaResources/TaboolaVIewResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TaboolaVIewResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EndlessFeedExample/Pods-EndlessFeedExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF3D550320AB4EE13AC8DD22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EndlessFeedExample/Pods-EndlessFeedExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD3CE689AFBD9C091B9486D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EndlessFeedExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC1703861F3AE943008F2485 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC1703AF1F3AEE7F008F2485 /* TBPlacementTableViewCell.m in Sources */,
+				DC1703921F3AE943008F2485 /* AppDelegate.m in Sources */,
+				DC17038F1F3AE943008F2485 /* main.m in Sources */,
+				DC33F8A71F3B04B90037B568 /* InfiniteTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DC1703961F3AE943008F2485 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC1703971F3AE943008F2485 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC17039B1F3AE943008F2485 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC17039C1F3AE943008F2485 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC17039F1F3AE943008F2485 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC1703A01F3AE943008F2485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC1703A21F3AE943008F2485 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A395F66EA6299A450AB3CBF /* Pods-EndlessFeedExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QMJ5T4LTHY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = EndlessFeedExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Taboola.EndlessFeedExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC1703A31F3AE943008F2485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32E34BC4CCEB13FF004568FA /* Pods-EndlessFeedExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QMJ5T4LTHY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = EndlessFeedExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Taboola.EndlessFeedExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC1703851F3AE943008F2485 /* Build configuration list for PBXProject "EndlessFeedExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC17039F1F3AE943008F2485 /* Debug */,
+				DC1703A01F3AE943008F2485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC1703A11F3AE943008F2485 /* Build configuration list for PBXNativeTarget "EndlessFeedExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC1703A21F3AE943008F2485 /* Debug */,
+				DC1703A31F3AE943008F2485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC1703821F3AE943008F2485 /* Project object */;
+}

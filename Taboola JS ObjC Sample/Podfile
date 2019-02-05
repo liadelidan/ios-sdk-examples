@@ -1,6 +1,4 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
-
-target 'Taboola JS ObjC Sample' do
-pod 'TaboolaSDK'
+target 'TaboolaDemoApp' do
+  # Pods for TaboolaDemoApp
+  pod 'TaboolaSDK'
 end

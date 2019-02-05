@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10BF5C8EB123161B226E52E51692299C /* Pods-ArticleEndlessFeedExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5885BDCB116D205017B6E42B4C61F /* Pods-ArticleEndlessFeedExample-dummy.m */; };
+		21BBE364AEA6DA7275AEE1CE6E15CE09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		016CEE2D888969FA350F1AE5840E1CF5 /* Pods-ArticleEndlessFeedExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ArticleEndlessFeedExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		1060339CF99B50CFBC3EF6C3E5C4FFD5 /* TBPlacement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBPlacement.h; path = TaboolaSDK.framework/Versions/A/Headers/TBPlacement.h; sourceTree = "<group>"; };
+		2ED86D2E6911FDDD4316C98C939813E2 /* TBTitleLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBTitleLabel.h; path = TaboolaSDK.framework/Versions/A/Headers/TBTitleLabel.h; sourceTree = "<group>"; };
+		33B6CD58D8062CE7C40A906286461D92 /* TaboolaJS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TaboolaJS.h; path = TaboolaSDK.framework/Versions/A/Headers/TaboolaJS.h; sourceTree = "<group>"; };
+		41FC757C923A601E1BD11F2BF0575769 /* Pods-ArticleEndlessFeedExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ArticleEndlessFeedExample.release.xcconfig"; sourceTree = "<group>"; };
+		4E856F6CB96597E997C82FE98258DD17 /* TBRecommendationResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBRecommendationResponse.h; path = TaboolaSDK.framework/Versions/A/Headers/TBRecommendationResponse.h; sourceTree = "<group>"; };
+		4F21CE69AAE7A73B051D80B1392583AB /* TaboolaSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TaboolaSDK.h; path = TaboolaSDK.framework/Versions/A/Headers/TaboolaSDK.h; sourceTree = "<group>"; };
+		51A31CEC6D527FC0D16CB60770FAB46F /* libPods-ArticleEndlessFeedExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ArticleEndlessFeedExample.a"; path = "libPods-ArticleEndlessFeedExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5290D2E0D8145E4858E414AFB40778F2 /* Pods-ArticleEndlessFeedExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ArticleEndlessFeedExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		594A144162163FE59945D2B693B48D61 /* Pods-ArticleEndlessFeedExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ArticleEndlessFeedExample-frameworks.sh"; sourceTree = "<group>"; };
+		605088667895E591636814ADD25FBE7C /* TaboolaView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TaboolaView.h; path = TaboolaSDK.framework/Versions/A/Headers/TaboolaView.h; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8E5D7B8646D61D21AD8BDFC846CD4AD7 /* TBDescriptionLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBDescriptionLabel.h; path = TaboolaSDK.framework/Versions/A/Headers/TBDescriptionLabel.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		994691670B460A777A740CC433EECE3E /* TaboolaApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TaboolaApi.h; path = TaboolaSDK.framework/Versions/A/Headers/TaboolaApi.h; sourceTree = "<group>"; };
+		9E6504398D1E0F2E3D778196CAFC7FC0 /* TBBrandingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBBrandingLabel.h; path = TaboolaSDK.framework/Versions/A/Headers/TBBrandingLabel.h; sourceTree = "<group>"; };
+		B094FDE7931BB71E467003B986D31A80 /* TaboolaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TaboolaSDK.framework; sourceTree = "<group>"; };
+		B2BCDEFB1AEA6B7F68A771449B83315C /* Pods-ArticleEndlessFeedExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ArticleEndlessFeedExample-resources.sh"; sourceTree = "<group>"; };
+		C73A21E0275C4CCAB560A3CD47E50FF4 /* Pods-ArticleEndlessFeedExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ArticleEndlessFeedExample.debug.xcconfig"; sourceTree = "<group>"; };
+		CEA4C6962A75C9DADFD051E6A89293F5 /* TBImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBImageView.h; path = TaboolaSDK.framework/Versions/A/Headers/TBImageView.h; sourceTree = "<group>"; };
+		CEF5885BDCB116D205017B6E42B4C61F /* Pods-ArticleEndlessFeedExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ArticleEndlessFeedExample-dummy.m"; sourceTree = "<group>"; };
+		F13FEFB84D6CA465C45D6E65B38A6374 /* TBRecommendationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBRecommendationRequest.h; path = TaboolaSDK.framework/Versions/A/Headers/TBRecommendationRequest.h; sourceTree = "<group>"; };
+		F3FC6EED1101007829FD6882F89079DE /* TaboolaVIewResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TaboolaVIewResources.bundle; path = TaboolaSDK.framework/Versions/A/TaboolaResources/TaboolaVIewResources.bundle; sourceTree = "<group>"; };
+		FE619CC1918B35CD8EB062BA3FB4055C /* TBPlacementRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBPlacementRequest.h; path = TaboolaSDK.framework/Versions/A/Headers/TBPlacementRequest.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		579E4433E2789B35204BFF49BB75D277 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21BBE364AEA6DA7275AEE1CE6E15CE09 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B5FE2EAD22CA65455A39B89631B784D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51A31CEC6D527FC0D16CB60770FAB46F /* libPods-ArticleEndlessFeedExample.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56D244FDA7D306058AC428784EDC4295 /* TaboolaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				994691670B460A777A740CC433EECE3E /* TaboolaApi.h */,
+				33B6CD58D8062CE7C40A906286461D92 /* TaboolaJS.h */,
+				4F21CE69AAE7A73B051D80B1392583AB /* TaboolaSDK.h */,
+				605088667895E591636814ADD25FBE7C /* TaboolaView.h */,
+				9E6504398D1E0F2E3D778196CAFC7FC0 /* TBBrandingLabel.h */,
+				8E5D7B8646D61D21AD8BDFC846CD4AD7 /* TBDescriptionLabel.h */,
+				CEA4C6962A75C9DADFD051E6A89293F5 /* TBImageView.h */,
+				1060339CF99B50CFBC3EF6C3E5C4FFD5 /* TBPlacement.h */,
+				FE619CC1918B35CD8EB062BA3FB4055C /* TBPlacementRequest.h */,
+				F13FEFB84D6CA465C45D6E65B38A6374 /* TBRecommendationRequest.h */,
+				4E856F6CB96597E997C82FE98258DD17 /* TBRecommendationResponse.h */,
+				2ED86D2E6911FDDD4316C98C939813E2 /* TBTitleLabel.h */,
+				6AE776025017CC02BBBF5003A6DF2DEE /* Frameworks */,
+				623316B2C2FFFAEA5C8B6C414686D435 /* Resources */,
+			);
+			name = TaboolaSDK;
+			path = TaboolaSDK;
+			sourceTree = "<group>";
+		};
+		623316B2C2FFFAEA5C8B6C414686D435 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC6EED1101007829FD6882F89079DE /* TaboolaVIewResources.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6AE776025017CC02BBBF5003A6DF2DEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B094FDE7931BB71E467003B986D31A80 /* TaboolaSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		783A6EBC27E50C87785356E0700A21A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56D244FDA7D306058AC428784EDC4295 /* TaboolaSDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				783A6EBC27E50C87785356E0700A21A1 /* Pods */,
+				1B5FE2EAD22CA65455A39B89631B784D /* Products */,
+				D8750B91807D5F71087F69CDAF460BD5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9EEA6D755C91BDC07900E02632495847 /* Pods-ArticleEndlessFeedExample */ = {
+			isa = PBXGroup;
+			children = (
+				5290D2E0D8145E4858E414AFB40778F2 /* Pods-ArticleEndlessFeedExample-acknowledgements.markdown */,
+				016CEE2D888969FA350F1AE5840E1CF5 /* Pods-ArticleEndlessFeedExample-acknowledgements.plist */,
+				CEF5885BDCB116D205017B6E42B4C61F /* Pods-ArticleEndlessFeedExample-dummy.m */,
+				594A144162163FE59945D2B693B48D61 /* Pods-ArticleEndlessFeedExample-frameworks.sh */,
+				B2BCDEFB1AEA6B7F68A771449B83315C /* Pods-ArticleEndlessFeedExample-resources.sh */,
+				C73A21E0275C4CCAB560A3CD47E50FF4 /* Pods-ArticleEndlessFeedExample.debug.xcconfig */,
+				41FC757C923A601E1BD11F2BF0575769 /* Pods-ArticleEndlessFeedExample.release.xcconfig */,
+			);
+			name = "Pods-ArticleEndlessFeedExample";
+			path = "Target Support Files/Pods-ArticleEndlessFeedExample";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D8750B91807D5F71087F69CDAF460BD5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EEA6D755C91BDC07900E02632495847 /* Pods-ArticleEndlessFeedExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E31A3B0818D28369CA65337F6EC5F4F /* Pods-ArticleEndlessFeedExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 706A08B6B20256B5DCBBC72E105C9B25 /* Build configuration list for PBXNativeTarget "Pods-ArticleEndlessFeedExample" */;
+			buildPhases = (
+				EC605F3F863570C9F003DB7ECCBAE743 /* Sources */,
+				579E4433E2789B35204BFF49BB75D277 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ArticleEndlessFeedExample";
+			productName = "Pods-ArticleEndlessFeedExample";
+			productReference = 51A31CEC6D527FC0D16CB60770FAB46F /* libPods-ArticleEndlessFeedExample.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1B5FE2EAD22CA65455A39B89631B784D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E31A3B0818D28369CA65337F6EC5F4F /* Pods-ArticleEndlessFeedExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC605F3F863570C9F003DB7ECCBAE743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10BF5C8EB123161B226E52E51692299C /* Pods-ArticleEndlessFeedExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5D9A659ABFCFB293F0ABC41A3717E1FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C73A21E0275C4CCAB560A3CD47E50FF4 /* Pods-ArticleEndlessFeedExample.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		621AB785940626574F07364CB14760E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7740924840C3B893BA2FC8EE74AED29C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41FC757C923A601E1BD11F2BF0575769 /* Pods-ArticleEndlessFeedExample.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B57C09D404C607DDE283C5C44183B2A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B57C09D404C607DDE283C5C44183B2A1 /* Debug */,
+				621AB785940626574F07364CB14760E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		706A08B6B20256B5DCBBC72E105C9B25 /* Build configuration list for PBXNativeTarget "Pods-ArticleEndlessFeedExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D9A659ABFCFB293F0ABC41A3717E1FB /* Debug */,
+				7740924840C3B893BA2FC8EE74AED29C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

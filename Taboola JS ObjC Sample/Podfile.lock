@@ -1,16 +1,3 @@
-PODS:
-  - TaboolaSDK (2.0.34)
+PODFILE CHECKSUM: 9be3a0cd09660b8bbc30ff89a89fef716550af0e
 
-DEPENDENCIES:
-  - TaboolaSDK
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - TaboolaSDK
-
-SPEC CHECKSUMS:
-  TaboolaSDK: fba8eeaedc314881a3912812a29683ee7215b5b7
-
-PODFILE CHECKSUM: b810befc139b84fe63a2956a38812a14e769f9bc
-
-COCOAPODS: 1.5.3
+COCOAPODS: 1.3.1
