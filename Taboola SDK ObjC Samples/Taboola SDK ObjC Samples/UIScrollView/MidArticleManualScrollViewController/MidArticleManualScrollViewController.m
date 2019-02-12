@@ -9,33 +9,42 @@
 #import "MidArticleManualScrollViewController.h"
 #import <TaboolaSDK/TaboolaSDK.h>
 
-@interface MidArticleManualScrollViewController () <UIScrollViewDelegate>
+@interface MidArticleManualScrollViewController () <UIScrollViewDelegate, TaboolaViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet TaboolaView *midTaboolaView;
 @property (weak, nonatomic) IBOutlet UILabel *topLabel;
 @property (weak, nonatomic) IBOutlet UILabel *midLabel;
+@property (weak, nonatomic) IBOutlet TaboolaView *feedTaboolaView;
 @end
 
 @implementation MidArticleManualScrollViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.scrollView.delegate = self;
+//    self.scrollView.delegate = self;
     //load tabolaView
     self.midTaboolaView.delegate = self;
     self.midTaboolaView.ownerViewController = self;
-    self.midTaboolaView.mode = @"thumbnails-sdk1";
-    self.midTaboolaView.publisher = @"betterbytheminute-app";
+    self.midTaboolaView.publisher = @"sdk-tester";
+    self.midTaboolaView.mode = @"alternating-widget-without-video-1-on-1";
     self.midTaboolaView.pageType = @"article";
     self.midTaboolaView.pageUrl = @"http://www.example.com";
-    self.midTaboolaView.placement = @"Mobile";
+    self.midTaboolaView.placement = @"Mid Article";
     self.midTaboolaView.targetType = @"mix";
-//    self.midTaboolaView.autoResizeHeight = YES;
-//    self.midTaboolaView.scrollEnable = NO;
-    self.midTaboolaView.enableClickHandler = YES;
     self.midTaboolaView.logLevel = LogLevelDebug;
-    [self.midTaboolaView setOverrideScrollIntercept:YES];
     [self.midTaboolaView fetchContent];
+    
+    self.feedTaboolaView.delegate = self;
+    self.feedTaboolaView.ownerViewController = self;
+    self.feedTaboolaView.publisher = @"sdk-tester";
+    self.feedTaboolaView.mode = @"thumbs-feed-01";
+    self.feedTaboolaView.pageType = @"article";
+    self.feedTaboolaView.pageUrl = @"http://www.example.com";
+    self.feedTaboolaView.placement = @"Feed without video";
+    self.feedTaboolaView.targetType = @"mix";
+    self.feedTaboolaView.logLevel = LogLevelDebug;
+    [self.feedTaboolaView setOverrideScrollIntercept:YES];
+    [self.feedTaboolaView fetchContent];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

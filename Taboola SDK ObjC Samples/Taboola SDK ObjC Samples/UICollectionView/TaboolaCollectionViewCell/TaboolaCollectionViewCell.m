@@ -11,7 +11,7 @@
 @implementation TaboolaCollectionViewCell
 
 - (void)awakeFromNib {
-    
+    [super awakeFromNib];
 }
 
 - (void)dealloc {

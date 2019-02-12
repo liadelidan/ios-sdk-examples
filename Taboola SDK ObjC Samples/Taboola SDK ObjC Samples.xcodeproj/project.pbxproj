@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07B03A15E0B836C26AB806EA /* libPods-Taboola SDK ObjC Samples.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B781906013D9BDA0EB4691C /* libPods-Taboola SDK ObjC Samples.a */; };
 		DC1575AA22083C2600BD63FA /* MidArticleManualCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1575A822083C2600BD63FA /* MidArticleManualCollectionViewController.m */; };
+		DC1575AD220B476200BD63FA /* TaboolaCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1575AC220B476200BD63FA /* TaboolaCollectionCell.m */; };
 		DC22AA8121F9E18B00EBC8D4 /* MidArticleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22AA8021F9E18B00EBC8D4 /* MidArticleScrollViewController.m */; };
 		DCBA833821EE462C0053B37E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBA833721EE462C0053B37E /* AppDelegate.m */; };
 		DCBA833E21EE462C0053B37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCBA833C21EE462C0053B37E /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 		BCADE0C501355F99E41392F0 /* Pods-Taboola SDK ObjC Samples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taboola SDK ObjC Samples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples.debug.xcconfig"; sourceTree = "<group>"; };
 		DC1575A822083C2600BD63FA /* MidArticleManualCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidArticleManualCollectionViewController.m; sourceTree = "<group>"; };
 		DC1575A922083C2600BD63FA /* MidArticleManualCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidArticleManualCollectionViewController.h; sourceTree = "<group>"; };
+		DC1575AB220B476200BD63FA /* TaboolaCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TaboolaCollectionCell.h; path = "Taboola SDK ObjC Samples/UICollectionView/TaboolaCollectionCell.h"; sourceTree = SOURCE_ROOT; };
+		DC1575AC220B476200BD63FA /* TaboolaCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TaboolaCollectionCell.m; path = "Taboola SDK ObjC Samples/UICollectionView/TaboolaCollectionCell.m"; sourceTree = SOURCE_ROOT; };
 		DC22AA7F21F9E18B00EBC8D4 /* MidArticleScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidArticleScrollViewController.h; sourceTree = "<group>"; };
 		DC22AA8021F9E18B00EBC8D4 /* MidArticleScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidArticleScrollViewController.m; sourceTree = "<group>"; };
 		DCBA833321EE462C0053B37E /* Taboola SDK ObjC Samples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taboola SDK ObjC Samples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +93,8 @@
 		DC1575A622083BE200BD63FA /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				DC1575AB220B476200BD63FA /* TaboolaCollectionCell.h */,
+				DC1575AC220B476200BD63FA /* TaboolaCollectionCell.m */,
 				DCE12EFD2201FA040018BD01 /* TaboolaCollectionViewCell */,
 				DCE12EFC2201F9FB0018BD01 /* MidArticleCollectionViewController */,
 				DCE12EFB2201F9F30018BD01 /* SingleTaboolaMidArticleCollectionViewController */,
@@ -309,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCE12EF321FF6FF30018BD01 /* MidArticleCollectionViewController.m in Sources */,
+				DC1575AD220B476200BD63FA /* TaboolaCollectionCell.m in Sources */,
 				DCE12EF021FF67570018BD01 /* TaboolaCollectionViewCell.m in Sources */,
 				DC22AA8121F9E18B00EBC8D4 /* MidArticleScrollViewController.m in Sources */,
 				DCE12EEB21FF59780018BD01 /* MidArticleManualScrollViewController.m in Sources */,
@@ -462,7 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QMJ5T4LTHY;
 				INFOPLIST_FILE = "Taboola SDK ObjC Samples/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,7 +490,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QMJ5T4LTHY;
 				INFOPLIST_FILE = "Taboola SDK ObjC Samples/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
