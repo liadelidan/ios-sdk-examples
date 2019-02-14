@@ -24,15 +24,16 @@
     [TaboolaJS sharedInstance].delegate = self;
     [[TaboolaJS sharedInstance] setLogLevel:LogLevelDebug];
     [[TaboolaJS sharedInstance] registerWebView:self.webView];
+    [self loadExamplePage:self.webView];
 }
 
 - (void)loadExamplePage:(UIView*)webView {
-    NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"sampleContentPage" ofType:@"html"];
+    NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"sampleContentPageLazyLoad" ofType:@"html"];
     NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
     [self.webView loadHTMLString:appHtml baseURL:[NSURL URLWithString:@"http://cdn.taboola.com/mobile-sdk/init/"]];
 }
 - (IBAction)fetchButtonPressed:(id)sender {
-    [self loadExamplePage:self.webView];
+    [[TaboolaJS sharedInstance] fetchContent:self.webView];
 }
 
 @end

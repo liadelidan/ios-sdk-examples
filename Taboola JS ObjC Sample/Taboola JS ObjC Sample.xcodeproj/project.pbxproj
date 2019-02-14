@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B14CF2BCD94527F84A9FB216 /* libPods-Taboola JS ObjC Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C6307EDE919A3915B8CF82 /* libPods-Taboola JS ObjC Sample.a */; };
+		DC04557C2215A7B300B37B35 /* sampleContentPageLazyLoad.html in Resources */ = {isa = PBXBuildFile; fileRef = DC04557B2215A7B300B37B35 /* sampleContentPageLazyLoad.html */; };
 		DC1AECB821F61C6E0090D191 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1AECB721F61C6E0090D191 /* AppDelegate.m */; };
 		DC1AECBE21F61C6E0090D191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1AECBC21F61C6E0090D191 /* Main.storyboard */; };
 		DC1AECC021F61C700090D191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1AECBF21F61C700090D191 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		33C6307EDE919A3915B8CF82 /* libPods-Taboola JS ObjC Sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Taboola JS ObjC Sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A88D9E29052B3412FC6AE3B /* Pods-Taboola JS ObjC Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taboola JS ObjC Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-Taboola JS ObjC Sample/Pods-Taboola JS ObjC Sample.release.xcconfig"; sourceTree = "<group>"; };
 		99591142E02CB40AAC1FAE44 /* Pods-Taboola JS ObjC Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taboola JS ObjC Sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taboola JS ObjC Sample/Pods-Taboola JS ObjC Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		DC04557B2215A7B300B37B35 /* sampleContentPageLazyLoad.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sampleContentPageLazyLoad.html; sourceTree = "<group>"; };
 		DC1AECB321F61C6E0090D191 /* Taboola JS ObjC Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taboola JS ObjC Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1AECB621F61C6E0090D191 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DC1AECB721F61C6E0090D191 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				DC1AECC521F61C700090D191 /* main.m */,
 				DC1AECCF21F771ED0090D191 /* sampleContentPage.html */,
 				DC1AECD121F865E30090D191 /* sampleContentPageSplitFeed.html */,
+				DC04557B2215A7B300B37B35 /* sampleContentPageLazyLoad.html */,
 			);
 			path = "Taboola JS ObjC Sample";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				DC1AECC021F61C700090D191 /* Assets.xcassets in Resources */,
 				DC1AECBE21F61C6E0090D191 /* Main.storyboard in Resources */,
 				DC1AECD021F771ED0090D191 /* sampleContentPage.html in Resources */,
+				DC04557C2215A7B300B37B35 /* sampleContentPageLazyLoad.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
