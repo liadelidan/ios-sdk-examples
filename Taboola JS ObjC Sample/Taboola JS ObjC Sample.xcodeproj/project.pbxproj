@@ -238,7 +238,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Taboola JS ObjC Sample/Pods-Taboola JS ObjC Sample-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Taboola JS ObjC Sample/Pods-Taboola JS ObjC Sample-resources.sh",
 				"${PODS_ROOT}/TaboolaSDK/TaboolaSDK.framework/Versions/A/TaboolaResources/TaboolaVIewResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -249,7 +249,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Taboola JS ObjC Sample/Pods-Taboola JS ObjC Sample-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Taboola JS ObjC Sample/Pods-Taboola JS ObjC Sample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5BC91FAC6E66B3DFBEC88C6A /* [CP] Check Pods Manifest.lock */ = {

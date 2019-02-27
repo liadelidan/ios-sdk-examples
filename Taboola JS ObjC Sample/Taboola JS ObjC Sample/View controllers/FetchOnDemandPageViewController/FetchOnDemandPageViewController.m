@@ -15,13 +15,20 @@
 
 @implementation FetchOnDemandPageViewController {
     NSUInteger pageQnty;
+    NSMutableArray *viewControllers;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     pageQnty = 5;
     self.dataSource = self;
-    [self setViewControllers:@[[self viewControllerAtIndex:0]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    viewControllers = [NSMutableArray array];
+    for (int i = 0; i < pageQnty; i++) {
+        UIViewController *vc = [self viewControllerAtIndex:i];
+        CGRect dontCareRect = vc.view.frame;
+        [viewControllers addObject:vc];
+    }
+    [self setViewControllers:@[viewControllers[0]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     // Do any additional setup after loading the view.
 }
 
@@ -39,13 +46,19 @@
 #pragma mark - Navigation
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-    NSUInteger index = ((PageContentViewController*) viewController).pageIndex;
-    return [self viewControllerAtIndex:++index];
+    NSUInteger index = ((PageContentViewController*) viewController).pageIndex + 1;
+    if (pageQnty > index) {
+        return viewControllers[index];
+    }
+    return nil;
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    NSUInteger index = ((PageContentViewController*) viewController).pageIndex;
-    return [self viewControllerAtIndex:--index];
+    NSUInteger index = ((PageContentViewController*) viewController).pageIndex - 1;
+    if (pageQnty > index) {
+        return viewControllers[index];
+    }
+    return nil;
 }
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {

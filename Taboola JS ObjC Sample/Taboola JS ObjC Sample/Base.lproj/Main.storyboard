@@ -198,20 +198,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMj-vT-FA3">
-                                <rect key="frame" x="0.0" y="57" width="375" height="540"/>
+                                <rect key="frame" x="0.0" y="57" width="375" height="610"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99K-ch-gsV">
-                                <rect key="frame" x="168" y="617" width="39" height="30"/>
-                                <state key="normal" title="Fetch"/>
-                                <connections>
-                                    <action selector="fetchButtonPressed:" destination="6gr-wo-BfK" eventType="touchUpInside" id="Sbf-wh-pn8"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFf-MQ-EFj">
                                 <rect key="frame" x="166.5" y="28" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -222,15 +215,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KMj-vT-FA3" firstAttribute="top" secondItem="wFf-MQ-EFj" secondAttribute="bottom" constant="8" id="Djm-Zg-7FV"/>
-                            <constraint firstItem="EC6-A8-IQF" firstAttribute="bottom" secondItem="99K-ch-gsV" secondAttribute="bottom" constant="20" id="VPN-yB-Gbc"/>
                             <constraint firstItem="KMj-vT-FA3" firstAttribute="leading" secondItem="EC6-A8-IQF" secondAttribute="leading" id="cJH-H2-DtA"/>
                             <constraint firstItem="EC6-A8-IQF" firstAttribute="trailing" secondItem="KMj-vT-FA3" secondAttribute="trailing" id="eJv-Wh-3he"/>
                             <constraint firstItem="wFf-MQ-EFj" firstAttribute="centerX" secondItem="a3b-XS-Geg" secondAttribute="centerX" id="gaY-Wa-jpS"/>
                             <constraint firstItem="wFf-MQ-EFj" firstAttribute="top" secondItem="EC6-A8-IQF" secondAttribute="top" constant="8" id="jnG-QJ-9uV"/>
                             <constraint firstItem="wFf-MQ-EFj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EC6-A8-IQF" secondAttribute="leading" constant="8" id="oRK-hS-TpL"/>
                             <constraint firstItem="EC6-A8-IQF" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wFf-MQ-EFj" secondAttribute="trailing" constant="8" id="rpk-Vp-0eS"/>
-                            <constraint firstItem="99K-ch-gsV" firstAttribute="top" secondItem="KMj-vT-FA3" secondAttribute="bottom" constant="20" id="tjX-sl-7qZ"/>
-                            <constraint firstItem="99K-ch-gsV" firstAttribute="centerX" secondItem="a3b-XS-Geg" secondAttribute="centerX" id="yXt-c5-dLL"/>
+                            <constraint firstItem="EC6-A8-IQF" firstAttribute="bottom" secondItem="KMj-vT-FA3" secondAttribute="bottom" id="tuF-bg-IwJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EC6-A8-IQF"/>
                     </view>
