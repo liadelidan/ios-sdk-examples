@@ -1,8 +1,8 @@
 //
-//  SingleTaboolaMidArticleCollectionViewController.h
+//  MidArticleManualCollectionViewController.h
 //  Taboola SDK ObjC Samples
 //
-//  Created by Roman Slyepko on 1/30/19.
+//  Created by Roman Slyepko on 2/4/19.
 //  Copyright © 2019 Taboola. All rights reserved.
 //
 
@@ -10,7 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LoadTaboolaInCellForItemCVC : UIViewController
+
+
+@interface CollectionViewChangeScrollInFeedMenual : UIViewController
+
 
 @end
 

@@ -10,9 +10,8 @@
 		07B03A15E0B836C26AB806EA /* libPods-Taboola SDK ObjC Samples.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B781906013D9BDA0EB4691C /* libPods-Taboola SDK ObjC Samples.a */; };
 		DB7EB0E62226C9A300E189FB /* MidArticleManualScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D22226C9A300E189FB /* MidArticleManualScrollViewController.m */; };
 		DB7EB0E72226C9A300E189FB /* MidArticleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D42226C9A300E189FB /* MidArticleScrollViewController.m */; };
-		DB7EB0E82226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D92226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC.m */; };
-		DB7EB0E92226C9A300E189FB /* LoadTaboolaInCellForItemCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0DC2226C9A300E189FB /* LoadTaboolaInCellForItemCVC.m */; };
-		DB7EB0EA2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0E02226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual.m */; };
+		DB7EB0E82226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D92226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m */; };
+		DB7EB0EA2226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0E02226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual.m */; };
 		DB7EB1292226CADA00E189FB /* sampleContentPage.html in Resources */ = {isa = PBXBuildFile; fileRef = DB7EB11B2226CADA00E189FB /* sampleContentPage.html */; };
 		DB7EB12A2226CADA00E189FB /* MidArticleJsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB11D2226CADA00E189FB /* MidArticleJsViewController.m */; };
 		DB7EB12B2226CADA00E189FB /* FetchOnDemandPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB11F2226CADA00E189FB /* FetchOnDemandPageViewController.m */; };
@@ -23,8 +22,6 @@
 		DB7EB13C2226CED700E189FB /* WidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB1312226CED700E189FB /* WidgetViewController.m */; };
 		DB7EB13D2226CED700E189FB /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB1342226CED700E189FB /* FeedViewController.m */; };
 		DB7EB13E2226CED700E189FB /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB1372226CED700E189FB /* FeedTableViewCell.m */; };
-		DBE6345F2227D3B00042B65A /* TaboolaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE6345C2227D3AF0042B65A /* TaboolaViewCell.xib */; };
-		DBE634602227D3B00042B65A /* TaboolaViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE6345E2227D3AF0042B65A /* TaboolaViewCell.m */; };
 		DBE634652227D3D90042B65A /* TaboolaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE634622227D3D90042B65A /* TaboolaCollectionViewCell.xib */; };
 		DBE634662227D3D90042B65A /* TaboolaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE634642227D3D90042B65A /* TaboolaCollectionViewCell.m */; };
 		DBE63469222803880042B65A /* RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE63468222803880042B65A /* RandomColor.m */; };
@@ -43,12 +40,10 @@
 		DB7EB0D22226C9A300E189FB /* MidArticleManualScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidArticleManualScrollViewController.m; sourceTree = "<group>"; };
 		DB7EB0D42226C9A300E189FB /* MidArticleScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidArticleScrollViewController.m; sourceTree = "<group>"; };
 		DB7EB0D52226C9A300E189FB /* MidArticleScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidArticleScrollViewController.h; sourceTree = "<group>"; };
-		DB7EB0D92226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadTaboolaInViewDidLoadCVC.m; sourceTree = "<group>"; };
-		DB7EB0DA2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadTaboolaInViewDidLoadCVC.h; sourceTree = "<group>"; };
-		DB7EB0DC2226C9A300E189FB /* LoadTaboolaInCellForItemCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadTaboolaInCellForItemCVC.m; sourceTree = "<group>"; };
-		DB7EB0DD2226C9A300E189FB /* LoadTaboolaInCellForItemCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadTaboolaInCellForItemCVC.h; sourceTree = "<group>"; };
-		DB7EB0DF2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadTaboolaInViewDidLoadCVCMenual.h; sourceTree = "<group>"; };
-		DB7EB0E02226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadTaboolaInViewDidLoadCVCMenual.m; sourceTree = "<group>"; };
+		DB7EB0D92226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewChangeScrollInFeedAuto.m; sourceTree = "<group>"; };
+		DB7EB0DA2226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewChangeScrollInFeedAuto.h; sourceTree = "<group>"; };
+		DB7EB0DF2226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewChangeScrollInFeedMenual.h; sourceTree = "<group>"; };
+		DB7EB0E02226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewChangeScrollInFeedMenual.m; sourceTree = "<group>"; };
 		DB7EB11B2226CADA00E189FB /* sampleContentPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sampleContentPage.html; sourceTree = "<group>"; };
 		DB7EB11C2226CADA00E189FB /* MidArticleJsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidArticleJsViewController.h; sourceTree = "<group>"; };
 		DB7EB11D2226CADA00E189FB /* MidArticleJsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidArticleJsViewController.m; sourceTree = "<group>"; };
@@ -66,9 +61,6 @@
 		DB7EB1362226CED700E189FB /* FeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell.h; sourceTree = "<group>"; };
 		DB7EB1372226CED700E189FB /* FeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
 		DB7EB1382226CED700E189FB /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
-		DBE6345C2227D3AF0042B65A /* TaboolaViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaboolaViewCell.xib; sourceTree = "<group>"; };
-		DBE6345D2227D3AF0042B65A /* TaboolaViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaboolaViewCell.h; sourceTree = "<group>"; };
-		DBE6345E2227D3AF0042B65A /* TaboolaViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaboolaViewCell.m; sourceTree = "<group>"; };
 		DBE634622227D3D90042B65A /* TaboolaCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaboolaCollectionViewCell.xib; sourceTree = "<group>"; };
 		DBE634632227D3D90042B65A /* TaboolaCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaboolaCollectionViewCell.h; sourceTree = "<group>"; };
 		DBE634642227D3D90042B65A /* TaboolaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaboolaCollectionViewCell.m; sourceTree = "<group>"; };
@@ -155,39 +147,28 @@
 			isa = PBXGroup;
 			children = (
 				DBE634612227D3D90042B65A /* TaboolaCollectionViewCell */,
-				DB7EB0D82226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC */,
-				DB7EB0DE2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual */,
-				DB7EB0DB2226C9A300E189FB /* LoadTaboolaInCellForItemCVC */,
+				DB7EB0D82226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto */,
+				DB7EB0DE2226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual */,
 			);
 			path = UICollectionView;
 			sourceTree = "<group>";
 		};
-		DB7EB0D82226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC */ = {
+		DB7EB0D82226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto */ = {
 			isa = PBXGroup;
 			children = (
-				DB7EB0DA2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC.h */,
-				DB7EB0D92226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC.m */,
+				DB7EB0DA2226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.h */,
+				DB7EB0D92226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m */,
 			);
-			path = LoadTaboolaInViewDidLoadCVC;
+			path = CollectionViewChangeScrollInFeedAuto;
 			sourceTree = "<group>";
 		};
-		DB7EB0DB2226C9A300E189FB /* LoadTaboolaInCellForItemCVC */ = {
+		DB7EB0DE2226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual */ = {
 			isa = PBXGroup;
 			children = (
-				DB7EB0DD2226C9A300E189FB /* LoadTaboolaInCellForItemCVC.h */,
-				DB7EB0DC2226C9A300E189FB /* LoadTaboolaInCellForItemCVC.m */,
-				DBE6345B2227D3AF0042B65A /* TaboolaViewCell */,
+				DB7EB0DF2226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual.h */,
+				DB7EB0E02226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual.m */,
 			);
-			path = LoadTaboolaInCellForItemCVC;
-			sourceTree = "<group>";
-		};
-		DB7EB0DE2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual */ = {
-			isa = PBXGroup;
-			children = (
-				DB7EB0DF2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual.h */,
-				DB7EB0E02226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual.m */,
-			);
-			path = LoadTaboolaInViewDidLoadCVCMenual;
+			path = CollectionViewChangeScrollInFeedMenual;
 			sourceTree = "<group>";
 		};
 		DB7EB0EE2226C9AB00E189FB /* SDK JS */ = {
@@ -275,16 +256,6 @@
 				DB7EB1372226CED700E189FB /* FeedTableViewCell.m */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		DBE6345B2227D3AF0042B65A /* TaboolaViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				DBE6345C2227D3AF0042B65A /* TaboolaViewCell.xib */,
-				DBE6345D2227D3AF0042B65A /* TaboolaViewCell.h */,
-				DBE6345E2227D3AF0042B65A /* TaboolaViewCell.m */,
-			);
-			path = TaboolaViewCell;
 			sourceTree = "<group>";
 		};
 		DBE634612227D3D90042B65A /* TaboolaCollectionViewCell */ = {
@@ -398,7 +369,6 @@
 				DCBA834021EE46300053B37E /* Assets.xcassets in Resources */,
 				DCBA833E21EE462C0053B37E /* Main.storyboard in Resources */,
 				DB7EB12C2226CADA00E189FB /* sampleContentPageLazyLoad.html in Resources */,
-				DBE6345F2227D3B00042B65A /* TaboolaViewCell.xib in Resources */,
 				DBE634652227D3D90042B65A /* TaboolaCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,21 +427,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB7EB0E82226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC.m in Sources */,
+				DB7EB0E82226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m in Sources */,
 				DB7EB13D2226CED700E189FB /* FeedViewController.m in Sources */,
 				DB7EB0E62226C9A300E189FB /* MidArticleManualScrollViewController.m in Sources */,
 				DB7EB12A2226CADA00E189FB /* MidArticleJsViewController.m in Sources */,
 				DB7EB13E2226CED700E189FB /* FeedTableViewCell.m in Sources */,
 				DB7EB12E2226CADB00E189FB /* SplitFeedJsViewController.m in Sources */,
-				DB7EB0EA2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual.m in Sources */,
+				DB7EB0EA2226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual.m in Sources */,
 				DB7EB12D2226CADB00E189FB /* PageContentViewController.m in Sources */,
 				DCBA834621EE46300053B37E /* main.m in Sources */,
 				DB7EB12B2226CADA00E189FB /* FetchOnDemandPageViewController.m in Sources */,
 				DB7EB0E72226C9A300E189FB /* MidArticleScrollViewController.m in Sources */,
-				DBE634602227D3B00042B65A /* TaboolaViewCell.m in Sources */,
 				DBE63469222803880042B65A /* RandomColor.m in Sources */,
 				DCBA833821EE462C0053B37E /* AppDelegate.m in Sources */,
-				DB7EB0E92226C9A300E189FB /* LoadTaboolaInCellForItemCVC.m in Sources */,
 				DB7EB13C2226CED700E189FB /* WidgetViewController.m in Sources */,
 				DBE634662227D3D90042B65A /* TaboolaCollectionViewCell.m in Sources */,
 			);

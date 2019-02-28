@@ -6,12 +6,12 @@
 //  Copyright © 2019 Taboola. All rights reserved.
 //
 
-#import "LoadTaboolaInViewDidLoadCVC.h"
+#import "CollectionViewChangeScrollInFeedAuto.h"
 #import "TaboolaCollectionViewCell.h"
 #import <TaboolaSDK/TaboolaSDK.h>
 #import "RandomColor.h"
 
-@interface LoadTaboolaInViewDidLoadCVC () <UICollectionViewDelegate,UICollectionViewDataSource, TaboolaViewDelegate>
+@interface CollectionViewChangeScrollInFeedAuto () <UICollectionViewDelegate,UICollectionViewDataSource, TaboolaViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic) TaboolaView* taboolaWidget;
 @property (nonatomic) TaboolaView* taboolaFeed;
@@ -25,7 +25,7 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
     TaboolaSectionFeed = 3
 };
 
-@implementation LoadTaboolaInViewDidLoadCVC
+@implementation CollectionViewChangeScrollInFeedAuto
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -147,71 +147,8 @@
                                             <segue destination="blD-Jy-gMk" kind="show" id="q1o-qw-s6Z"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TaboolaCell" id="PuN-nh-g46">
-                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PuN-nh-g46" id="yok-Ez-B2z">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="buY-J1-K8O">
-                                                    <rect key="frame" x="0.0" y="5" width="341" height="33.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="UICollectionView" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="D5c-A0-ojo">
-                                                            <rect key="frame" x="0.0" y="0.0" width="81.5" height="33.5"/>
-                                                            <color key="backgroundColor" red="0.20969616220000001" green="0.76212354270000005" blue="0.45693507480000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Auto scroll switch in feed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Ok-OR-c0Q">
-                                                            <rect key="frame" x="86.5" y="0.0" width="81.5" height="33.5"/>
-                                                            <color key="backgroundColor" red="0.98726596170000003" green="0.65996221850000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Mid article widget" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8tv-2E-rFL">
-                                                            <rect key="frame" x="173" y="0.0" width="81.5" height="33.5"/>
-                                                            <color key="backgroundColor" red="0.65626635430000002" green="0.45291466139999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Load In CellForItem" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="Ucz-vk-w9r">
-                                                            <rect key="frame" x="259.5" y="0.0" width="81.5" height="33.5"/>
-                                                            <color key="backgroundColor" red="1" green="0.34578434200000002" blue="0.38458776230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="D5c-A0-ojo" secondAttribute="bottom" id="6A2-Rn-8Gh"/>
-                                                        <constraint firstItem="8tv-2E-rFL" firstAttribute="top" secondItem="buY-J1-K8O" secondAttribute="top" id="7Ac-Ww-6xi"/>
-                                                        <constraint firstAttribute="bottom" secondItem="1Ok-OR-c0Q" secondAttribute="bottom" id="9oe-pQ-Tej"/>
-                                                        <constraint firstItem="Ucz-vk-w9r" firstAttribute="top" secondItem="buY-J1-K8O" secondAttribute="top" id="Myd-b7-RBZ"/>
-                                                        <constraint firstItem="D5c-A0-ojo" firstAttribute="top" secondItem="buY-J1-K8O" secondAttribute="top" id="R9k-8i-zCg"/>
-                                                        <constraint firstItem="1Ok-OR-c0Q" firstAttribute="top" secondItem="buY-J1-K8O" secondAttribute="top" id="WiE-b5-wao"/>
-                                                        <constraint firstAttribute="bottom" secondItem="8tv-2E-rFL" secondAttribute="bottom" id="ksv-fW-ATQ"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Ucz-vk-w9r" secondAttribute="bottom" id="uYH-kx-aPd"/>
-                                                    </constraints>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="buY-J1-K8O" secondAttribute="trailing" id="7Zj-m9-kBo"/>
-                                                <constraint firstItem="buY-J1-K8O" firstAttribute="leading" secondItem="yok-Ez-B2z" secondAttribute="leading" id="Hdw-ZX-mk1"/>
-                                                <constraint firstAttribute="bottom" secondItem="buY-J1-K8O" secondAttribute="bottom" constant="5" id="Pys-HL-L99"/>
-                                                <constraint firstItem="buY-J1-K8O" firstAttribute="top" secondItem="yok-Ez-B2z" secondAttribute="top" constant="5" id="UBT-3E-5hi"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.41743757349999999" green="0.4820767078" blue="0.87487856220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <segue destination="qfK-Fy-JgA" kind="show" id="fas-W0-xIc"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TypeCell" id="Zte-oC-E6L">
-                                        <rect key="frame" x="0.0" y="160" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zte-oC-E6L" id="yek-ZV-diK">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -265,7 +202,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TypeCell" id="Tmp-ML-tfw">
-                                        <rect key="frame" x="0.0" y="204" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="160" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tmp-ML-tfw" id="dMn-ZR-W0k">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -323,7 +260,7 @@
                             <tableViewSection headerTitle="JS" id="0C0-lY-GoM">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="GkF-dS-gxO" style="IBUITableViewCellStyleDefault" id="Ghv-zq-jvl">
-                                        <rect key="frame" x="0.0" y="276" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="232" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ghv-zq-jvl" id="JWX-di-orX">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -344,7 +281,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="cZP-sG-oPS" style="IBUITableViewCellStyleDefault" id="cr7-1p-v6X">
-                                        <rect key="frame" x="0.0" y="320" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="276" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cr7-1p-v6X" id="7Jz-bC-QhM">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -365,7 +302,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="udE-BP-ZLO" style="IBUITableViewCellStyleDefault" id="GqI-IH-KZP">
-                                        <rect key="frame" x="0.0" y="364" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="320" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GqI-IH-KZP" id="12n-FW-CdQ">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -390,7 +327,7 @@
                             <tableViewSection headerTitle="API" id="X0o-b2-979">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TypeCell" textLabel="Y1b-2Y-bqV" style="IBUITableViewCellStyleDefault" id="PNj-5s-gdD">
-                                        <rect key="frame" x="0.0" y="436" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="392" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PNj-5s-gdD" id="Zh2-ns-kY5">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -411,7 +348,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TypeCell" textLabel="ZNp-70-V4J" style="IBUITableViewCellStyleDefault" id="jSb-IL-cya">
-                                        <rect key="frame" x="0.0" y="480" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="436" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jSb-IL-cya" id="mTb-84-XyH">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -681,10 +618,10 @@
             </objects>
             <point key="canvasLocation" x="2185" y="173"/>
         </scene>
-        <!--Load Taboola In View Did LoadCVC-->
+        <!--Collection View Change Scroll In Feed Auto-->
         <scene sceneID="akj-0O-Ipi">
             <objects>
-                <viewController id="jCD-3P-Kh6" customClass="LoadTaboolaInViewDidLoadCVC" sceneMemberID="viewController">
+                <viewController id="jCD-3P-Kh6" customClass="CollectionViewChangeScrollInFeedAuto" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W99-kl-ce8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -755,84 +692,10 @@
             </objects>
             <point key="canvasLocation" x="2167.1999999999998" y="887.40629685157433"/>
         </scene>
-        <!--Load Taboola In Cell For ItemCVC-->
-        <scene sceneID="Bqg-rm-1xg">
-            <objects>
-                <viewController id="qfK-Fy-JgA" customClass="LoadTaboolaInCellForItemCVC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aPi-4W-pJ9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wSK-aX-L9v">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="A2e-dI-7V2">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="randomCell" id="LJQ-Ho-o8g">
-                                        <rect key="frame" x="0.0" y="89" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="TaboolaCell" id="JEU-cd-32f" customClass="TaboolaViewCell">
-                                        <rect key="frame" x="60" y="0.0" width="263" height="228"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="263" height="228"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H1W-rv-IlJ" customClass="TaboolaView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="263" height="228"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </view>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="H1W-rv-IlJ" secondAttribute="trailing" id="A6g-UV-qPa"/>
-                                            <constraint firstItem="H1W-rv-IlJ" firstAttribute="leading" secondItem="JEU-cd-32f" secondAttribute="leading" id="JVs-GB-CxT"/>
-                                            <constraint firstItem="H1W-rv-IlJ" firstAttribute="top" secondItem="JEU-cd-32f" secondAttribute="top" id="PSM-nP-rMD"/>
-                                            <constraint firstAttribute="bottom" secondItem="H1W-rv-IlJ" secondAttribute="bottom" id="aXA-oI-GIJ"/>
-                                        </constraints>
-                                        <size key="customSize" width="263" height="228"/>
-                                        <connections>
-                                            <outlet property="taboolaView" destination="H1W-rv-IlJ" id="yrs-K3-DFt"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="qfK-Fy-JgA" id="5uL-X1-1DB"/>
-                                    <outlet property="delegate" destination="qfK-Fy-JgA" id="Wqs-jD-9yx"/>
-                                </connections>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="nMq-ez-nsC" firstAttribute="bottom" secondItem="wSK-aX-L9v" secondAttribute="bottom" id="Aml-Qb-bfF"/>
-                            <constraint firstItem="wSK-aX-L9v" firstAttribute="leading" secondItem="nMq-ez-nsC" secondAttribute="leading" id="HrQ-fR-MJb"/>
-                            <constraint firstItem="wSK-aX-L9v" firstAttribute="top" secondItem="nMq-ez-nsC" secondAttribute="top" id="X42-wQ-u3g"/>
-                            <constraint firstItem="wSK-aX-L9v" firstAttribute="trailing" secondItem="nMq-ez-nsC" secondAttribute="trailing" id="aIM-5T-wUL"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="nMq-ez-nsC"/>
-                    </view>
-                    <connections>
-                        <outlet property="collectionView" destination="wSK-aX-L9v" id="CCf-gr-5yG"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bgU-Dz-uor" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2159" y="1638"/>
-        </scene>
-        <!--Load Taboola In View Did LoadCVC Menual-->
+        <!--Collection View Change Scroll In Feed Menual-->
         <scene sceneID="gv0-Ig-x8T">
             <objects>
-                <viewController id="blD-Jy-gMk" customClass="LoadTaboolaInViewDidLoadCVCMenual" sceneMemberID="viewController">
+                <viewController id="blD-Jy-gMk" customClass="CollectionViewChangeScrollInFeedMenual" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P45-Vp-25m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

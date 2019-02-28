@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LoadTaboolaInViewDidLoadCVC : UIViewController
+@interface CollectionViewChangeScrollInFeedAuto : UIViewController
 
 @end
 
