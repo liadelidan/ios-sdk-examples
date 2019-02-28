@@ -8,31 +8,72 @@
 
 /* Begin PBXBuildFile section */
 		07B03A15E0B836C26AB806EA /* libPods-Taboola SDK ObjC Samples.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B781906013D9BDA0EB4691C /* libPods-Taboola SDK ObjC Samples.a */; };
-		DC1575AA22083C2600BD63FA /* MidArticleManualCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1575A822083C2600BD63FA /* MidArticleManualCollectionViewController.m */; };
-		DC1575AD220B476200BD63FA /* TaboolaCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1575AC220B476200BD63FA /* TaboolaCollectionCell.m */; };
-		DC22AA8121F9E18B00EBC8D4 /* MidArticleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22AA8021F9E18B00EBC8D4 /* MidArticleScrollViewController.m */; };
+		DB7EB0E62226C9A300E189FB /* MidArticleManualScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D22226C9A300E189FB /* MidArticleManualScrollViewController.m */; };
+		DB7EB0E72226C9A300E189FB /* MidArticleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D42226C9A300E189FB /* MidArticleScrollViewController.m */; };
+		DB7EB0E82226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D92226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC.m */; };
+		DB7EB0E92226C9A300E189FB /* LoadTaboolaInCellForItemCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0DC2226C9A300E189FB /* LoadTaboolaInCellForItemCVC.m */; };
+		DB7EB0EA2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0E02226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual.m */; };
+		DB7EB1292226CADA00E189FB /* sampleContentPage.html in Resources */ = {isa = PBXBuildFile; fileRef = DB7EB11B2226CADA00E189FB /* sampleContentPage.html */; };
+		DB7EB12A2226CADA00E189FB /* MidArticleJsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB11D2226CADA00E189FB /* MidArticleJsViewController.m */; };
+		DB7EB12B2226CADA00E189FB /* FetchOnDemandPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB11F2226CADA00E189FB /* FetchOnDemandPageViewController.m */; };
+		DB7EB12C2226CADA00E189FB /* sampleContentPageLazyLoad.html in Resources */ = {isa = PBXBuildFile; fileRef = DB7EB1202226CADA00E189FB /* sampleContentPageLazyLoad.html */; };
+		DB7EB12D2226CADB00E189FB /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB1222226CADA00E189FB /* PageContentViewController.m */; };
+		DB7EB12E2226CADB00E189FB /* SplitFeedJsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB1262226CADA00E189FB /* SplitFeedJsViewController.m */; };
+		DB7EB12F2226CADB00E189FB /* sampleContentPageSplitFeed.html in Resources */ = {isa = PBXBuildFile; fileRef = DB7EB1272226CADA00E189FB /* sampleContentPageSplitFeed.html */; };
+		DB7EB13C2226CED700E189FB /* WidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB1312226CED700E189FB /* WidgetViewController.m */; };
+		DB7EB13D2226CED700E189FB /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB1342226CED700E189FB /* FeedViewController.m */; };
+		DB7EB13E2226CED700E189FB /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB1372226CED700E189FB /* FeedTableViewCell.m */; };
+		DBE6345F2227D3B00042B65A /* TaboolaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE6345C2227D3AF0042B65A /* TaboolaViewCell.xib */; };
+		DBE634602227D3B00042B65A /* TaboolaViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE6345E2227D3AF0042B65A /* TaboolaViewCell.m */; };
+		DBE634652227D3D90042B65A /* TaboolaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE634622227D3D90042B65A /* TaboolaCollectionViewCell.xib */; };
+		DBE634662227D3D90042B65A /* TaboolaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE634642227D3D90042B65A /* TaboolaCollectionViewCell.m */; };
+		DBE63469222803880042B65A /* RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE63468222803880042B65A /* RandomColor.m */; };
 		DCBA833821EE462C0053B37E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBA833721EE462C0053B37E /* AppDelegate.m */; };
 		DCBA833E21EE462C0053B37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCBA833C21EE462C0053B37E /* Main.storyboard */; };
 		DCBA834021EE46300053B37E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCBA833F21EE46300053B37E /* Assets.xcassets */; };
 		DCBA834321EE46300053B37E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCBA834121EE46300053B37E /* LaunchScreen.storyboard */; };
 		DCBA834621EE46300053B37E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBA834521EE46300053B37E /* main.m */; };
-		DCE12EEB21FF59780018BD01 /* MidArticleManualScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE12EEA21FF59780018BD01 /* MidArticleManualScrollViewController.m */; };
-		DCE12EEF21FF67570018BD01 /* TaboolaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCE12EED21FF67570018BD01 /* TaboolaCollectionViewCell.xib */; };
-		DCE12EF021FF67570018BD01 /* TaboolaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE12EEE21FF67570018BD01 /* TaboolaCollectionViewCell.m */; };
-		DCE12EF321FF6FF30018BD01 /* MidArticleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE12EF221FF6FF30018BD01 /* MidArticleCollectionViewController.m */; };
-		DCE12EFA2201F9EB0018BD01 /* SingleTaboolaMidArticleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE12EF92201F9EB0018BD01 /* SingleTaboolaMidArticleCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B781906013D9BDA0EB4691C /* libPods-Taboola SDK ObjC Samples.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Taboola SDK ObjC Samples.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB954357479751D1D2BE4F67 /* Pods-Taboola SDK ObjC Samples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taboola SDK ObjC Samples.release.xcconfig"; path = "Pods/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples.release.xcconfig"; sourceTree = "<group>"; };
 		BCADE0C501355F99E41392F0 /* Pods-Taboola SDK ObjC Samples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taboola SDK ObjC Samples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples.debug.xcconfig"; sourceTree = "<group>"; };
-		DC1575A822083C2600BD63FA /* MidArticleManualCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidArticleManualCollectionViewController.m; sourceTree = "<group>"; };
-		DC1575A922083C2600BD63FA /* MidArticleManualCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidArticleManualCollectionViewController.h; sourceTree = "<group>"; };
-		DC1575AB220B476200BD63FA /* TaboolaCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TaboolaCollectionCell.h; path = "Taboola SDK ObjC Samples/UICollectionView/TaboolaCollectionCell.h"; sourceTree = SOURCE_ROOT; };
-		DC1575AC220B476200BD63FA /* TaboolaCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TaboolaCollectionCell.m; path = "Taboola SDK ObjC Samples/UICollectionView/TaboolaCollectionCell.m"; sourceTree = SOURCE_ROOT; };
-		DC22AA7F21F9E18B00EBC8D4 /* MidArticleScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidArticleScrollViewController.h; sourceTree = "<group>"; };
-		DC22AA8021F9E18B00EBC8D4 /* MidArticleScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidArticleScrollViewController.m; sourceTree = "<group>"; };
+		DB7EB0D12226C9A300E189FB /* MidArticleManualScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidArticleManualScrollViewController.h; sourceTree = "<group>"; };
+		DB7EB0D22226C9A300E189FB /* MidArticleManualScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidArticleManualScrollViewController.m; sourceTree = "<group>"; };
+		DB7EB0D42226C9A300E189FB /* MidArticleScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidArticleScrollViewController.m; sourceTree = "<group>"; };
+		DB7EB0D52226C9A300E189FB /* MidArticleScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidArticleScrollViewController.h; sourceTree = "<group>"; };
+		DB7EB0D92226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadTaboolaInViewDidLoadCVC.m; sourceTree = "<group>"; };
+		DB7EB0DA2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadTaboolaInViewDidLoadCVC.h; sourceTree = "<group>"; };
+		DB7EB0DC2226C9A300E189FB /* LoadTaboolaInCellForItemCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadTaboolaInCellForItemCVC.m; sourceTree = "<group>"; };
+		DB7EB0DD2226C9A300E189FB /* LoadTaboolaInCellForItemCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadTaboolaInCellForItemCVC.h; sourceTree = "<group>"; };
+		DB7EB0DF2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadTaboolaInViewDidLoadCVCMenual.h; sourceTree = "<group>"; };
+		DB7EB0E02226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadTaboolaInViewDidLoadCVCMenual.m; sourceTree = "<group>"; };
+		DB7EB11B2226CADA00E189FB /* sampleContentPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sampleContentPage.html; sourceTree = "<group>"; };
+		DB7EB11C2226CADA00E189FB /* MidArticleJsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidArticleJsViewController.h; sourceTree = "<group>"; };
+		DB7EB11D2226CADA00E189FB /* MidArticleJsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidArticleJsViewController.m; sourceTree = "<group>"; };
+		DB7EB11F2226CADA00E189FB /* FetchOnDemandPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchOnDemandPageViewController.m; sourceTree = "<group>"; };
+		DB7EB1202226CADA00E189FB /* sampleContentPageLazyLoad.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sampleContentPageLazyLoad.html; sourceTree = "<group>"; };
+		DB7EB1222226CADA00E189FB /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		DB7EB1232226CADA00E189FB /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		DB7EB1242226CADA00E189FB /* FetchOnDemandPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchOnDemandPageViewController.h; sourceTree = "<group>"; };
+		DB7EB1262226CADA00E189FB /* SplitFeedJsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitFeedJsViewController.m; sourceTree = "<group>"; };
+		DB7EB1272226CADA00E189FB /* sampleContentPageSplitFeed.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sampleContentPageSplitFeed.html; sourceTree = "<group>"; };
+		DB7EB1282226CADA00E189FB /* SplitFeedJsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitFeedJsViewController.h; sourceTree = "<group>"; };
+		DB7EB1312226CED700E189FB /* WidgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetViewController.m; sourceTree = "<group>"; };
+		DB7EB1322226CED700E189FB /* WidgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetViewController.h; sourceTree = "<group>"; };
+		DB7EB1342226CED700E189FB /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		DB7EB1362226CED700E189FB /* FeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell.h; sourceTree = "<group>"; };
+		DB7EB1372226CED700E189FB /* FeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
+		DB7EB1382226CED700E189FB /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		DBE6345C2227D3AF0042B65A /* TaboolaViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaboolaViewCell.xib; sourceTree = "<group>"; };
+		DBE6345D2227D3AF0042B65A /* TaboolaViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaboolaViewCell.h; sourceTree = "<group>"; };
+		DBE6345E2227D3AF0042B65A /* TaboolaViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaboolaViewCell.m; sourceTree = "<group>"; };
+		DBE634622227D3D90042B65A /* TaboolaCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaboolaCollectionViewCell.xib; sourceTree = "<group>"; };
+		DBE634632227D3D90042B65A /* TaboolaCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaboolaCollectionViewCell.h; sourceTree = "<group>"; };
+		DBE634642227D3D90042B65A /* TaboolaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaboolaCollectionViewCell.m; sourceTree = "<group>"; };
+		DBE63467222803880042B65A /* RandomColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomColor.h; sourceTree = "<group>"; };
+		DBE63468222803880042B65A /* RandomColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomColor.m; sourceTree = "<group>"; };
 		DCBA833321EE462C0053B37E /* Taboola SDK ObjC Samples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taboola SDK ObjC Samples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCBA833621EE462C0053B37E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DCBA833721EE462C0053B37E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -41,15 +82,6 @@
 		DCBA834221EE46300053B37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCBA834421EE46300053B37E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCBA834521EE46300053B37E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DCE12EE921FF59780018BD01 /* MidArticleManualScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidArticleManualScrollViewController.h; sourceTree = "<group>"; };
-		DCE12EEA21FF59780018BD01 /* MidArticleManualScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidArticleManualScrollViewController.m; sourceTree = "<group>"; };
-		DCE12EEC21FF67570018BD01 /* TaboolaCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaboolaCollectionViewCell.h; sourceTree = "<group>"; };
-		DCE12EED21FF67570018BD01 /* TaboolaCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaboolaCollectionViewCell.xib; sourceTree = "<group>"; };
-		DCE12EEE21FF67570018BD01 /* TaboolaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaboolaCollectionViewCell.m; sourceTree = "<group>"; };
-		DCE12EF121FF6FF30018BD01 /* MidArticleCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidArticleCollectionViewController.h; sourceTree = "<group>"; };
-		DCE12EF221FF6FF30018BD01 /* MidArticleCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidArticleCollectionViewController.m; sourceTree = "<group>"; };
-		DCE12EF82201F9EB0018BD01 /* SingleTaboolaMidArticleCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleTaboolaMidArticleCollectionViewController.h; sourceTree = "<group>"; };
-		DCE12EF92201F9EB0018BD01 /* SingleTaboolaMidArticleCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleTaboolaMidArticleCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,35 +113,188 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DC1575A522083BD500BD63FA /* MidArticleManualCollectionViewController */ = {
+		DB7EB0CE2226C9A300E189FB /* SDK Standerd */ = {
 			isa = PBXGroup;
 			children = (
-				DC1575A922083C2600BD63FA /* MidArticleManualCollectionViewController.h */,
-				DC1575A822083C2600BD63FA /* MidArticleManualCollectionViewController.m */,
+				DB7EB0D62226C9A300E189FB /* UICollectionView */,
+				DB7EB0CF2226C9A300E189FB /* UIScrollView */,
+				DBE63467222803880042B65A /* RandomColor.h */,
+				DBE63468222803880042B65A /* RandomColor.m */,
 			);
-			path = MidArticleManualCollectionViewController;
+			path = "SDK Standerd";
 			sourceTree = "<group>";
 		};
-		DC1575A622083BE200BD63FA /* UICollectionView */ = {
+		DB7EB0CF2226C9A300E189FB /* UIScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				DC1575AB220B476200BD63FA /* TaboolaCollectionCell.h */,
-				DC1575AC220B476200BD63FA /* TaboolaCollectionCell.m */,
-				DCE12EFD2201FA040018BD01 /* TaboolaCollectionViewCell */,
-				DCE12EFC2201F9FB0018BD01 /* MidArticleCollectionViewController */,
-				DCE12EFB2201F9F30018BD01 /* SingleTaboolaMidArticleCollectionViewController */,
-				DC1575A522083BD500BD63FA /* MidArticleManualCollectionViewController */,
+				DB7EB0D02226C9A300E189FB /* MidArticleManualScrollViewController */,
+				DB7EB0D32226C9A300E189FB /* MidArticleScrollViewController */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		DB7EB0D02226C9A300E189FB /* MidArticleManualScrollViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EB0D12226C9A300E189FB /* MidArticleManualScrollViewController.h */,
+				DB7EB0D22226C9A300E189FB /* MidArticleManualScrollViewController.m */,
+			);
+			path = MidArticleManualScrollViewController;
+			sourceTree = "<group>";
+		};
+		DB7EB0D32226C9A300E189FB /* MidArticleScrollViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EB0D52226C9A300E189FB /* MidArticleScrollViewController.h */,
+				DB7EB0D42226C9A300E189FB /* MidArticleScrollViewController.m */,
+			);
+			path = MidArticleScrollViewController;
+			sourceTree = "<group>";
+		};
+		DB7EB0D62226C9A300E189FB /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				DBE634612227D3D90042B65A /* TaboolaCollectionViewCell */,
+				DB7EB0D82226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC */,
+				DB7EB0DE2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual */,
+				DB7EB0DB2226C9A300E189FB /* LoadTaboolaInCellForItemCVC */,
 			);
 			path = UICollectionView;
 			sourceTree = "<group>";
 		};
-		DC1575A722083BF000BD63FA /* UIScrollView */ = {
+		DB7EB0D82226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC */ = {
 			isa = PBXGroup;
 			children = (
-				DCE12EFF2201FA140018BD01 /* MidArticleScrollViewController */,
-				DCE12EFE2201FA0D0018BD01 /* MidArticleManualScrollViewController */,
+				DB7EB0DA2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC.h */,
+				DB7EB0D92226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC.m */,
 			);
-			path = UIScrollView;
+			path = LoadTaboolaInViewDidLoadCVC;
+			sourceTree = "<group>";
+		};
+		DB7EB0DB2226C9A300E189FB /* LoadTaboolaInCellForItemCVC */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EB0DD2226C9A300E189FB /* LoadTaboolaInCellForItemCVC.h */,
+				DB7EB0DC2226C9A300E189FB /* LoadTaboolaInCellForItemCVC.m */,
+				DBE6345B2227D3AF0042B65A /* TaboolaViewCell */,
+			);
+			path = LoadTaboolaInCellForItemCVC;
+			sourceTree = "<group>";
+		};
+		DB7EB0DE2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EB0DF2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual.h */,
+				DB7EB0E02226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual.m */,
+			);
+			path = LoadTaboolaInViewDidLoadCVCMenual;
+			sourceTree = "<group>";
+		};
+		DB7EB0EE2226C9AB00E189FB /* SDK JS */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EB11E2226CADA00E189FB /* FetchOnDemandPageViewController */,
+				DB7EB11A2226CADA00E189FB /* Mid Article */,
+				DB7EB1252226CADA00E189FB /* Split Feed */,
+			);
+			path = "SDK JS";
+			sourceTree = "<group>";
+		};
+		DB7EB0EF2226C9B500E189FB /* SDK API */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EB1302226CED700E189FB /* Widget */,
+				DB7EB1332226CED700E189FB /* Feed */,
+			);
+			path = "SDK API";
+			sourceTree = "<group>";
+		};
+		DB7EB11A2226CADA00E189FB /* Mid Article */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EB11C2226CADA00E189FB /* MidArticleJsViewController.h */,
+				DB7EB11D2226CADA00E189FB /* MidArticleJsViewController.m */,
+				DB7EB11B2226CADA00E189FB /* sampleContentPage.html */,
+			);
+			path = "Mid Article";
+			sourceTree = "<group>";
+		};
+		DB7EB11E2226CADA00E189FB /* FetchOnDemandPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EB1242226CADA00E189FB /* FetchOnDemandPageViewController.h */,
+				DB7EB11F2226CADA00E189FB /* FetchOnDemandPageViewController.m */,
+				DB7EB1212226CADA00E189FB /* PageContentViewController */,
+				DB7EB1202226CADA00E189FB /* sampleContentPageLazyLoad.html */,
+			);
+			path = FetchOnDemandPageViewController;
+			sourceTree = "<group>";
+		};
+		DB7EB1212226CADA00E189FB /* PageContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EB1222226CADA00E189FB /* PageContentViewController.m */,
+				DB7EB1232226CADA00E189FB /* PageContentViewController.h */,
+			);
+			path = PageContentViewController;
+			sourceTree = "<group>";
+		};
+		DB7EB1252226CADA00E189FB /* Split Feed */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EB1262226CADA00E189FB /* SplitFeedJsViewController.m */,
+				DB7EB1282226CADA00E189FB /* SplitFeedJsViewController.h */,
+				DB7EB1272226CADA00E189FB /* sampleContentPageSplitFeed.html */,
+			);
+			path = "Split Feed";
+			sourceTree = "<group>";
+		};
+		DB7EB1302226CED700E189FB /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EB1322226CED700E189FB /* WidgetViewController.h */,
+				DB7EB1312226CED700E189FB /* WidgetViewController.m */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		DB7EB1332226CED700E189FB /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EB1382226CED700E189FB /* FeedViewController.h */,
+				DB7EB1342226CED700E189FB /* FeedViewController.m */,
+				DB7EB1352226CED700E189FB /* Cell */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		DB7EB1352226CED700E189FB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EB1362226CED700E189FB /* FeedTableViewCell.h */,
+				DB7EB1372226CED700E189FB /* FeedTableViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DBE6345B2227D3AF0042B65A /* TaboolaViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DBE6345C2227D3AF0042B65A /* TaboolaViewCell.xib */,
+				DBE6345D2227D3AF0042B65A /* TaboolaViewCell.h */,
+				DBE6345E2227D3AF0042B65A /* TaboolaViewCell.m */,
+			);
+			path = TaboolaViewCell;
+			sourceTree = "<group>";
+		};
+		DBE634612227D3D90042B65A /* TaboolaCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DBE634632227D3D90042B65A /* TaboolaCollectionViewCell.h */,
+				DBE634642227D3D90042B65A /* TaboolaCollectionViewCell.m */,
+				DBE634622227D3D90042B65A /* TaboolaCollectionViewCell.xib */,
+			);
+			path = TaboolaCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		DCBA832A21EE462C0053B37E = {
@@ -135,8 +320,9 @@
 			children = (
 				DCBA833621EE462C0053B37E /* AppDelegate.h */,
 				DCBA833721EE462C0053B37E /* AppDelegate.m */,
-				DC1575A722083BF000BD63FA /* UIScrollView */,
-				DC1575A622083BE200BD63FA /* UICollectionView */,
+				DB7EB0CE2226C9A300E189FB /* SDK Standerd */,
+				DB7EB0EE2226C9AB00E189FB /* SDK JS */,
+				DB7EB0EF2226C9B500E189FB /* SDK API */,
 				DCBA833C21EE462C0053B37E /* Main.storyboard */,
 				DCBA833F21EE46300053B37E /* Assets.xcassets */,
 				DCBA834121EE46300053B37E /* LaunchScreen.storyboard */,
@@ -144,52 +330,6 @@
 				DCBA834521EE46300053B37E /* main.m */,
 			);
 			path = "Taboola SDK ObjC Samples";
-			sourceTree = "<group>";
-		};
-		DCE12EFB2201F9F30018BD01 /* SingleTaboolaMidArticleCollectionViewController */ = {
-			isa = PBXGroup;
-			children = (
-				DCE12EF82201F9EB0018BD01 /* SingleTaboolaMidArticleCollectionViewController.h */,
-				DCE12EF92201F9EB0018BD01 /* SingleTaboolaMidArticleCollectionViewController.m */,
-			);
-			path = SingleTaboolaMidArticleCollectionViewController;
-			sourceTree = "<group>";
-		};
-		DCE12EFC2201F9FB0018BD01 /* MidArticleCollectionViewController */ = {
-			isa = PBXGroup;
-			children = (
-				DCE12EF121FF6FF30018BD01 /* MidArticleCollectionViewController.h */,
-				DCE12EF221FF6FF30018BD01 /* MidArticleCollectionViewController.m */,
-			);
-			path = MidArticleCollectionViewController;
-			sourceTree = "<group>";
-		};
-		DCE12EFD2201FA040018BD01 /* TaboolaCollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				DCE12EEC21FF67570018BD01 /* TaboolaCollectionViewCell.h */,
-				DCE12EEE21FF67570018BD01 /* TaboolaCollectionViewCell.m */,
-				DCE12EED21FF67570018BD01 /* TaboolaCollectionViewCell.xib */,
-			);
-			path = TaboolaCollectionViewCell;
-			sourceTree = "<group>";
-		};
-		DCE12EFE2201FA0D0018BD01 /* MidArticleManualScrollViewController */ = {
-			isa = PBXGroup;
-			children = (
-				DCE12EE921FF59780018BD01 /* MidArticleManualScrollViewController.h */,
-				DCE12EEA21FF59780018BD01 /* MidArticleManualScrollViewController.m */,
-			);
-			path = MidArticleManualScrollViewController;
-			sourceTree = "<group>";
-		};
-		DCE12EFF2201FA140018BD01 /* MidArticleScrollViewController */ = {
-			isa = PBXGroup;
-			children = (
-				DC22AA7F21F9E18B00EBC8D4 /* MidArticleScrollViewController.h */,
-				DC22AA8021F9E18B00EBC8D4 /* MidArticleScrollViewController.m */,
-			);
-			path = MidArticleScrollViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,10 +392,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB7EB1292226CADA00E189FB /* sampleContentPage.html in Resources */,
 				DCBA834321EE46300053B37E /* LaunchScreen.storyboard in Resources */,
+				DB7EB12F2226CADB00E189FB /* sampleContentPageSplitFeed.html in Resources */,
 				DCBA834021EE46300053B37E /* Assets.xcassets in Resources */,
 				DCBA833E21EE462C0053B37E /* Main.storyboard in Resources */,
-				DCE12EEF21FF67570018BD01 /* TaboolaCollectionViewCell.xib in Resources */,
+				DB7EB12C2226CADA00E189FB /* sampleContentPageLazyLoad.html in Resources */,
+				DBE6345F2227D3B00042B65A /* TaboolaViewCell.xib in Resources */,
+				DBE634652227D3D90042B65A /* TaboolaCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +436,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples-resources.sh",
 				"${PODS_ROOT}/TaboolaSDK/TaboolaSDK.framework/Versions/A/TaboolaResources/TaboolaVIewResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -303,7 +447,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -313,15 +457,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCE12EF321FF6FF30018BD01 /* MidArticleCollectionViewController.m in Sources */,
-				DC1575AD220B476200BD63FA /* TaboolaCollectionCell.m in Sources */,
-				DCE12EF021FF67570018BD01 /* TaboolaCollectionViewCell.m in Sources */,
-				DC22AA8121F9E18B00EBC8D4 /* MidArticleScrollViewController.m in Sources */,
-				DCE12EEB21FF59780018BD01 /* MidArticleManualScrollViewController.m in Sources */,
+				DB7EB0E82226C9A300E189FB /* LoadTaboolaInViewDidLoadCVC.m in Sources */,
+				DB7EB13D2226CED700E189FB /* FeedViewController.m in Sources */,
+				DB7EB0E62226C9A300E189FB /* MidArticleManualScrollViewController.m in Sources */,
+				DB7EB12A2226CADA00E189FB /* MidArticleJsViewController.m in Sources */,
+				DB7EB13E2226CED700E189FB /* FeedTableViewCell.m in Sources */,
+				DB7EB12E2226CADB00E189FB /* SplitFeedJsViewController.m in Sources */,
+				DB7EB0EA2226C9A300E189FB /* LoadTaboolaInViewDidLoadCVCMenual.m in Sources */,
+				DB7EB12D2226CADB00E189FB /* PageContentViewController.m in Sources */,
 				DCBA834621EE46300053B37E /* main.m in Sources */,
+				DB7EB12B2226CADA00E189FB /* FetchOnDemandPageViewController.m in Sources */,
+				DB7EB0E72226C9A300E189FB /* MidArticleScrollViewController.m in Sources */,
+				DBE634602227D3B00042B65A /* TaboolaViewCell.m in Sources */,
+				DBE63469222803880042B65A /* RandomColor.m in Sources */,
 				DCBA833821EE462C0053B37E /* AppDelegate.m in Sources */,
-				DCE12EFA2201F9EB0018BD01 /* SingleTaboolaMidArticleCollectionViewController.m in Sources */,
-				DC1575AA22083C2600BD63FA /* MidArticleManualCollectionViewController.m in Sources */,
+				DB7EB0E92226C9A300E189FB /* LoadTaboolaInCellForItemCVC.m in Sources */,
+				DB7EB13C2226CED700E189FB /* WidgetViewController.m in Sources */,
+				DBE634662227D3D90042B65A /* TaboolaCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +620,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QMJ5T4LTHY;
 				INFOPLIST_FILE = "Taboola SDK ObjC Samples/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,7 +642,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QMJ5T4LTHY;
 				INFOPLIST_FILE = "Taboola SDK ObjC Samples/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
