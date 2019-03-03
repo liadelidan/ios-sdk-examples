@@ -49,6 +49,11 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
     return taboolaView;
 }
 
+-(void)dealloc {
+    [_taboolaWidget reset];
+    [_taboolaFeed reset];
+}
+
 #pragma mark - UICollectionViewDatasource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return (section == TaboolaSectionMid || section == TaboolaSectionFeed) ? 1 : 3;

@@ -48,5 +48,24 @@
     [self.feedTaboolaView fetchContent];
 }
 
+-(void)dealloc {
+    [_midTaboolaView reset];
+    [_feedTaboolaView reset];
+}
+
+#pragma mark - TaboolaViewDelegate
+
+- (void)taboolaView:(UIView *)taboolaView didLoadPlacementNamed:(NSString *)placementName withHeight:(CGFloat)height {
+    NSLog(@"%@", placementName);
+}
+
+- (void)taboolaView:(UIView *)taboolaView didFailToLoadPlacementNamed:(NSString *)placementName withErrorMessage:(NSString *)error {
+    NSLog(@"%@", error);
+}
+
+-(BOOL)onItemClick:(NSString *)placementName withItemId:(NSString *)itemId withClickUrl:(NSString *)clickUrl isOrganic:(BOOL)organic {
+    return YES;
+}
+
 
 @end

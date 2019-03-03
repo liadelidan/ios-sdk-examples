@@ -32,5 +32,8 @@
     [self.webView loadHTMLString:appHtml baseURL:[NSURL URLWithString:@"http://cdn.taboola.com/mobile-sdk/init/"]];
 }
 
+-(void)dealloc {
+    [[TaboolaJS sharedInstance] unregisterWebView:self.webView completion:nil];
+}
 
 @end

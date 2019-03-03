@@ -25,7 +25,6 @@
     
     self.taboolaApi = [TaboolaApi sharedInstance];
     [self.taboolaApi startWithPublisherID:@"sdk-tester" andApiKey:@"d39df1418f5a4819c9eae2ca02595d57de98c246"];
-    [self.taboolaApi setExtraPropetries:@{@"fsdfds":@1}];
     self.taboolaApi.clickDelegate = self;
     
     [self fetchRecommendation];
@@ -69,6 +68,10 @@
     } onFailure:^(NSError *error) {
         
     }];
+}
+
+-(void)dealloc {
+    [self.taboolaApi clear];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

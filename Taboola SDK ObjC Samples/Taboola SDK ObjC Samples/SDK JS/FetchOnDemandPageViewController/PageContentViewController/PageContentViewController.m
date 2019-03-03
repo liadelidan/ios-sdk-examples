@@ -52,4 +52,8 @@
     [[TaboolaJS sharedInstance] fetchContent:self.webView];
 }
 
+-(void)dealloc {
+    [[TaboolaJS sharedInstance] unregisterWebView:self.webView completion:nil];
+}
+
 @end

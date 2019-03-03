@@ -214,8 +214,8 @@
 		DB7EB1212226CADA00E189FB /* PageContentViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DB7EB1222226CADA00E189FB /* PageContentViewController.m */,
 				DB7EB1232226CADA00E189FB /* PageContentViewController.h */,
+				DB7EB1222226CADA00E189FB /* PageContentViewController.m */,
 			);
 			path = PageContentViewController;
 			sourceTree = "<group>";
@@ -223,8 +223,8 @@
 		DB7EB1252226CADA00E189FB /* Split Feed */ = {
 			isa = PBXGroup;
 			children = (
-				DB7EB1262226CADA00E189FB /* SplitFeedJsViewController.m */,
 				DB7EB1282226CADA00E189FB /* SplitFeedJsViewController.h */,
+				DB7EB1262226CADA00E189FB /* SplitFeedJsViewController.m */,
 				DB7EB1272226CADA00E189FB /* sampleContentPageSplitFeed.html */,
 			);
 			path = "Split Feed";
