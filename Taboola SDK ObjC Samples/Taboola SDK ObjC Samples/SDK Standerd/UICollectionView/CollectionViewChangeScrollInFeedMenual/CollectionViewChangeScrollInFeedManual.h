@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-@interface CollectionViewChangeScrollInFeedMenual : UIViewController
+@interface CollectionViewChangeScrollInFeedManual : UIViewController
 
 
 @end

@@ -101,7 +101,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Menual scroll switch in feed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7p4-nB-MDf">
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Manual scroll switch in feed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7p4-nB-MDf">
                                                             <rect key="frame" x="86.5" y="0.0" width="81.5" height="33.5"/>
                                                             <color key="backgroundColor" red="1" green="0.38035440199999998" blue="0.76097999640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -218,7 +218,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Menual scroll switch in feed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6Rh-eo-yM2">
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Manual scroll switch in feed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6Rh-eo-yM2">
                                                             <rect key="frame" x="115.5" y="0.0" width="110" height="33.5"/>
                                                             <color key="backgroundColor" red="1" green="0.38035440199999998" blue="0.76097999640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -692,10 +692,10 @@
             </objects>
             <point key="canvasLocation" x="2167.1999999999998" y="887.40629685157433"/>
         </scene>
-        <!--Collection View Change Scroll In Feed Menual-->
+        <!--Collection View Change Scroll In Feed Manual-->
         <scene sceneID="gv0-Ig-x8T">
             <objects>
-                <viewController id="blD-Jy-gMk" customClass="CollectionViewChangeScrollInFeedMenual" sceneMemberID="viewController">
+                <viewController id="blD-Jy-gMk" customClass="CollectionViewChangeScrollInFeedManual" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P45-Vp-25m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

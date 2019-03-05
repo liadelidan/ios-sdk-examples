@@ -11,7 +11,7 @@
 		DB7EB0E62226C9A300E189FB /* MidArticleManualScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D22226C9A300E189FB /* MidArticleManualScrollViewController.m */; };
 		DB7EB0E72226C9A300E189FB /* MidArticleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D42226C9A300E189FB /* MidArticleScrollViewController.m */; };
 		DB7EB0E82226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D92226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m */; };
-		DB7EB0EA2226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0E02226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual.m */; };
+		DB7EB0EA2226C9A300E189FB /* CollectionViewChangeScrollInFeedManual.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0E02226C9A300E189FB /* CollectionViewChangeScrollInFeedManual.m */; };
 		DB7EB1292226CADA00E189FB /* sampleContentPage.html in Resources */ = {isa = PBXBuildFile; fileRef = DB7EB11B2226CADA00E189FB /* sampleContentPage.html */; };
 		DB7EB12A2226CADA00E189FB /* MidArticleJsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB11D2226CADA00E189FB /* MidArticleJsViewController.m */; };
 		DB7EB12B2226CADA00E189FB /* FetchOnDemandPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB11F2226CADA00E189FB /* FetchOnDemandPageViewController.m */; };
@@ -42,8 +42,8 @@
 		DB7EB0D52226C9A300E189FB /* MidArticleScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidArticleScrollViewController.h; sourceTree = "<group>"; };
 		DB7EB0D92226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewChangeScrollInFeedAuto.m; sourceTree = "<group>"; };
 		DB7EB0DA2226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewChangeScrollInFeedAuto.h; sourceTree = "<group>"; };
-		DB7EB0DF2226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewChangeScrollInFeedMenual.h; sourceTree = "<group>"; };
-		DB7EB0E02226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewChangeScrollInFeedMenual.m; sourceTree = "<group>"; };
+		DB7EB0DF2226C9A300E189FB /* CollectionViewChangeScrollInFeedManual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewChangeScrollInFeedManual.h; sourceTree = "<group>"; };
+		DB7EB0E02226C9A300E189FB /* CollectionViewChangeScrollInFeedManual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewChangeScrollInFeedManual.m; sourceTree = "<group>"; };
 		DB7EB11B2226CADA00E189FB /* sampleContentPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sampleContentPage.html; sourceTree = "<group>"; };
 		DB7EB11C2226CADA00E189FB /* MidArticleJsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidArticleJsViewController.h; sourceTree = "<group>"; };
 		DB7EB11D2226CADA00E189FB /* MidArticleJsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidArticleJsViewController.m; sourceTree = "<group>"; };
@@ -165,8 +165,8 @@
 		DB7EB0DE2226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual */ = {
 			isa = PBXGroup;
 			children = (
-				DB7EB0DF2226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual.h */,
-				DB7EB0E02226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual.m */,
+				DB7EB0DF2226C9A300E189FB /* CollectionViewChangeScrollInFeedManual.h */,
+				DB7EB0E02226C9A300E189FB /* CollectionViewChangeScrollInFeedManual.m */,
 			);
 			path = CollectionViewChangeScrollInFeedMenual;
 			sourceTree = "<group>";
@@ -433,7 +433,7 @@
 				DB7EB12A2226CADA00E189FB /* MidArticleJsViewController.m in Sources */,
 				DB7EB13E2226CED700E189FB /* FeedTableViewCell.m in Sources */,
 				DB7EB12E2226CADB00E189FB /* SplitFeedJsViewController.m in Sources */,
-				DB7EB0EA2226C9A300E189FB /* CollectionViewChangeScrollInFeedMenual.m in Sources */,
+				DB7EB0EA2226C9A300E189FB /* CollectionViewChangeScrollInFeedManual.m in Sources */,
 				DB7EB12D2226CADB00E189FB /* PageContentViewController.m in Sources */,
 				DCBA834621EE46300053B37E /* main.m in Sources */,
 				DB7EB12B2226CADA00E189FB /* FetchOnDemandPageViewController.m in Sources */,
