@@ -1,8 +1,0 @@
-target 'TaboolaDemoSwiftApp' do
-pod 'TaboolaSDK', '2.0.8'
-pod 'Fabric'
-pod 'Crashlytics'
-
-
-
-end
