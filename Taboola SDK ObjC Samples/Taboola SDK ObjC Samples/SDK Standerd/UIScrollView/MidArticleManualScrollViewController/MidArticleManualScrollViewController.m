@@ -23,6 +23,12 @@
     [super viewDidLoad];
 //    self.scrollView.delegate = self;
     //load tabolaView
+    
+    int timestamp = [[NSDate date] timeIntervalSince1970];
+    NSString *viewID = [NSString stringWithFormat:@"%d",timestamp];
+    self.midTaboolaView.viewID = viewID;
+    self.feedTaboolaView.viewID = viewID;
+    
     self.midTaboolaView.delegate = self;
     self.midTaboolaView.ownerViewController = self;
     self.midTaboolaView.publisher = @"sdk-tester";

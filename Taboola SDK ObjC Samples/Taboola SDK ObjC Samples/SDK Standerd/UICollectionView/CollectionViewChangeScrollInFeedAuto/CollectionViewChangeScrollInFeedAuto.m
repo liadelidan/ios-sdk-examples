@@ -29,8 +29,14 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     _taboolaWidget = [self loadTaboolaWithMode:@"alternating-widget-without-video" placement:@"Below Article" scrollIntercept:NO];
     _taboolaFeed = [self loadTaboolaWithMode:@"thumbs-feed-01" placement:@"Feed without video" scrollIntercept:YES];
+    
+    int timestamp = [[NSDate date] timeIntervalSince1970];
+    NSString *viewID = [NSString stringWithFormat:@"%d",timestamp];
+    _taboolaWidget.viewID = viewID;
+    _taboolaFeed.viewID = viewID;
 }
 
 - (TaboolaView*)loadTaboolaWithMode:(NSString*)mode placement:(NSString*)placement scrollIntercept:(BOOL)scrollIntercept {
