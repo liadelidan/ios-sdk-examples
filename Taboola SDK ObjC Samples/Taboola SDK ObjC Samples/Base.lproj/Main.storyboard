@@ -664,9 +664,6 @@
                                             <constraint firstItem="E5A-6G-jUa" firstAttribute="top" secondItem="Owt-wC-hL1" secondAttribute="top" id="mwm-xo-8CW"/>
                                         </constraints>
                                         <size key="customSize" width="263" height="228"/>
-                                        <connections>
-                                            <outlet property="taboolaContainer" destination="E5A-6G-jUa" id="GIr-z3-5dQ"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -738,9 +735,6 @@
                                             <constraint firstAttribute="trailing" secondItem="v1y-AV-XOt" secondAttribute="trailing" id="kDC-mS-CtQ"/>
                                         </constraints>
                                         <size key="customSize" width="263" height="228"/>
-                                        <connections>
-                                            <outlet property="taboolaContainer" destination="v1y-AV-XOt" id="WKz-lm-Ce1"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -1072,6 +1066,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLZ-BG-DaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3766" y="-573"/>
+        </scene>
+        <!--TableView-->
+        <scene sceneID="LiC-Ow-zgI">
+            <objects>
+                <tableViewController id="KTP-UZ-B8t" customClass="TBTableViewController" customModule="TaboolaDemoSwiftApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9jc-zi-CQz" customClass="TBTableViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textCell" rowHeight="231" id="r3e-BT-7Yl">
+                                <rect key="frame" x="0.0" y="28" width="375" height="231"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r3e-BT-7Yl" id="vNU-gZ-dPJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="230.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bes-8n-L49">
+                                            <rect key="frame" x="10" y="10" width="355" height="210.5"/>
+                                            <string key="text">あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+　またそのなかでいっしょになったたくさんのひとたち、ファゼーロとロザーロ、羊飼のミーロや、顔の赤いこどもたち、地主のテーモ、山猫博士のボーガント・デストゥパーゴなど、いまこの暗い巨きな石の建物のなかで考えていると、みんなむかし風のなつかしい青い幻燈のように思われます。では、わたくしはいつかの小さなみだしをつけながら、しずかにあの年のイーハトーヴォの五月から十月までを書きつけましょう。</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Bes-8n-L49" secondAttribute="trailing" constant="10" id="D7R-TO-0AQ"/>
+                                        <constraint firstItem="Bes-8n-L49" firstAttribute="leading" secondItem="vNU-gZ-dPJ" secondAttribute="leading" constant="10" id="ZUB-rP-sRP"/>
+                                        <constraint firstItem="Bes-8n-L49" firstAttribute="top" secondItem="vNU-gZ-dPJ" secondAttribute="top" constant="10" id="ecs-vG-hRZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="Bes-8n-L49" secondAttribute="bottom" constant="10" id="gnT-12-YI3"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taboolaCell" rowHeight="144" id="oGI-Re-zS9" customClass="TaboolaCell" customModule="TaboolaDemoSwiftApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="259" width="375" height="144"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oGI-Re-zS9" id="CSQ-Zg-yG2">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KTP-UZ-B8t" id="J1b-Ed-o5d"/>
+                            <outlet property="delegate" destination="KTP-UZ-B8t" id="2YP-6c-f3O"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="TableView" id="WhS-el-I6I"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cxC-8K-blC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="-784"/>
         </scene>
     </scenes>
 </document>

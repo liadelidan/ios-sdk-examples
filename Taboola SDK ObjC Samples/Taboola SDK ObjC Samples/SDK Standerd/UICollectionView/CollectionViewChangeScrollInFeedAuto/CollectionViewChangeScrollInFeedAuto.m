@@ -44,7 +44,6 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
     taboolaView.targetType = @"mix";
     [taboolaView setInterceptScroll:scrollIntercept];
     taboolaView.logLevel = LogLevelDebug;
-    [taboolaView setOptionalPageCommands:@{@"useOnlineTemplate":[NSNumber numberWithBool:YES]}];
     [taboolaView fetchContent];
     return taboolaView;
 }
@@ -75,12 +74,12 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
     if (indexPath.section == TaboolaSectionMid) {
         TaboolaCollectionViewCell* taboolaCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TaboolaCell" forIndexPath:indexPath];
         [self clearTaboolaInReusedCell:taboolaCell];
-        [taboolaCell.taboolaContainer addSubview:_taboolaWidget];
+        [taboolaCell.contentView addSubview:_taboolaWidget];
         return taboolaCell;
     } else if (indexPath.section == TaboolaSectionFeed) {
         TaboolaCollectionViewCell* taboolaCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TaboolaCell" forIndexPath:indexPath];
         [self clearTaboolaInReusedCell:taboolaCell];
-        [taboolaCell.taboolaContainer addSubview:_taboolaFeed];
+        [taboolaCell.contentView addSubview:_taboolaFeed];
         return taboolaCell;
     } else {
         UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"randomCell" forIndexPath:indexPath];
@@ -90,9 +89,14 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
 }
 
 -(void)clearTaboolaInReusedCell:(TaboolaCollectionViewCell*)cell {
-    for (UIView *view in [cell.taboolaContainer subviews]) {
+    for (UIView *view in [cell.contentView subviews]) {
         [view removeFromSuperview];
     }
+}
+
+-(void)dealloc {
+    [_taboolaWidget reset];
+    [_taboolaFeed reset];
 }
 
 #pragma mark - TaboolaViewDelegate
@@ -100,7 +104,7 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
 - (void)taboolaView:(UIView *)taboolaView didLoadPlacementNamed:(NSString *)placementName withHeight:(CGFloat)height {
     if ([placementName isEqualToString:@"Below Article"]) {
         _taboolaWidgetHeight = height;
-        [self.collectionView reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:0 inSection:TaboolaSectionMid]]];
+        [self.collectionView.collectionViewLayout invalidateLayout];
     }
 }
 

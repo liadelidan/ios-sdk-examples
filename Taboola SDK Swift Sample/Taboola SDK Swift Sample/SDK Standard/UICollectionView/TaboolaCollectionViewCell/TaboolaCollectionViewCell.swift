@@ -9,10 +9,9 @@
 import UIKit
 
 class TaboolaCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var taboolaContainer: UIView!
     
     override func prepareForReuse() {
-        for view in taboolaContainer.subviews {
+        for view in contentView.subviews {
             view.removeFromSuperview()
         }
     }

@@ -71,11 +71,11 @@ extension CollectionViewChangeScrollInFeedAuto: UICollectionViewDataSource, UICo
         switch indexPath.section {
         case TaboolaSection.widget.index:
             let taboolaCell = collectionView.dequeueReusableCell(withReuseIdentifier: taboolaIdentifier, for: indexPath) as? TaboolaCollectionViewCell ?? TaboolaCollectionViewCell()
-            taboolaCell.taboolaContainer.addSubview(taboolaWidget)
+            taboolaCell.contentView.addSubview(taboolaWidget)
             return taboolaCell
         case TaboolaSection.feed.index:
             let taboolaCell = collectionView.dequeueReusableCell(withReuseIdentifier: taboolaIdentifier, for: indexPath) as? TaboolaCollectionViewCell ?? TaboolaCollectionViewCell()
-            taboolaCell.taboolaContainer.addSubview(taboolaFeed)
+            taboolaCell.contentView.addSubview(taboolaFeed)
             return taboolaCell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "randomCell", for: indexPath)
@@ -106,7 +106,7 @@ extension CollectionViewChangeScrollInFeedAuto: TaboolaViewDelegate {
     func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {
         if placementName == TaboolaSection.widget.placement {
             taboolaWidgetHeight = height
-            collectionView.reloadItems(at: [IndexPath(item: 0, section: TaboolaSection.widget.index)])
+            collectionView.collectionViewLayout.invalidateLayout()
         }
     }
     

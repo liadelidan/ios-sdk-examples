@@ -34,9 +34,6 @@
                 <constraint firstAttribute="bottom" secondItem="Wd5-eL-7Aj" secondAttribute="bottom" id="cYa-QW-A6M"/>
             </constraints>
             <size key="customSize" width="486" height="-963"/>
-            <connections>
-                <outlet property="taboolaContainer" destination="Wd5-eL-7Aj" id="W0j-LB-tPm"/>
-            </connections>
             <point key="canvasLocation" x="-587.20000000000005" y="-59.820089955022496"/>
         </collectionViewCell>
     </objects>

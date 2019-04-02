@@ -71,11 +71,11 @@ extension CollectionViewChangeScrollInFeedManual: UICollectionViewDataSource, UI
         switch indexPath.section {
         case TaboolaSection.widget.index:
             let taboolaCell = collectionView.dequeueReusableCell(withReuseIdentifier: taboolaIdentifier, for: indexPath) as? TaboolaCollectionViewCell ?? TaboolaCollectionViewCell()
-            taboolaCell.taboolaContainer.addSubview(taboolaWidget)
+            taboolaCell.contentView.addSubview(taboolaWidget)
             return taboolaCell
         case TaboolaSection.feed.index:
             let taboolaCell = collectionView.dequeueReusableCell(withReuseIdentifier: taboolaIdentifier, for: indexPath) as? TaboolaCollectionViewCell ?? TaboolaCollectionViewCell()
-            taboolaCell.taboolaContainer.addSubview(taboolaFeed)
+            taboolaCell.contentView.addSubview(taboolaFeed)
             return taboolaCell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "randomCell", for: indexPath)
@@ -108,7 +108,11 @@ extension CollectionViewChangeScrollInFeedManual: UICollectionViewDataSource, UI
         }
     }
     
-    func didEndScrollOfParrentScroll() -> Bool{
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        didEndScrollOfParrentScroll()
+    }
+    
+    func didEndScrollOfParrentScroll(){
         let height = collectionView.frame.size.height
         var yContentOffset = collectionView.contentOffset.y
         
@@ -122,22 +126,23 @@ extension CollectionViewChangeScrollInFeedManual: UICollectionViewDataSource, UI
         if distanceFromBotton < height, collectionView.isScrollEnabled, collectionView.contentSize.height > 0 {
             collectionView.isScrollEnabled = false
             taboolaFeed.scrollEnable = true
-            return true
         }
-        return false
     }
+    
 }
+
+
 
 extension CollectionViewChangeScrollInFeedManual: TaboolaViewDelegate {
     func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {
         if placementName == TaboolaSection.widget.placement {
             taboolaWidgetHeight = height
-            collectionView.reloadItems(at: [IndexPath(item: 0, section: TaboolaSection.widget.index)])
+            collectionView.collectionViewLayout.invalidateLayout()
         }
     }
     
     func taboolaView(_ taboolaView: UIView!, didFailToLoadPlacementNamed placementName: String!, withErrorMessage error: String!) {
-        print("Did fail: \(placementName) error: \(error)")
+        print("Did fail: \(String(describing: placementName)) error: \(String(describing: error))")
     }
     
     func onItemClick(_ placementName: String!, withItemId itemId: String!, withClickUrl clickUrl: String!, isOrganic organic: Bool) -> Bool {
