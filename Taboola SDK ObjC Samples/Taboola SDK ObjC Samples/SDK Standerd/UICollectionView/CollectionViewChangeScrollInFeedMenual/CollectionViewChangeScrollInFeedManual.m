@@ -6,12 +6,12 @@
 //  Copyright © 2019 Taboola. All rights reserved.
 //
 
-#import "CollectionViewChangeScrollInFeedAuto.h"
+#import "CollectionViewChangeScrollInFeedManual.h"
 #import "TaboolaCollectionViewCell.h"
 #import <TaboolaSDK/TaboolaSDK.h>
 #import "RandomColor.h"
 
-@interface CollectionViewChangeScrollInFeedAuto () <UICollectionViewDelegate,UICollectionViewDataSource, TaboolaViewDelegate>
+@interface CollectionViewChangeScrollInFeedManual () <UICollectionViewDelegate,UICollectionViewDataSource, TaboolaViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic) TaboolaView* taboolaWidget;
 @property (nonatomic) TaboolaView* taboolaFeed;
@@ -25,15 +25,15 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
     TaboolaSectionFeed = 3
 };
 
-@implementation CollectionViewChangeScrollInFeedAuto
+@implementation CollectionViewChangeScrollInFeedManual
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _taboolaWidget = [self loadTaboolaWithMode:@"alternating-widget-without-video" placement:@"Below Article" scrollIntercept:NO];
-    _taboolaFeed = [self loadTaboolaWithMode:@"thumbs-feed-01" placement:@"Feed without video" scrollIntercept:YES];
+    _taboolaWidget = [self loadTaboolaWithMode:@"alternating-widget-without-video-1-on-1" placement:@"Mid Article" overrideScrollIntercept:NO];
+    _taboolaFeed = [self loadTaboolaWithMode:@"thumbs-feed-01" placement:@"Feed without video" overrideScrollIntercept:YES];
 }
 
-- (TaboolaView*)loadTaboolaWithMode:(NSString*)mode placement:(NSString*)placement scrollIntercept:(BOOL)scrollIntercept {
+- (TaboolaView*)loadTaboolaWithMode:(NSString*)mode placement:(NSString*)placement overrideScrollIntercept:(BOOL)scrollIntercept {
     TaboolaView *taboolaView = [[TaboolaView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     taboolaView.delegate = self;
     taboolaView.mode = mode;
@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
     taboolaView.pageUrl = @"http://www.example.com";
     taboolaView.placement = placement;
     taboolaView.targetType = @"mix";
-    [taboolaView setInterceptScroll:scrollIntercept];
+    [taboolaView setOverrideScrollIntercept:scrollIntercept];
     taboolaView.logLevel = LogLevelDebug;
     [taboolaView fetchContent];
     return taboolaView;
@@ -102,7 +102,7 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
 #pragma mark - TaboolaViewDelegate
 
 - (void)taboolaView:(UIView *)taboolaView didLoadPlacementNamed:(NSString *)placementName withHeight:(CGFloat)height {
-    if ([placementName isEqualToString:@"Below Article"]) {
+    if ([placementName isEqualToString:@"Mid Article"]) {
         _taboolaWidgetHeight = height;
         [self.collectionView.collectionViewLayout invalidateLayout];
     }
@@ -115,6 +115,47 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
 -(BOOL)onItemClick:(NSString *)placementName withItemId:(NSString *)itemId withClickUrl:(NSString *)clickUrl isOrganic:(BOOL)organic {
     return YES;
 }
+
+- (void)scrollViewDidScrollToTopTaboolaView:(UIView*)taboolaView {
+    if (_taboolaFeed.scrollEnable) {
+        NSLog(@"did finish scrolling taboola");
+        [_taboolaFeed setScrollEnable:NO];
+        self.collectionView.scrollEnabled = YES;
+    }
+    
+}
+
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSLog(@"scrollViewDidScroll! %f",scrollView.contentOffset.y);
+    
+    [self didEndScrollOfParentScroll];
+}
+
+-(BOOL)didEndScrollOfParentScroll {
+    float height = self.collectionView.frame.size.height;
+    float contentYoffset = self.collectionView.contentOffset.y;
+    
+    if (@available(iOS 11.0, *)) {
+        contentYoffset = contentYoffset - self.collectionView.adjustedContentInset.bottom;
+    }
+    else {
+        contentYoffset = contentYoffset - self.collectionView.contentInset.bottom;
+    }
+    
+    float distanceFromBottom = self.collectionView.contentSize.height - contentYoffset;
+    if (distanceFromBottom < height && self.collectionView.scrollEnabled && self.collectionView.contentSize.height > 0) {
+        self.collectionView.scrollEnabled = NO;
+        NSLog(@"did finish scrolling");
+        [_taboolaFeed setScrollEnable:YES];
+        return YES;
+    }
+    
+    return NO;
+}
+
 
 
 @end

@@ -21,11 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    int timestamp = [[NSDate date] timeIntervalSince1970];
-    NSString *viewID = [NSString stringWithFormat:@"%d",timestamp];
-    self.midTaboolaView.viewID = viewID;
-    self.feedTaboolaView.viewID = viewID;
-    
     //load mid tabolaView
     self.midTaboolaView.delegate = self;
     self.midTaboolaView.ownerViewController = self;
@@ -52,26 +47,6 @@
     [self.midTaboolaView fetchContent];
     [self.feedTaboolaView fetchContent];
 }
-
--(void)dealloc {
-    [_midTaboolaView reset];
-    [_feedTaboolaView reset];
-}
-
-#pragma mark - TaboolaViewDelegate
-
-- (void)taboolaView:(UIView *)taboolaView didLoadPlacementNamed:(NSString *)placementName withHeight:(CGFloat)height {
-    NSLog(@"%@", placementName);
-}
-
-- (void)taboolaView:(UIView *)taboolaView didFailToLoadPlacementNamed:(NSString *)placementName withErrorMessage:(NSString *)error {
-    NSLog(@"%@", error);
-}
-
--(BOOL)onItemClick:(NSString *)placementName withItemId:(NSString *)itemId withClickUrl:(NSString *)clickUrl isOrganic:(BOOL)organic {
-    return YES;
-}
-
 
 
 @end

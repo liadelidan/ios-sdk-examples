@@ -23,12 +23,6 @@
     [super viewDidLoad];
 //    self.scrollView.delegate = self;
     //load tabolaView
-    
-    int timestamp = [[NSDate date] timeIntervalSince1970];
-    NSString *viewID = [NSString stringWithFormat:@"%d",timestamp];
-    self.midTaboolaView.viewID = viewID;
-    self.feedTaboolaView.viewID = viewID;
-    
     self.midTaboolaView.delegate = self;
     self.midTaboolaView.ownerViewController = self;
     self.midTaboolaView.publisher = @"sdk-tester";
@@ -53,36 +47,6 @@
     [self.feedTaboolaView fetchContent];
 }
 
--(void)dealloc {
-    [_midTaboolaView reset];
-    [_feedTaboolaView reset];
-}
-
-#pragma mark - TaboolaViewDelegate
-
-- (void)taboolaView:(UIView *)taboolaView didLoadPlacementNamed:(NSString *)placementName withHeight:(CGFloat)height {
-    NSLog(@"%@", placementName);
-}
-
-- (void)taboolaView:(UIView *)taboolaView didFailToLoadPlacementNamed:(NSString *)placementName withErrorMessage:(NSString *)error {
-    NSLog(@"%@", error);
-}
-
--(BOOL)onItemClick:(NSString *)placementName withItemId:(NSString *)itemId withClickUrl:(NSString *)clickUrl isOrganic:(BOOL)organic {
-    return YES;
-}
-
-- (void)scrollViewDidScrollToTopTaboolaView:(UIView*)taboolaView {
-    if (self.feedTaboolaView.scrollEnable) {
-        NSLog(@"did finish scrolling taboola");
-        [self.feedTaboolaView setScrollEnable:NO];
-        self.scrollView.scrollEnabled = YES;
-    }
-    
-}
-
-#pragma mark - UIScrollViewDelegate
-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSLog(@"scrollViewDidScroll! %f",scrollView.contentOffset.y);
     [self didEndScrollOfParentScroll];
@@ -106,6 +70,13 @@
     return NO;
 }
 
+- (void)scrollViewDidScrollToTopTaboolaView:(UIView*)taboolaView {
+    if (self.feedTaboolaView.scrollEnable) {
+        NSLog(@"did finish scrolling taboola");
+        [self.feedTaboolaView setScrollEnable:NO];
+        self.scrollView.scrollEnabled = YES;
+    }
 
+}
 
 @end

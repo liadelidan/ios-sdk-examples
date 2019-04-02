@@ -9,5 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface TaboolaCollectionViewCell : UICollectionViewCell
-@property (strong, nonatomic) IBOutlet UIView *taboolaContainer;
 @end
