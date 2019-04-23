@@ -12,12 +12,17 @@ import TaboolaSDK
 
 class PageContentViewController: UIViewController {
     var pageIndex: Int?
-    @IBOutlet weak var webView: WKWebView!
+
     @IBOutlet weak var indexLabel: UILabel!
     var didLoadTaboola = false
     
+    @IBOutlet weak var webViewContainer: UIView!
+    var webView = WKWebView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        webView.frame = view.frame
+        webViewContainer.addSubview(webView)
         if let pageIndex = pageIndex {
             indexLabel.text = "\(pageIndex)"
         }

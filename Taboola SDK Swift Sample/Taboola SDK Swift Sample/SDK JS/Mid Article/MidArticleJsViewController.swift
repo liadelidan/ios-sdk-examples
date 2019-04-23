@@ -11,10 +11,13 @@ import WebKit
 import TaboolaSDK
 
 class MidArticleJsViewController: UIViewController {
-    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var webViewContainer: UIView!
+    var webView = WKWebView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        webView.frame = view.frame
+        webViewContainer.addSubview(webView)
         TaboolaJS.sharedInstance()?.delegate = self
         TaboolaJS.sharedInstance()?.logLevel = .debug
         TaboolaJS.sharedInstance()?.registerWebView(webView)

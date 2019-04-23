@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VZM-Wf-tJ4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VZM-Wf-tJ4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -227,14 +227,14 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Manual scroll switch in feed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="P0o-Jn-jEF">
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Widget" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="P0o-Jn-jEF">
                                                             <rect key="frame" x="86.5" y="0.0" width="81.5" height="33.5"/>
                                                             <color key="backgroundColor" red="1" green="0.38035440199999998" blue="0.76097999640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Below article feed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dIK-sb-csB">
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="alternating-widget" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dIK-sb-csB">
                                                             <rect key="frame" x="173" y="0.0" width="81.5" height="33.5"/>
                                                             <color key="backgroundColor" red="0.64737383469999998" green="0.62096773979999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -894,26 +894,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFU-Pa-lhy">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGL-wm-cGV">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cu7-HJ-b24" firstAttribute="trailing" secondItem="vFU-Pa-lhy" secondAttribute="trailing" id="Dla-Xx-7wJ"/>
-                            <constraint firstItem="vFU-Pa-lhy" firstAttribute="top" secondItem="cu7-HJ-b24" secondAttribute="top" id="P7i-hJ-wJ4"/>
-                            <constraint firstItem="vFU-Pa-lhy" firstAttribute="leading" secondItem="cu7-HJ-b24" secondAttribute="leading" id="T9C-b7-678"/>
-                            <constraint firstItem="cu7-HJ-b24" firstAttribute="bottom" secondItem="vFU-Pa-lhy" secondAttribute="bottom" id="iZQ-hL-eeA"/>
+                            <constraint firstItem="cu7-HJ-b24" firstAttribute="bottom" secondItem="CGL-wm-cGV" secondAttribute="bottom" id="chc-Gf-yy1"/>
+                            <constraint firstItem="CGL-wm-cGV" firstAttribute="top" secondItem="cu7-HJ-b24" secondAttribute="top" id="eI4-7b-jOq"/>
+                            <constraint firstItem="cu7-HJ-b24" firstAttribute="trailing" secondItem="CGL-wm-cGV" secondAttribute="trailing" id="jMU-3o-UaZ"/>
+                            <constraint firstItem="CGL-wm-cGV" firstAttribute="leading" secondItem="cu7-HJ-b24" secondAttribute="leading" id="kIw-rJ-eqd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cu7-HJ-b24"/>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="vFU-Pa-lhy" id="hYS-ZL-ZFA"/>
+                        <outlet property="webViewContainer" destination="CGL-wm-cGV" id="SpE-VW-2Xo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ZP-gg-IWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -928,31 +924,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Js-TC-ZDv">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MNP-tj-SI9">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tZJ-P3-5K0" firstAttribute="trailing" secondItem="8Js-TC-ZDv" secondAttribute="trailing" id="GpV-A1-pva"/>
-                            <constraint firstItem="tZJ-P3-5K0" firstAttribute="bottom" secondItem="8Js-TC-ZDv" secondAttribute="bottom" id="LjM-oT-IWL"/>
-                            <constraint firstItem="8Js-TC-ZDv" firstAttribute="leading" secondItem="tZJ-P3-5K0" secondAttribute="leading" id="qXc-Mb-zHO"/>
-                            <constraint firstItem="8Js-TC-ZDv" firstAttribute="top" secondItem="tZJ-P3-5K0" secondAttribute="top" id="zL5-uv-gwY"/>
+                            <constraint firstItem="MNP-tj-SI9" firstAttribute="leading" secondItem="tZJ-P3-5K0" secondAttribute="leading" id="AJu-K4-9ah"/>
+                            <constraint firstItem="MNP-tj-SI9" firstAttribute="bottom" secondItem="tZJ-P3-5K0" secondAttribute="bottom" id="MQU-38-2wN"/>
+                            <constraint firstItem="MNP-tj-SI9" firstAttribute="trailing" secondItem="tZJ-P3-5K0" secondAttribute="trailing" id="RYw-Em-aOl"/>
+                            <constraint firstItem="MNP-tj-SI9" firstAttribute="top" secondItem="tZJ-P3-5K0" secondAttribute="top" id="hxe-HP-FjF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tZJ-P3-5K0"/>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="8Js-TC-ZDv" id="yar-gH-Btc"/>
+                        <outlet property="webViewContainer" destination="WZf-e4-b1v" id="bf9-V0-pVF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhg-9e-DMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2937" y="166"/>
+            <point key="canvasLocation" x="2936.8000000000002" y="165.96701649175412"/>
         </scene>
         <!--Fetch On Demand Page View Controller-->
         <scene sceneID="U0y-oN-52b">
@@ -970,30 +962,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4f-sX-efk">
-                                <rect key="frame" x="0.0" y="57" width="375" height="610"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYk-9d-sxz">
                                 <rect key="frame" x="166.5" y="28" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rW-Ee-gSI">
+                                <rect key="frame" x="0.0" y="54" width="375" height="613"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sMw-kb-iPR" firstAttribute="trailing" secondItem="g4f-sX-efk" secondAttribute="trailing" id="2Or-Hv-miS"/>
-                            <constraint firstItem="sMw-kb-iPR" firstAttribute="bottom" secondItem="g4f-sX-efk" secondAttribute="bottom" id="Euo-xH-8pE"/>
-                            <constraint firstItem="g4f-sX-efk" firstAttribute="leading" secondItem="sMw-kb-iPR" secondAttribute="leading" id="QpG-kR-k8e"/>
-                            <constraint firstItem="g4f-sX-efk" firstAttribute="top" secondItem="BYk-9d-sxz" secondAttribute="bottom" constant="8" id="W1P-3K-Smz"/>
+                            <constraint firstItem="2rW-Ee-gSI" firstAttribute="leading" secondItem="sMw-kb-iPR" secondAttribute="leading" id="IX7-2y-726"/>
                             <constraint firstItem="sMw-kb-iPR" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BYk-9d-sxz" secondAttribute="trailing" constant="8" id="Zdr-7z-Ast"/>
+                            <constraint firstItem="sMw-kb-iPR" firstAttribute="bottom" secondItem="2rW-Ee-gSI" secondAttribute="bottom" id="dIq-zQ-sIF"/>
+                            <constraint firstItem="2rW-Ee-gSI" firstAttribute="top" secondItem="BYk-9d-sxz" secondAttribute="bottom" constant="5" id="huk-II-ssA"/>
                             <constraint firstItem="BYk-9d-sxz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sMw-kb-iPR" secondAttribute="leading" constant="8" id="isv-3p-GVC"/>
                             <constraint firstItem="BYk-9d-sxz" firstAttribute="centerX" secondItem="fvl-qd-jY7" secondAttribute="centerX" id="smt-YA-iO3"/>
+                            <constraint firstItem="sMw-kb-iPR" firstAttribute="trailing" secondItem="2rW-Ee-gSI" secondAttribute="trailing" id="uGf-Jc-Q6X"/>
                             <constraint firstItem="BYk-9d-sxz" firstAttribute="top" secondItem="sMw-kb-iPR" secondAttribute="top" constant="8" id="zdV-Dn-hQb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sMw-kb-iPR"/>
@@ -1001,7 +989,7 @@
                     <navigationItem key="navigationItem" id="RjM-eX-zFZ"/>
                     <connections>
                         <outlet property="indexLabel" destination="BYk-9d-sxz" id="CmV-nD-AJP"/>
-                        <outlet property="webView" destination="g4f-sX-efk" id="IdF-3B-yzN"/>
+                        <outlet property="webViewContainer" destination="2rW-Ee-gSI" id="VcG-II-C91"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5UG-8U-ha4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1196,8 +1184,8 @@
         <!--TableView-->
         <scene sceneID="Drk-fA-2Od">
             <objects>
-                <tableViewController id="oUa-yO-ErZ" customClass="TBTableViewChangeScrollInFeedManual" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Uol-fQ-U1t" customClass="TBTableViewController">
+                <tableViewController id="oUa-yO-ErZ" customClass="TBTableViewWidget" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Uol-fQ-U1t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1210,13 +1198,28 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taboolaCell" rowHeight="144" id="Osj-2u-Wwg" customClass="TaboolaCell" customModule="TaboolaDemoSwiftApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taboolaCell" rowHeight="144" id="Osj-2u-Wwg" customClass="TaboolaCell" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="259" width="375" height="144"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Osj-2u-Wwg" id="zvd-wu-c3z">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhq-5m-v5g" customClass="TaboolaView">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Fhq-5m-v5g" firstAttribute="leading" secondItem="zvd-wu-c3z" secondAttribute="leading" id="8A8-ei-s6a"/>
+                                        <constraint firstAttribute="bottom" secondItem="Fhq-5m-v5g" secondAttribute="bottom" id="GuV-5u-GYJ"/>
+                                        <constraint firstItem="Fhq-5m-v5g" firstAttribute="top" secondItem="zvd-wu-c3z" secondAttribute="top" id="Hrz-83-XRu"/>
+                                        <constraint firstAttribute="trailing" secondItem="Fhq-5m-v5g" secondAttribute="trailing" id="w0U-ut-N97"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="taboolaView" destination="Fhq-5m-v5g" id="iam-Wq-I0B"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1247,7 +1250,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taboolaCell" rowHeight="144" id="hL9-gU-Hk9" customClass="TaboolaCell" customModule="TaboolaDemoSwiftApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taboolaCell" rowHeight="144" id="hL9-gU-Hk9" customClass="TaboolaCell" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="259" width="375" height="144"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hL9-gU-Hk9" id="kvP-ad-JDd">
