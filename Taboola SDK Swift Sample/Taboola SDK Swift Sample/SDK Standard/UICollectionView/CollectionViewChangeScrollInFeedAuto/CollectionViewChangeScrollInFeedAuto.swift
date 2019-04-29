@@ -55,9 +55,18 @@ class CollectionViewChangeScrollInFeedAuto: UIViewController {
         taboolaWidget.reset()
         taboolaFeed.reset()
     }
+    
+    func setTaboolaConstraints(taboolaCell:UICollectionViewCell, taboolaView:inout TaboolaView) {
+        taboolaView.translatesAutoresizingMaskIntoConstraints = false
+        let horizConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[taboolaView]-0-|", options: [], metrics: nil, views: ["taboolaView":taboolaView])
+        let vertConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[taboolaView]-0-|", options: [], metrics: nil, views: ["taboolaView":taboolaView])
+        taboolaCell.addConstraints(horizConstraints)
+        taboolaCell.addConstraints(vertConstraints)
+    }
 }
 
 extension CollectionViewChangeScrollInFeedAuto: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 4
     }
@@ -72,10 +81,12 @@ extension CollectionViewChangeScrollInFeedAuto: UICollectionViewDataSource, UICo
         case TaboolaSection.widget.index:
             let taboolaCell = collectionView.dequeueReusableCell(withReuseIdentifier: taboolaIdentifier, for: indexPath) as? TaboolaCollectionViewCell ?? TaboolaCollectionViewCell()
             taboolaCell.contentView.addSubview(taboolaWidget)
+            setTaboolaConstraints(taboolaCell: taboolaCell, taboolaView: &taboolaWidget)
             return taboolaCell
         case TaboolaSection.feed.index:
             let taboolaCell = collectionView.dequeueReusableCell(withReuseIdentifier: taboolaIdentifier, for: indexPath) as? TaboolaCollectionViewCell ?? TaboolaCollectionViewCell()
             taboolaCell.contentView.addSubview(taboolaFeed)
+            setTaboolaConstraints(taboolaCell: taboolaCell, taboolaView: &taboolaFeed)
             return taboolaCell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "randomCell", for: indexPath)

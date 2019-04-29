@@ -1204,22 +1204,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Osj-2u-Wwg" id="zvd-wu-c3z">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhq-5m-v5g" customClass="TaboolaView">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Fhq-5m-v5g" firstAttribute="leading" secondItem="zvd-wu-c3z" secondAttribute="leading" id="8A8-ei-s6a"/>
-                                        <constraint firstAttribute="bottom" secondItem="Fhq-5m-v5g" secondAttribute="bottom" id="GuV-5u-GYJ"/>
-                                        <constraint firstItem="Fhq-5m-v5g" firstAttribute="top" secondItem="zvd-wu-c3z" secondAttribute="top" id="Hrz-83-XRu"/>
-                                        <constraint firstAttribute="trailing" secondItem="Fhq-5m-v5g" secondAttribute="trailing" id="w0U-ut-N97"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="taboolaView" destination="Fhq-5m-v5g" id="iam-Wq-I0B"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
