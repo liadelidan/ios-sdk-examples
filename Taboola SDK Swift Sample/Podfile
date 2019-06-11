@@ -2,7 +2,7 @@
 # platform :ios, '9.0'
 
 target 'Taboola SDK Swift Sample' do
-pod 'TaboolaSDK'
+pod 'TaboolaSDK', '2.1.6'
 end
 
 
