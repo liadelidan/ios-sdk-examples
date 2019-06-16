@@ -18,6 +18,10 @@
 
 @property (nonatomic) CGFloat taboolaWidgetHeight;
 
+@property (nonatomic, strong) NSString *viewId;
+
+@property (nonatomic) BOOL didLoadFeed;
+
 @end
 
 typedef NS_ENUM(NSInteger, TaboolaSection) {
@@ -29,8 +33,12 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    int timestamp = [[NSDate date] timeIntervalSince1970];
+    _viewId = [NSString stringWithFormat:@"%d",timestamp];
     _taboolaWidget = [self loadTaboolaWithMode:@"alternating-widget-without-video" placement:@"Below Article" scrollIntercept:NO];
     _taboolaFeed = [self loadTaboolaWithMode:@"thumbs-feed-01" placement:@"Feed without video" scrollIntercept:YES];
+    
+    [_taboolaWidget fetchContent];
 }
 
 - (TaboolaView*)loadTaboolaWithMode:(NSString*)mode placement:(NSString*)placement scrollIntercept:(BOOL)scrollIntercept {
@@ -44,7 +52,7 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
     taboolaView.targetType = @"mix";
     [taboolaView setInterceptScroll:scrollIntercept];
     taboolaView.logLevel = LogLevelDebug;
-    [taboolaView fetchContent];
+    taboolaView.viewID = _viewId;
     return taboolaView;
 }
 
@@ -105,6 +113,11 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
     if ([placementName isEqualToString:@"Below Article"]) {
         _taboolaWidgetHeight = height;
         [self.collectionView.collectionViewLayout invalidateLayout];
+        if (!_didLoadFeed) {
+            _didLoadFeed = YES;
+            // We are loading the feed only when the widget finished loading- for dedup.
+            [_taboolaFeed fetchContent];
+        }
     }
 }
 

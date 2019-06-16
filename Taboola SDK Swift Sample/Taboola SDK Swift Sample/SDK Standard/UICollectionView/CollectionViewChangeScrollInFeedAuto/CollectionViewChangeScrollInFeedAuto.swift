@@ -14,7 +14,14 @@ class CollectionViewChangeScrollInFeedAuto: UIViewController {
     var taboolaWidget: TaboolaView!
     var taboolaFeed: TaboolaView!
     
+    var didLoadFeed = false
+    
     var taboolaWidgetHeight: CGFloat = 0.0
+    
+    lazy var viewId: String = {
+        let timestamp = Int(Date().timeIntervalSince1970)
+        return "\(timestamp)"
+    }()
     
     fileprivate struct TaboolaSection {
         let placement: String
@@ -33,6 +40,8 @@ class CollectionViewChangeScrollInFeedAuto: UIViewController {
         taboolaFeed = taboolaView(mode: TaboolaSection.feed.mode,
                                   placement: TaboolaSection.feed.placement,
                                   scrollIntercept: TaboolaSection.feed.scrollIntercept)
+        
+        taboolaWidget.fetchContent()
     }
     
     func taboolaView(mode: String, placement: String, scrollIntercept: Bool) -> TaboolaView {
@@ -47,7 +56,7 @@ class CollectionViewChangeScrollInFeedAuto: UIViewController {
         taboolaView.setInterceptScroll(scrollIntercept)
         taboolaView.logLevel = .debug
         taboolaView.setOptionalModeCommands(["useOnlineTemplate": true])
-        taboolaView.fetchContent()
+        taboolaView.viewID = viewId
         return taboolaView
     }
     
@@ -117,6 +126,11 @@ extension CollectionViewChangeScrollInFeedAuto: TaboolaViewDelegate {
     func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {
         if placementName == TaboolaSection.widget.placement {
             taboolaWidgetHeight = height
+            if !didLoadFeed {
+                didLoadFeed = true
+                // We are loading the feed only when the widget finished loading- for dedup.
+                taboolaFeed.fetchContent()
+            }
             collectionView.collectionViewLayout.invalidateLayout()
         }
     }

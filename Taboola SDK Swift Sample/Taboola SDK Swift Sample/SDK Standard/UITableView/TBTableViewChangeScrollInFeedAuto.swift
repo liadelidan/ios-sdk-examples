@@ -13,18 +13,24 @@ class TBTableViewChangeScrollInFeedAuto: UITableViewController {
     
     var taboolaView:TaboolaView!
     var didLoadTaboolaView = false
+    
+    lazy var viewId: String = {
+        let timestamp = Int(Date().timeIntervalSince1970)
+        return "\(timestamp)"
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         taboolaView = TaboolaView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: TaboolaView.widgetHeight()))
         taboolaView.delegate = self
         taboolaView.ownerViewController = self
-        taboolaView.mode = "thumbs-feed-01";
-        taboolaView.publisher = "sdk-tester";
-        taboolaView.pageType = "article";
-        taboolaView.pageUrl = "http://www.example.com";
-        taboolaView.placement = "Feed without video";
-        taboolaView.targetType = "mix";
+        taboolaView.mode = "thumbs-feed-01"
+        taboolaView.publisher = "sdk-tester"
+        taboolaView.pageType = "article"
+        taboolaView.pageUrl = "http://www.example.com"
+        taboolaView.placement = "Feed without video"
+        taboolaView.targetType = "mix"
+        taboolaView.viewID = viewId
         taboolaView.setInterceptScroll(true)
     }
 

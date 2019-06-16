@@ -15,6 +15,13 @@ class MidArticleScrollViewController: UIViewController {
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var midLabel: UILabel!
     
+    var didLoadFeed = false
+    
+    lazy var viewId: String = {
+        let timestamp = Int(Date().timeIntervalSince1970)
+        return "\(timestamp)"
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +35,8 @@ class MidArticleScrollViewController: UIViewController {
         midTaboolaView.placement = "Mid Article"
         midTaboolaView.targetType = "mix"
         midTaboolaView.logLevel = .debug
+        midTaboolaView.viewID = viewId
+        midTaboolaView.fetchContent()
         
         // load feed tabolaView
         feedTaboolaView.delegate = self
@@ -40,9 +49,9 @@ class MidArticleScrollViewController: UIViewController {
         feedTaboolaView.targetType = "mix"
         feedTaboolaView.setInterceptScroll(true)
         feedTaboolaView.logLevel = .debug
+        feedTaboolaView.viewID = viewId
         
-        midTaboolaView.fetchContent()
-        feedTaboolaView.fetchContent()
+        
     }
     
     deinit {
@@ -52,7 +61,15 @@ class MidArticleScrollViewController: UIViewController {
 }
 
 extension MidArticleScrollViewController: TaboolaViewDelegate {
-    func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String, withHeight height: CGFloat) {
+    
+    func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {
+        if placementName == "Mid Article" {
+            if !didLoadFeed {
+                didLoadFeed = true
+                // We are loading the feed only when the widget finished loading- for dedup.
+                feedTaboolaView.fetchContent()
+            }
+        }
         print("Did load: \(placementName)")
     }
     

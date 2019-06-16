@@ -14,11 +14,15 @@
 @property (weak, nonatomic) IBOutlet TaboolaView *feedTaboolaView;
 @property (weak, nonatomic) IBOutlet UILabel *topLabel;
 @property (weak, nonatomic) IBOutlet UILabel *midLabel;
+@property (nonatomic, strong) NSString *viewId;
+@property (nonatomic) BOOL didLoadFeed;
 @end
 
 @implementation MidArticleScrollViewController
 
 - (void)viewDidLoad {
+    int timestamp = [[NSDate date] timeIntervalSince1970];
+    _viewId = [NSString stringWithFormat:@"%d",timestamp];
     [super viewDidLoad];
     
     //load mid tabolaView
@@ -30,7 +34,9 @@
     self.midTaboolaView.pageUrl = @"http://www.example.com";
     self.midTaboolaView.placement = @"Mid Article";
     self.midTaboolaView.targetType = @"mix";
+    self.midTaboolaView.viewID = _viewId;
     self.midTaboolaView.logLevel = LogLevelDebug;
+    [self.midTaboolaView fetchContent];
     
     //load feed tabolaView
     self.feedTaboolaView.delegate = self;
@@ -42,10 +48,20 @@
     self.feedTaboolaView.placement = @"Feed without video";
     self.feedTaboolaView.targetType = @"mix";
     [self.feedTaboolaView setInterceptScroll:YES];
+    self.feedTaboolaView.viewID = _viewId;
     self.feedTaboolaView.logLevel = LogLevelDebug;
     
-    [self.midTaboolaView fetchContent];
-    [self.feedTaboolaView fetchContent];
+    
+}
+
+- (void)taboolaView:(UIView *)taboolaView didLoadPlacementNamed:(NSString *)placementName withHeight:(CGFloat)height {
+    if ([placementName isEqualToString:@"Mid Article"]) {
+        if (!_didLoadFeed) {
+            _didLoadFeed = YES;
+            // We are loading the feed only when the widget finished loading- for dedup.
+            [_feedTaboolaView fetchContent];
+        }
+    }
 }
 
 
