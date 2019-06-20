@@ -18,9 +18,8 @@ class MidArticleJsViewController: UIViewController {
         super.viewDidLoad()
         webView.frame = view.frame
         webViewContainer.addSubview(webView)
-        TaboolaJS.sharedInstance()?.delegate = self
         TaboolaJS.sharedInstance()?.logLevel = .debug
-        TaboolaJS.sharedInstance()?.registerWebView(webView)
+        TaboolaJS.sharedInstance()?.registerWebView(webView, with: self)
         // Do any additional setup after loading the view.
         try? loadExamplePage()
     }

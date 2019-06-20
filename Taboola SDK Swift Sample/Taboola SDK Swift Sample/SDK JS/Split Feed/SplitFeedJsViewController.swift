@@ -18,9 +18,8 @@ class SplitFeedJsViewController: UIViewController {
         super.viewDidLoad()
         webView.frame = webViewContainer.frame
         webViewContainer.addSubview(webView)
-        TaboolaJS.sharedInstance()?.delegate = self
         TaboolaJS.sharedInstance()?.logLevel = .debug
-        TaboolaJS.sharedInstance()?.registerWebView(webView)
+        TaboolaJS.sharedInstance()?.registerWebView(webView, with: self)
         
         try? loadExamplePage()
     }

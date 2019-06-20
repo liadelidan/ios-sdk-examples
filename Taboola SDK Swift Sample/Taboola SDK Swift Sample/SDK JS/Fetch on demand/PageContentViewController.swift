@@ -26,9 +26,8 @@ class PageContentViewController: UIViewController {
         if let pageIndex = pageIndex {
             indexLabel.text = "\(pageIndex)"
         }
-        TaboolaJS.sharedInstance()?.delegate = self
         TaboolaJS.sharedInstance()?.logLevel = .debug
-        TaboolaJS.sharedInstance()?.registerWebView(webView)
+        TaboolaJS.sharedInstance()?.registerWebView(webView, with: self)
         do { try loadExamplePage() }
         catch {
             print("Error loading HTML: \(error)")
