@@ -53,7 +53,7 @@ class PageContentViewController: UIViewController {
             return
         }
         let appHtml = try String.init(contentsOfFile: htmlPath, encoding: .utf8)
-        webView.loadHTMLString(appHtml, baseURL: URL(string: "http://cdn.taboola.com/mobile-sdk/init/"))
+        webView.loadHTMLString(appHtml, baseURL: URL(string: "https://cdn.taboola.com/mobile-sdk/init/"))
     }
     
     func fetch() {
