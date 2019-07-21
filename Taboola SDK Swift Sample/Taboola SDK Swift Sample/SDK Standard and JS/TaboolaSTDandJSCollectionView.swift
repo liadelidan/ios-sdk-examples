@@ -18,6 +18,11 @@ var viewId: String = {
 
 class TaboolaSTDandJSCollectionView: UIViewController {
     
+    // Creating identifiers for the cellviews.
+    let taboolaIdentifier = "TaboolaCell"
+    let taboolaJSIdentifier = "TaboolaJSCell"
+    let normalIdentifier = "normalCell"
+    
     // A simple String array to be used by the label inside the cell.
     let cellsNumber = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     var webView = WKWebView()
@@ -32,7 +37,11 @@ class TaboolaSTDandJSCollectionView: UIViewController {
         let placement: String
         let whichSection: Int
         
+        static let normalMid = TaboolaSection(placement: "", whichSection: 0)
+        static let normalEnd = TaboolaSection(placement: "", whichSection: 2)
+        static let widget = TaboolaSection(placement: "Mid Article", whichSection: 1)
         static let feed = TaboolaSection(placement: "Feed without video", whichSection: 3)
+
     }
     
     override func viewDidLoad() {
@@ -81,11 +90,11 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
     
     // Choosing how many items(cells) to be in each sections:
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if (section == 0)
+        if (section == TaboolaSection.normalMid.whichSection)
         {
             return 0
         }
-        else if (section == 2)
+        else if (section == TaboolaSection.normalEnd.whichSection)
         {
             return 3
         }
@@ -94,15 +103,11 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
     
     // Function that creates each cell with the info required.
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // Creating identifiers for the cellviews.
-        let taboolaIdentifier = "TaboolaCell"
-        let taboolaJSIdentifier = "TaboolaJSCell"
-        let normalIdentifier = "normalCell"
         
         // Switch case for each section.
         switch indexPath.section {
             
-        case 1:
+        case TaboolaSection.widget.whichSection:
             
             let taboolaCell = collectionView.dequeueReusableCell(withReuseIdentifier: taboolaJSIdentifier, for: indexPath) as? TaboolaCollectionJSViewCell ?? TaboolaCollectionJSViewCell()
             taboolaCell.loadTaboolaJS()
@@ -123,11 +128,7 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
             let regularCell = collectionView.dequeueReusableCell(withReuseIdentifier: normalIdentifier, for: indexPath) as? NormalViewCell ?? NormalViewCell()
             regularCell.contentView.backgroundColor = UIColor.blue
             
-            if (indexPath.section == 0)
-            {
-                regularCell.myLabel.text = cellsNumber[indexPath.item]
-            }
-            else if (indexPath.section == 2)
+            if (indexPath.section == TaboolaSection.normalMid.whichSection || indexPath.section == TaboolaSection.normalEnd.whichSection)
             {
                 regularCell.myLabel.text = cellsNumber[indexPath.item]
             }
@@ -139,7 +140,7 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
-        case 1:
+        case TaboolaSection.widget.whichSection:
             return CGSize(width: view.frame.size.width, height: 1200)
         case TaboolaSection.feed.whichSection:
             return CGSize(width: view.frame.size.width, height: TaboolaView.widgetHeight())
