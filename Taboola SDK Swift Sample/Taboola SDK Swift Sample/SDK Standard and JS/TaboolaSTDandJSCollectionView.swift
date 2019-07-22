@@ -10,13 +10,15 @@ import UIKit
 import TaboolaSDK
 import WebKit
 
-// Dedup time-stamp
-var viewId: String = {
-    let timestamp = Int(Date().timeIntervalSince1970)
-    return "\(timestamp)"
-}()
+
 
 class TaboolaSTDandJSCollectionView: UIViewController {
+    
+    // Dedup time-stamp
+    lazy var viewId: String = {
+        let timestamp = Int(Date().timeIntervalSince1970)
+        return "\(timestamp)"
+    }()
     
     // Creating identifiers for the cellviews.
     let taboolaIdentifier = "TaboolaCell"
@@ -63,6 +65,7 @@ class TaboolaSTDandJSCollectionView: UIViewController {
         taboolaView.setInterceptScroll(true)
         taboolaView.setOptionalModeCommands(["useOnlineTemplate": true])
         taboolaView.viewID = viewId
+        print("HEY " + viewId)
         taboolaView.fetchContent()
         return taboolaView
     }
@@ -110,7 +113,7 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
         case TaboolaSection.widget.whichSection:
             
             let taboolaCell = collectionView.dequeueReusableCell(withReuseIdentifier: taboolaJSIdentifier, for: indexPath) as? TaboolaCollectionJSViewCell ?? TaboolaCollectionJSViewCell()
-            taboolaCell.loadTaboolaJS()
+            taboolaCell.loadTaboolaJS(viewId: viewId)
             return taboolaCell
             
         case TaboolaSection.feed.whichSection:

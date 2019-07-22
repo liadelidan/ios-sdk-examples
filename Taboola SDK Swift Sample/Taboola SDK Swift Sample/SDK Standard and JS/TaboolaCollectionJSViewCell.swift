@@ -13,7 +13,10 @@ import TaboolaSDK
 class TaboolaCollectionJSViewCell: UICollectionViewCell {
     @IBOutlet weak var webView: WKWebView!
     
-    func loadTaboolaJS() {
+    var currentViewId = ""
+    
+    func loadTaboolaJS(viewId: String) {
+        currentViewId = viewId
         TaboolaJS.sharedInstance()?.logLevel = .debug
         TaboolaJS.sharedInstance()?.registerWebView(webView)
         try? loadExamplePage()
@@ -25,6 +28,6 @@ class TaboolaCollectionJSViewCell: UICollectionViewCell {
             return
         }
         let appHtml = try String.init(contentsOfFile: htmlPath, encoding: .utf8)
-        webView.loadHTMLString(appHtml, baseURL: URL(string: "https://cdn.taboola.com/mobile-sdk/init/?\(viewId)"))
+        webView.loadHTMLString(appHtml, baseURL: URL(string: "https://cdn.taboola.com/mobile-sdk/init/?\(currentViewId)"))
     }
 }
