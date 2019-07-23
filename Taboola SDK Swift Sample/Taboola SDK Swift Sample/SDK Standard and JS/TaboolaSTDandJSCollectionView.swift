@@ -156,7 +156,10 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             webView.evaluateJavaScript("document.documentElement.scrollHeight", completionHandler: { (height, error) in
             self.specificWidgetHeight = height as! CGFloat
+            self.specificWidgetHeight += 300.0
             self.collectionView.collectionViewLayout.invalidateLayout()
+            print("HEY")
+            print(self.specificWidgetHeight)
         })
     }
 }
@@ -170,6 +173,4 @@ extension TaboolaSTDandJSCollectionView: TaboolaViewDelegate {
     func onItemClick(_ placementName: String!, withItemId itemId: String!, withClickUrl clickUrl: String!, isOrganic organic: Bool) -> Bool {
         return true
     }
-    
-
 }
