@@ -154,13 +154,14 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            webView.evaluateJavaScript("document.documentElement.scrollHeight", completionHandler: { (height, error) in
+
+        webView.scrollView.isScrollEnabled = false
+        webView.evaluateJavaScript("document.documentElement.scrollHeight", completionHandler: { (height, error) in
             self.specificWidgetHeight = height as! CGFloat
-            self.specificWidgetHeight += 300.0
             self.collectionView.collectionViewLayout.invalidateLayout()
-            print("HEY")
-            print(self.specificWidgetHeight)
         })
+        
+
     }
 }
 
