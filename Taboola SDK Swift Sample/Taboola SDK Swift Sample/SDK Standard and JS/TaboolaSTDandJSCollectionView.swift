@@ -12,13 +12,15 @@ import WebKit
 
 
 
-class TaboolaSTDandJSCollectionView: UIViewController {
+class TaboolaSTDandJSCollectionView: UIViewController, WKNavigationDelegate {
     
     // Dedup time-stamp
     lazy var viewId: String = {
         let timestamp = Int(Date().timeIntervalSince1970)
         return "\(timestamp)"
     }()
+    
+    var didLoadFeed = false
     
     // Creating identifiers for the cellviews.
     let taboolaIdentifier = "TaboolaCell"
@@ -34,7 +36,8 @@ class TaboolaSTDandJSCollectionView: UIViewController {
     var taboolaFeed: TaboolaView!
     
     var taboolaWidgetHeight: CGFloat = 0.0
-    
+    var specificWidgetHeight: CGFloat = 1
+
     fileprivate struct TaboolaSection {
         let placement: String
         let whichSection: Int
@@ -43,13 +46,15 @@ class TaboolaSTDandJSCollectionView: UIViewController {
         static let normalEnd = TaboolaSection(placement: "", whichSection: 2)
         static let widget = TaboolaSection(placement: "Mid Article", whichSection: 1)
         static let feed = TaboolaSection(placement: "Feed without video", whichSection: 3)
-
+        
     }
     
     override func viewDidLoad() {
         
         // Creating the feed.
+        collectionView.delegate = self
         taboolaFeed = taboolaViewFeed()
+        taboolaFeed.fetchContent()
     }
     
     // Function that creates the feed view with the appropriate attributes.
@@ -65,7 +70,6 @@ class TaboolaSTDandJSCollectionView: UIViewController {
         taboolaView.setInterceptScroll(true)
         taboolaView.setOptionalModeCommands(["useOnlineTemplate": true])
         taboolaView.viewID = viewId
-        print("HEY " + viewId)
         taboolaView.fetchContent()
         return taboolaView
     }
@@ -113,7 +117,7 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
         case TaboolaSection.widget.whichSection:
             
             let taboolaCell = collectionView.dequeueReusableCell(withReuseIdentifier: taboolaJSIdentifier, for: indexPath) as? TaboolaCollectionJSViewCell ?? TaboolaCollectionJSViewCell()
-            taboolaCell.loadTaboolaJS(viewId: viewId)
+            taboolaCell.loadTaboolaJS(viewId: viewId, taboolaSpecificCollectionView: self)
             return taboolaCell
             
         case TaboolaSection.feed.whichSection:
@@ -144,7 +148,7 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case TaboolaSection.widget.whichSection:
-            return CGSize(width: view.frame.size.width, height: 1200)
+            return CGSize(width: view.frame.size.width, height: specificWidgetHeight)
         case TaboolaSection.feed.whichSection:
             return CGSize(width: view.frame.size.width, height: TaboolaView.widgetHeight())
         default:
@@ -152,6 +156,12 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
         }
     }
     
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+            webView.evaluateJavaScript("document.documentElement.scrollHeight", completionHandler: { (height, error) in
+            self.specificWidgetHeight = height as! CGFloat
+            self.collectionView.collectionViewLayout.invalidateLayout()
+        })
+    }
 }
 
 extension TaboolaSTDandJSCollectionView: TaboolaViewDelegate {
@@ -163,4 +173,6 @@ extension TaboolaSTDandJSCollectionView: TaboolaViewDelegate {
     func onItemClick(_ placementName: String!, withItemId itemId: String!, withClickUrl clickUrl: String!, isOrganic organic: Bool) -> Bool {
         return true
     }
+    
+
 }
