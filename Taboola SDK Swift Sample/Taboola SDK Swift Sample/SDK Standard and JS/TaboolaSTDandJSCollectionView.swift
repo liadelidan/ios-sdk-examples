@@ -20,8 +20,6 @@ class TaboolaSTDandJSCollectionView: UIViewController, WKNavigationDelegate {
         return "\(timestamp)"
     }()
     
-    var didLoadFeed = false
-    
     // Creating identifiers for the cellviews.
     let taboolaIdentifier = "TaboolaCell"
     let taboolaJSIdentifier = "TaboolaJSCell"
@@ -46,7 +44,6 @@ class TaboolaSTDandJSCollectionView: UIViewController, WKNavigationDelegate {
         static let normalEnd = TaboolaSection(placement: "", whichSection: 2)
         static let widget = TaboolaSection(placement: "Mid Article", whichSection: 1)
         static let feed = TaboolaSection(placement: "Feed without video", whichSection: 3)
-        
     }
     
     override func viewDidLoad() {
