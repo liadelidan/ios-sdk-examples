@@ -22,6 +22,8 @@ class TaboolaSTDandJSCollectionView: UIViewController, WKNavigationDelegate {
     
     var widgetLoadeed = false
     
+    var tempHeight = 0
+    
     // Creating identifiers for the cellviews.
     let taboolaIdentifier = "TaboolaCell"
     let taboolaJSIdentifier = "TaboolaJSCell"
@@ -49,12 +51,15 @@ class TaboolaSTDandJSCollectionView: UIViewController, WKNavigationDelegate {
         static let feed = TaboolaSection(placement: "Feed without video", whichSection: 3)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        webView.scrollView.removeObserver(self, forKeyPath: "contentSize", context: nil)
+        TaboolaJS.sharedInstance()?.unregisterWebView(webView, completion: nil)
+    }
     override func viewDidLoad() {
 
         // Creating the feed.
         collectionView.delegate = self
         taboolaFeed = taboolaViewFeed()
-        taboolaFeed.fetchContent()
     }
     
     // Function that creates the feed view with the appropriate attributes.
@@ -120,8 +125,8 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
             let taboolaCell = collectionView.dequeueReusableCell(withReuseIdentifier: taboolaJSIdentifier, for: indexPath) as? TaboolaCollectionJSViewCell ?? TaboolaCollectionJSViewCell()
             if (!widgetLoadeed)
             {
-                
                 taboolaCell.loadTaboolaJS(viewId: viewId, taboolaSpecificCollectionView: self)
+                webView = taboolaCell.webView
                 widgetLoadeed = true
             }
             return taboolaCell
@@ -155,7 +160,8 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
         switch indexPath.section {
         case TaboolaSection.widget.whichSection:
             print("print in height change")
-            return CGSize(width: view.frame.size.width, height: 1200)
+            print(specificWidgetHeight)
+            return CGSize(width: view.frame.size.width, height: specificWidgetHeight)
         case TaboolaSection.feed.whichSection:
             return CGSize(width: view.frame.size.width, height: TaboolaView.widgetHeight())
         default:
@@ -163,18 +169,33 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
         }
     }
     
-    
+    /*
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         webView.scrollView.isScrollEnabled = false
+        
         webView.evaluateJavaScript("document.documentElement.scrollHeight", completionHandler: { (height, error) in
             specificWidgetHeight = height as! CGFloat
             self.collectionView.collectionViewLayout.invalidateLayout()
             print("HEY")
             print(specificWidgetHeight)
         })
-    }
+    }*/
  
-
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        
+        if (object as AnyObject? === self.webView.scrollView && keyPath == "contentSize") {
+            // we are here because the contentSize of the WebView's scrollview changed.
+            
+            let scrollView = self.webView.scrollView
+            print("print in observer")
+            print(scrollView.contentSize.height)
+            if scrollView.contentSize.height != specificWidgetHeight{
+                specificWidgetHeight = scrollView.contentSize.height
+                self.collectionView.collectionViewLayout.invalidateLayout()
+            }
+        }
+    }
 }
 
 extension TaboolaSTDandJSCollectionView: TaboolaViewDelegate {
@@ -186,4 +207,6 @@ extension TaboolaSTDandJSCollectionView: TaboolaViewDelegate {
     func onItemClick(_ placementName: String!, withItemId itemId: String!, withClickUrl clickUrl: String!, isOrganic organic: Bool) -> Bool {
         return true
     }
+    
 }
+

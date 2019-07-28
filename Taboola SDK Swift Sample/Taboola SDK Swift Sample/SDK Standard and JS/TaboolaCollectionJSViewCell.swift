@@ -12,14 +12,14 @@ import TaboolaSDK
 
 class TaboolaCollectionJSViewCell: UICollectionViewCell, WKNavigationDelegate{
     @IBOutlet weak var webView: WKWebView!
-    
+    var tempWebView: WKWebView!
     var currentViewId = ""
     var cellTaboolaWidgetHeight: CGFloat = 0.0
     
     
-    func loadTaboolaJS(viewId: String, taboolaSpecificCollectionView: TaboolaSTDandJSCollectionView) {
-        //webView.scrollView.addObserver(self, forKeyPath: "contentSize", options:NSKeyValueObservingOptions.new, context: nil)
-
+    func loadTaboolaJS(viewId: String, taboolaSpecificCollectionView: TaboolaSTDandJSCollectionView){
+        webView.scrollView.addObserver(taboolaSpecificCollectionView.self, forKeyPath: "contentSize", options:NSKeyValueObservingOptions.new, context: nil)
+        
         currentViewId = viewId
         TaboolaJS.sharedInstance()?.logLevel = .debug
         TaboolaJS.sharedInstance()?.registerWebView(webView)
@@ -35,19 +35,24 @@ class TaboolaCollectionJSViewCell: UICollectionViewCell, WKNavigationDelegate{
         let appHtml = try String.init(contentsOfFile: htmlPath, encoding: .utf8)
         webView.loadHTMLString(appHtml, baseURL: URL(string: "https://cdn.taboola.com/mobile-sdk/init/?\(currentViewId)"))
     }
-
-    /*
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if (object as AnyObject? === self.webView.scrollView && keyPath == "contentSize") {
-            // we are here because the contentSize of the WebView's scrollview changed.
-            
-            let scrollView = self.webView.scrollView
-            print("LOL")
-            print(scrollView.contentSize.height)
-            specificWidgetHeight = scrollView.contentSize.height
-            //self.myCollectionView.collectionViewLayout.invalidateLayout()
-        }
+    
+    deinit {
+        TaboolaJS.sharedInstance()?.unregisterWebView(webView, completion: nil)
     }
-    */
+
+    
+//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+//        if (object as AnyObject? === self.webView.scrollView && keyPath == "contentSize") {
+//            // we are here because the contentSize of the WebView's scrollview changed.
+//
+//            let scrollView = self.webView.scrollView
+//            print("observed in cell")
+//            print(scrollView.contentSize.height)
+//            specificWidgetHeight = scrollView.contentSize.height
+//            //NotificationCenter.default.post(name: NSNotification.Name(rawValue: "nameOfNotification"), object: nil)
+//
+//        }
+//    }
+    
 }
 
