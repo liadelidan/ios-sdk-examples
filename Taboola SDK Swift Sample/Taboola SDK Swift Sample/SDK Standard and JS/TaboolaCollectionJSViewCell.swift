@@ -15,14 +15,16 @@ class TaboolaCollectionJSViewCell: UICollectionViewCell, WKNavigationDelegate{
     
     var currentViewId = ""
     var cellTaboolaWidgetHeight: CGFloat = 0.0
-
+    
+    
     func loadTaboolaJS(viewId: String, taboolaSpecificCollectionView: TaboolaSTDandJSCollectionView) {
+        //webView.scrollView.addObserver(self, forKeyPath: "contentSize", options:NSKeyValueObservingOptions.new, context: nil)
+
         currentViewId = viewId
         TaboolaJS.sharedInstance()?.logLevel = .debug
         TaboolaJS.sharedInstance()?.registerWebView(webView)
         webView.navigationDelegate = taboolaSpecificCollectionView.self
         try? loadExamplePage()
-        
     }
     
     func loadExamplePage() throws {
@@ -33,5 +35,19 @@ class TaboolaCollectionJSViewCell: UICollectionViewCell, WKNavigationDelegate{
         let appHtml = try String.init(contentsOfFile: htmlPath, encoding: .utf8)
         webView.loadHTMLString(appHtml, baseURL: URL(string: "https://cdn.taboola.com/mobile-sdk/init/?\(currentViewId)"))
     }
+
+    /*
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if (object as AnyObject? === self.webView.scrollView && keyPath == "contentSize") {
+            // we are here because the contentSize of the WebView's scrollview changed.
+            
+            let scrollView = self.webView.scrollView
+            print("LOL")
+            print(scrollView.contentSize.height)
+            specificWidgetHeight = scrollView.contentSize.height
+            //self.myCollectionView.collectionViewLayout.invalidateLayout()
+        }
+    }
+    */
 }
 
