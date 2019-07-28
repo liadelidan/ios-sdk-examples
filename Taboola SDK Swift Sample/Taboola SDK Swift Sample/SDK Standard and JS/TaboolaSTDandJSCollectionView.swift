@@ -10,37 +10,32 @@ import UIKit
 import TaboolaSDK
 import WebKit
 
- var specificWidgetHeight: CGFloat = 1
 
-class TaboolaSTDandJSCollectionView: UIViewController, WKNavigationDelegate {
+
+class TaboolaSTDandJSCollectionView: UIViewController, WKNavigationDelegate, TaboolaContainerDelegate {
     
+    // The dynamic height of the widget cell
+    var widgetHeight: CGFloat = 1
+    // Variable to check that the widget has been loaded once and not more.
+    var widgetLoadeed = false
+    // Constant of a normal height of cell
+    let nativeCellHeight: CGFloat = 200
     // Dedup time-stamp
     lazy var viewId: String = {
         let timestamp = Int(Date().timeIntervalSince1970)
         return "\(timestamp)"
     }()
-    
-    var widgetLoadeed = false
-    
-    var tempHeight = 0
-    
     // Creating identifiers for the cellviews.
     let taboolaIdentifier = "TaboolaCell"
     let taboolaJSIdentifier = "TaboolaJSCell"
     let normalIdentifier = "normalCell"
-    
     // A simple String array to be used by the label inside the cell.
     let cellsNumber = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-    var webView = WKWebView()
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     var taboolaFeed: TaboolaView!
     
-    var currentViewId = ""
-    
-    var taboolaWidgetHeight: CGFloat = 0.0
-
     fileprivate struct TaboolaSection {
         let placement: String
         let whichSection: Int
@@ -51,14 +46,9 @@ class TaboolaSTDandJSCollectionView: UIViewController, WKNavigationDelegate {
         static let feed = TaboolaSection(placement: "Feed without video", whichSection: 3)
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        webView.scrollView.removeObserver(self, forKeyPath: "contentSize", context: nil)
-        TaboolaJS.sharedInstance()?.unregisterWebView(webView, completion: nil)
-    }
     override func viewDidLoad() {
-
+        
         // Creating the feed.
-        collectionView.delegate = self
         taboolaFeed = taboolaViewFeed()
     }
     
@@ -125,8 +115,8 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
             let taboolaCell = collectionView.dequeueReusableCell(withReuseIdentifier: taboolaJSIdentifier, for: indexPath) as? TaboolaCollectionJSViewCell ?? TaboolaCollectionJSViewCell()
             if (!widgetLoadeed)
             {
-                taboolaCell.loadTaboolaJS(viewId: viewId, taboolaSpecificCollectionView: self)
-                webView = taboolaCell.webView
+                taboolaCell.delegate = self
+                taboolaCell.loadTaboolaJS(viewId: viewId)
                 widgetLoadeed = true
             }
             return taboolaCell
@@ -159,43 +149,20 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case TaboolaSection.widget.whichSection:
-            print("print in height change")
-            print(specificWidgetHeight)
-            return CGSize(width: view.frame.size.width, height: specificWidgetHeight)
+            return CGSize(width: view.frame.size.width, height: widgetHeight)
         case TaboolaSection.feed.whichSection:
             return CGSize(width: view.frame.size.width, height: TaboolaView.widgetHeight())
         default:
-            return CGSize(width: view.frame.size.width, height: 200)
+            return CGSize(width: view.frame.size.width, height: nativeCellHeight)
         }
     }
-    
-    /*
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        webView.scrollView.isScrollEnabled = false
-        
-        webView.evaluateJavaScript("document.documentElement.scrollHeight", completionHandler: { (height, error) in
-            specificWidgetHeight = height as! CGFloat
-            self.collectionView.collectionViewLayout.invalidateLayout()
-            print("HEY")
-            print(specificWidgetHeight)
-        })
-    }*/
  
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        
-        if (object as AnyObject? === self.webView.scrollView && keyPath == "contentSize") {
-            // we are here because the contentSize of the WebView's scrollview changed.
-            
-            let scrollView = self.webView.scrollView
-            print("print in observer")
-            print(scrollView.contentSize.height)
-            if scrollView.contentSize.height != specificWidgetHeight{
-                specificWidgetHeight = scrollView.contentSize.height
-                self.collectionView.collectionViewLayout.invalidateLayout()
-            }
-        }
+    func didChangeWebViewHeight(height: CGFloat) {
+        widgetHeight = height
+        self.collectionView.collectionViewLayout.invalidateLayout()
     }
+
 }
 
 extension TaboolaSTDandJSCollectionView: TaboolaViewDelegate {

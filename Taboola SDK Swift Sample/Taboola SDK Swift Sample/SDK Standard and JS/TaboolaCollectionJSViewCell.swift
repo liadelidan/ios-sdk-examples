@@ -10,49 +10,63 @@ import UIKit
 import WebKit
 import TaboolaSDK
 
+protocol TaboolaContainerDelegate : class {
+    func didChangeWebViewHeight(height:CGFloat)
+}
+
+
 class TaboolaCollectionJSViewCell: UICollectionViewCell, WKNavigationDelegate{
-    @IBOutlet weak var webView: WKWebView!
-    var tempWebView: WKWebView!
+
+    // Creating a delegate for the TaboolaContainerDelegate protocol
+    weak var delegate: TaboolaContainerDelegate?
+
+    // Creating the webView to be used
+    @IBOutlet weak var webViewJS: WKWebView!
     var currentViewId = ""
     var cellTaboolaWidgetHeight: CGFloat = 0.0
+    var lastHeight: CGFloat = 0.0
     
-    
-    func loadTaboolaJS(viewId: String, taboolaSpecificCollectionView: TaboolaSTDandJSCollectionView){
-        webView.scrollView.addObserver(taboolaSpecificCollectionView.self, forKeyPath: "contentSize", options:NSKeyValueObservingOptions.new, context: nil)
+    // Function that loads the taboola JS widget while adding an observer to check from height changes
+    func loadTaboolaJS(viewId: String){
+        
+        webViewJS.scrollView.addObserver(self, forKeyPath: "contentSize", options:NSKeyValueObservingOptions.new, context: nil)
         
         currentViewId = viewId
         TaboolaJS.sharedInstance()?.logLevel = .debug
-        TaboolaJS.sharedInstance()?.registerWebView(webView)
-        webView.navigationDelegate = taboolaSpecificCollectionView.self
+        TaboolaJS.sharedInstance()?.registerWebView(webViewJS)
         try? loadExamplePage()
     }
     
+    // Function that do the actual HTML loading of the Taboola Widget from the appropriate HTML String
     func loadExamplePage() throws {
         guard let htmlPath = Bundle.main.path(forResource: "sampleContentPageSTDJS", ofType: "html") else {
             print("Error loading HTML")
             return
         }
         let appHtml = try String.init(contentsOfFile: htmlPath, encoding: .utf8)
-        webView.loadHTMLString(appHtml, baseURL: URL(string: "https://cdn.taboola.com/mobile-sdk/init/?\(currentViewId)"))
+        webViewJS.loadHTMLString(appHtml, baseURL: URL(string: "https://cdn.taboola.com/mobile-sdk/init/?\(currentViewId)"))
     }
     
     deinit {
-        TaboolaJS.sharedInstance()?.unregisterWebView(webView, completion: nil)
+        webViewJS.scrollView.removeObserver(self, forKeyPath: "contentSize", context: nil)
+        TaboolaJS.sharedInstance()?.unregisterWebView(webViewJS, completion: nil)
     }
 
+    // Function that observes any height changes of the HTML to be presented, and sends it to the collectionview through the delegate
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+
+        if (object as AnyObject? === self.webViewJS.scrollView && keyPath == "contentSize") {
+            // we are here because the contentSize of the WebView's scrollview changed.
+
+            let scrollView = self.webViewJS.scrollView
+
+            if scrollView.contentSize.height != lastHeight{
+                lastHeight = scrollView.contentSize.height
+                delegate?.didChangeWebViewHeight(height: scrollView.contentSize.height)
+            }
+        }
+    }
     
-//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-//        if (object as AnyObject? === self.webView.scrollView && keyPath == "contentSize") {
-//            // we are here because the contentSize of the WebView's scrollview changed.
-//
-//            let scrollView = self.webView.scrollView
-//            print("observed in cell")
-//            print(scrollView.contentSize.height)
-//            specificWidgetHeight = scrollView.contentSize.height
-//            //NotificationCenter.default.post(name: NSNotification.Name(rawValue: "nameOfNotification"), object: nil)
-//
-//        }
-//    }
     
 }
 

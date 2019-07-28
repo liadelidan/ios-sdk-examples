@@ -1377,7 +1377,7 @@
                                         </constraints>
                                         <size key="customSize" width="263" height="228"/>
                                         <connections>
-                                            <outlet property="webView" destination="ych-Zv-16Y" id="xTC-tJ-dKN"/>
+                                            <outlet property="webViewJS" destination="ych-Zv-16Y" id="4AR-oI-TlR"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="normalCell" id="jZd-DY-469" customClass="NormalViewCell" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target">

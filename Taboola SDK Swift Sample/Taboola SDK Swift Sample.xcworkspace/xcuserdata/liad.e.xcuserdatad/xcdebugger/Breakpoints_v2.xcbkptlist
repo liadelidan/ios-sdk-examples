@@ -9,8 +9,24 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+            filePath = "Taboola SDK Swift Sample/SDK Standard and JS/TaboolaCollectionJSViewCell.swift"
+            timestampString = "586016580.245874"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "deinit"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
             filePath = "Taboola SDK Swift Sample/SDK Standard and JS/NormalViewCell.swift"
-            timestampString = "586006810.333599"
+            timestampString = "586016210.657318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -22,15 +38,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Taboola SDK Swift Sample/SDK Standard and JS/TaboolaSTDandJSCollectionView.swift"
-            timestampString = "586006810.333652"
+            filePath = "Taboola SDK Swift Sample/SDK Standard and JS/TaboolaCollectionJSViewCell.swift"
+            timestampString = "586016580.246389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "deinit"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +58,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Taboola SDK Swift Sample/SDK Standard and JS/TaboolaCollectionJSViewCell.swift"
-            timestampString = "586006810.334687"
+            timestampString = "586016580.246588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "deinit"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Taboola SDK Swift Sample/SDK Standard and JS/TaboolaSTDandJSCollectionView.swift"
+            timestampString = "586016580.246773"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "deinit"
             landmarkType = "7">
          </BreakpointContent>
