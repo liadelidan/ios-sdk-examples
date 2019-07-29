@@ -10,8 +10,4 @@ import UIKit
 
 class NormalViewCell: UICollectionViewCell {
     @IBOutlet weak var myLabel: UILabel!
-    
-    deinit {
-        print("Deleted")
-    }
 }

@@ -156,7 +156,6 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
             return CGSize(width: view.frame.size.width, height: nativeCellHeight)
         }
     }
- 
     
     func didChangeWebViewHeight(height: CGFloat) {
         widgetHeight = height
