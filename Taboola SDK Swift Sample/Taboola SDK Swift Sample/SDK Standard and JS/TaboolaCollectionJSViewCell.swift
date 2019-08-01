@@ -46,11 +46,6 @@ class TaboolaCollectionJSViewCell: UICollectionViewCell, WKNavigationDelegate{
         let appHtml = try String.init(contentsOfFile: htmlPath, encoding: .utf8)
         webViewJS.loadHTMLString(appHtml, baseURL: URL(string: "https://cdn.taboola.com/mobile-sdk/init/?\(currentViewId)"))
     }
-    
-    deinit {
-        webViewJS.scrollView.removeObserver(self, forKeyPath: "contentSize", context: nil)
-        TaboolaJS.sharedInstance()?.unregisterWebView(webViewJS, completion: nil)
-    }
 
     // Function that observes any height changes of the HTML to be presented, and sends it to the collectionview through the delegate
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -66,7 +61,5 @@ class TaboolaCollectionJSViewCell: UICollectionViewCell, WKNavigationDelegate{
             }
         }
     }
-    
-    
 }
 

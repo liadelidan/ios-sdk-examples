@@ -161,7 +161,6 @@ extension TaboolaSTDandJSCollectionView: UICollectionViewDataSource, UICollectio
         widgetHeight = height
         self.collectionView.collectionViewLayout.invalidateLayout()
     }
-
 }
 
 extension TaboolaSTDandJSCollectionView: TaboolaViewDelegate {
