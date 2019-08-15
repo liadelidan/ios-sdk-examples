@@ -14,15 +14,14 @@ struct Message {
   let messageSender: MessageSender
   
   init(message: String, messageSender: MessageSender, username: String) {
-    print("MESSAGE DETAILS")
     self.message = message.withoutWhitespace()
-    print("MESSAGE IS: ")
+    print("Message is: ", terminator:"")
     print(message.withoutWhitespace())
     self.messageSender = messageSender
-    print("MESSAGE SENDER IS: ")
+    print("Message sender is: ", terminator:"")
     print(messageSender)
     self.senderUsername = username
-    print("MESSAGE USERNAME IS: ")
+    print("Message publisher is: ", terminator:"")
     print(username)
   }
 }

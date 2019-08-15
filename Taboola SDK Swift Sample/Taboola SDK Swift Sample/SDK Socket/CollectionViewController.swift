@@ -44,6 +44,7 @@ class CollectionViewController: UIViewController {
         socketConnection.setupNetworkCommunication()
         socketConnection.joinConnection(username: publisherId)
         
+        
         taboolaWidget = taboolaView(mode: TaboolaSection.widget.mode,
                                     placement: TaboolaSection.widget.placement,
                                     scrollIntercept: TaboolaSection.widget.scrollIntercept)
@@ -52,7 +53,7 @@ class CollectionViewController: UIViewController {
                                   scrollIntercept: TaboolaSection.feed.scrollIntercept)
         
         //SOCKET SENDING INFO BACK TO SERVER
-        socketConnection.send(message: "The placement of the widget is " + taboolaWidget.placement)
+//        socketConnection.send(message: "The placement of the widget is " + taboolaWidget.placement)
         taboolaWidget.fetchContent()
     }
     
@@ -161,11 +162,10 @@ extension CollectionViewController: ConnectorDelegate {
 
         if (!firstMessage)
         {
-            print("SERVER MESSAGE")
-            print(message)
-            taboolaWidget.mode = "thumbnails-a"
+//            taboolaWidget.mode = "thumbnails-a"
+            taboolaWidget.mode = message.message
             taboolaWidget.fetchContent()
-//            taboolaWidget.fetchContent()
+            taboolaWidget.fetchContent()
 
         }
         firstMessage = false

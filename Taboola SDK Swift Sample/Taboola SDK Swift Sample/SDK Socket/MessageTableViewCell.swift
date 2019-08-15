@@ -13,10 +13,6 @@ enum MessageSender {
   case someoneElse
 }
 
-class MessageTableViewCell: UITableViewCell {
+class MessageTableViewCell: NSObject {
   var messageSender: MessageSender = .ourself
-  
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
 }
