@@ -42,7 +42,7 @@ class CollectionViewController: UIViewController {
         //SOCKET CONNECTION
         socketConnection.delegate = self
         socketConnection.setupNetworkCommunication()
-        socketConnection.joinConnection(username: publisherId)
+        socketConnection.joinConnection(publisherName: publisherId)
         
         
         taboolaWidget = taboolaView(mode: TaboolaSection.widget.mode,
@@ -131,8 +131,7 @@ extension CollectionViewController: UICollectionViewDataSource, UICollectionView
         default:
             return CGSize(width: view.frame.size.width, height: 200)
         }
-    }
-    
+    }    
 }
 
 extension CollectionViewController: TaboolaViewDelegate {
@@ -162,12 +161,14 @@ extension CollectionViewController: ConnectorDelegate {
 
         if (!firstMessage)
         {
-//            taboolaWidget.mode = "thumbnails-a"
+            taboolaWidget.publisher = message.senderUsername
+            
             taboolaWidget.mode = message.message
-            taboolaWidget.fetchContent()
+            
             taboolaWidget.fetchContent()
 
         }
         firstMessage = false
+        taboolaWidget.fetchContent()
     }
 }

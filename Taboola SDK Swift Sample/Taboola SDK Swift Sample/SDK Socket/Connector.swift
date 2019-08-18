@@ -22,8 +22,9 @@ class Connector: NSObject {
     var outputStream: OutputStream!
     
     //2
-    var username = ""
+    var publisherName = ""
     
+    var widgetName = "alternating-widget-without-video"
     //3
     let maxReadLength = 4096
     
@@ -33,11 +34,19 @@ class Connector: NSObject {
         var writeStream: Unmanaged<CFWriteStream>?
         
         // 2
+//        CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,
+//                                           "localhost" as CFString,
+//                                           80,
+//                                           &readStream,
+//                                           &writeStream)
+        let addr = getWiFiAddress()
+
         CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,
-                                           "localhost" as CFString,
-                                           80,
+                                           addr! as CFString,
+                                           8080,
                                            &readStream,
                                            &writeStream)
+        
         
         inputStream = readStream!.takeRetainedValue()
         outputStream = writeStream!.takeRetainedValue()
@@ -49,12 +58,12 @@ class Connector: NSObject {
         outputStream.open()
     }
     
-    func joinConnection(username: String) {
+    func joinConnection(publisherName: String) {
         //1
-        let data = "iam:\(username)".data(using: .utf8)!
+        let data = "iam:\(publisherName)".data(using: .utf8)!
         
-        //2
-        self.username = username
+        //2        
+        self.publisherName = publisherName
         
         //3
         _ = data.withUnsafeBytes {
@@ -96,25 +105,29 @@ class Connector: NSObject {
                                         length: Int) -> Message? {
         //1
         guard
-            let stringArray = String(
+             let stringArray = String(
                 bytesNoCopy: buffer,
                 length: length,
                 encoding: .utf8,
                 freeWhenDone: true)?.components(separatedBy: ":"),
-            let name = stringArray.first,
-            let message = stringArray.last
+            let publisherName = stringArray.first,
+            var message = stringArray.last
             else {
                 return nil
         }
+        if (publisherName == message)
+        {
+            message = widgetName
+        }
         //2
         let messageSender: MessageSender =
-            (name == self.username) ? .ourself : .someoneElse
+            (publisherName == self.publisherName) ? .ourself : .someoneElse
         //3
-        return Message(message: message, messageSender: messageSender, username: name)
+        return Message(message: message, messageSender: messageSender, publisherName: publisherName)
     }
     
-    func send(message: String) {
-        let data = "msg:\(message)".data(using: .utf8)!
+    func send(widgetName: String) {
+        let data = "msg:\(widgetName)".data(using: .utf8)!
         
         _ = data.withUnsafeBytes {
             guard let pointer = $0.baseAddress?.assumingMemoryBound(to: UInt8.self) else {
@@ -128,6 +141,41 @@ class Connector: NSObject {
     func stopChatSession() {
         inputStream.close()
         outputStream.close()
+    }
+    
+    // Return IP address of WiFi interface (en0) as a String, or `nil`
+    func getWiFiAddress() -> String? {
+        var address : String?
+        
+        // Get list of all interfaces on the local machine:
+        var ifaddr : UnsafeMutablePointer<ifaddrs>?
+        guard getifaddrs(&ifaddr) == 0 else { return nil }
+        guard let firstAddr = ifaddr else { return nil }
+        
+        // For each interface ...
+        for ifptr in sequence(first: firstAddr, next: { $0.pointee.ifa_next }) {
+            let interface = ifptr.pointee
+            
+            // Check for IPv4 or IPv6 interface:
+            let addrFamily = interface.ifa_addr.pointee.sa_family
+            if addrFamily == UInt8(AF_INET) || addrFamily == UInt8(AF_INET6) {
+                
+                // Check interface name:
+                let name = String(cString: interface.ifa_name)
+                if  name == "en0" {
+                    
+                    // Convert interface address to a human readable string:
+                    var hostname = [CChar](repeating: 0, count: Int(NI_MAXHOST))
+                    getnameinfo(interface.ifa_addr, socklen_t(interface.ifa_addr.pointee.sa_len),
+                                &hostname, socklen_t(hostname.count),
+                                nil, socklen_t(0), NI_NUMERICHOST)
+                    address = String(cString: hostname)
+                }
+            }
+        }
+        freeifaddrs(ifaddr)
+        
+        return address
     }
 }
 

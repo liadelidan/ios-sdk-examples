@@ -13,15 +13,21 @@ struct Message {
   let senderUsername: String
   let messageSender: MessageSender
   
-  init(message: String, messageSender: MessageSender, username: String) {
+  init(message: String, messageSender: MessageSender, publisherName: String) {
     self.message = message.withoutWhitespace()
-    print("Message is: ", terminator:"")
-    print(message.withoutWhitespace())
+    print("Widget is: ", terminator:"")
+    if self.message == "" {
+        print("alternating-widget-without-video")
+    }
+    else
+    {
+        print(message.withoutWhitespace())
+    }
     self.messageSender = messageSender
-    print("Message sender is: ", terminator:"")
+    print("The message sender is: ", terminator:"")
     print(messageSender)
-    self.senderUsername = username
-    print("Message publisher is: ", terminator:"")
-    print(username)
+    self.senderUsername = publisherName
+    print("The publisher is: ", terminator:"")
+    print(publisherName)
   }
 }
