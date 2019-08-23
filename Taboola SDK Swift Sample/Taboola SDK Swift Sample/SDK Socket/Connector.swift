@@ -6,15 +6,19 @@
 //  Copyright © 2019 Taboola LTD. All rights reserved.
 //
 
+import TaboolaSDK
 import Foundation
 import UIKit
 
 protocol ConnectorDelegate: class {
+    func getTaboolaObject() -> TaboolaView
     func received(message: Message)
 }
 
 class Connector: NSObject {
     
+    var taboolaObject: TaboolaView!
+
     weak var delegate: ConnectorDelegate?
     
     //1
@@ -39,10 +43,11 @@ class Connector: NSObject {
 //                                           80,
 //                                           &readStream,
 //                                           &writeStream)
-        let addr = getWiFiAddress()
-
+        var addr = getWiFiAddress()!
+        print(addr)
+        addr = "10.0.0.2"
         CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,
-                                           addr! as CFString,
+                                           addr as CFString,
                                            8080,
                                            &readStream,
                                            &writeStream)
@@ -110,24 +115,34 @@ class Connector: NSObject {
                 length: length,
                 encoding: .utf8,
                 freeWhenDone: true)?.components(separatedBy: ":"),
-            let publisherName = stringArray.first,
-            var message = stringArray.last
+            let recieved = stringArray.first
             else {
                 return nil
         }
-        if (publisherName == message)
-        {
-            message = widgetName
+            if recieved.contains("showinfo")
+            {
+                taboolaObject = self.delegate?.getTaboolaObject()
+                send(message: taboolaObject.publisher)
+            }
+            else if recieved.contains("updatepublisher-")
+            {
+                taboolaObject = self.delegate?.getTaboolaObject()
+                taboolaObject.publisher = recieved.replacingOccurrences(of: "updatepublisher-", with: "")
+                send(message: "Changed")
         }
-        //2
-        let messageSender: MessageSender =
-            (publisherName == self.publisherName) ? .ourself : .someoneElse
+            else if recieved.contains("refresh")
+            {
+                taboolaObject = self.delegate?.getTaboolaObject()
+                taboolaObject.fetchContent()
+                send(message: "Refreshed")
+        }
+        
         //3
-        return Message(message: message, messageSender: messageSender, publisherName: publisherName)
+        return Message(message: stringArray)
     }
     
-    func send(widgetName: String) {
-        let data = "msg:\(widgetName)".data(using: .utf8)!
+    func send(message: String) {
+        let data = "msg:\(message)".data(using: .utf8)!
         
         _ = data.withUnsafeBytes {
             guard let pointer = $0.baseAddress?.assumingMemoryBound(to: UInt8.self) else {

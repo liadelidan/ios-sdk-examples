@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Taboola SDK Swift Sample/SDK Socket/Connector.swift"
-            timestampString = "587825627.63743"
+            timestampString = "588263019.136379"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "processedMessageString(buffer:length:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,13 +26,90 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Taboola SDK Swift Sample/SDK Socket/Connector.swift"
-            timestampString = "587825627.638075"
+            timestampString = "588263019.136445"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "processedMessageString(buffer:length:)"
-            landmarkType = "7">
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "Connector"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Taboola_SDK_Swift_Sample.Connector.taboolaObject.getter : Swift.Optional&lt;__C.TaboolaView&gt;"
+                  moduleName = "Taboola SDK Swift Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liad.e/ios-sdk-examples/Taboola%20SDK%20Swift%20Sample/Taboola%20SDK%20Swift%20Sample/SDK%20Socket/Connector.swift"
+                  timestampString = "588261011.089131"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Taboola_SDK_Swift_Sample.Connector.taboolaObject.setter : Swift.Optional&lt;__C.TaboolaView&gt;"
+                  moduleName = "Taboola SDK Swift Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liad.e/ios-sdk-examples/Taboola%20SDK%20Swift%20Sample/Taboola%20SDK%20Swift%20Sample/SDK%20Socket/Connector.swift"
+                  timestampString = "588261011.0976239"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Taboola_SDK_Swift_Sample.Connector.taboolaObject.modify : Swift.Optional&lt;__C.TaboolaView&gt;"
+                  moduleName = "Taboola SDK Swift Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liad.e/ios-sdk-examples/Taboola%20SDK%20Swift%20Sample/Taboola%20SDK%20Swift%20Sample/SDK%20Socket/Connector.swift"
+                  timestampString = "588261011.1008559"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Taboola_SDK_Swift_Sample.Connector.taboolaObject.modify : Swift.Optional&lt;__C.TaboolaView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Taboola SDK Swift Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liad.e/ios-sdk-examples/Taboola%20SDK%20Swift%20Sample/Taboola%20SDK%20Swift%20Sample/SDK%20Socket/Connector.swift"
+                  timestampString = "588261011.104239"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Taboola_SDK_Swift_Sample.Connector.init() -&gt; Taboola_SDK_Swift_Sample.Connector"
+                  moduleName = "Taboola SDK Swift Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liad.e/ios-sdk-examples/Taboola%20SDK%20Swift%20Sample/Taboola%20SDK%20Swift%20Sample/SDK%20Socket/Connector.swift"
+                  timestampString = "588261011.111128"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -41,13 +118,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Taboola SDK Swift Sample/SDK Socket/Connector.swift"
-            timestampString = "587825627.638343"
+            filePath = "Taboola SDK Swift Sample/SDK Socket/CollectionViewController.swift"
+            timestampString = "588263019.136489"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "processedMessageString(buffer:length:)"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "received(message:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

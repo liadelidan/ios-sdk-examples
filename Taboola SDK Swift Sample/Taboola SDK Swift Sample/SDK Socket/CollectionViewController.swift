@@ -55,6 +55,8 @@ class CollectionViewController: UIViewController {
         //SOCKET SENDING INFO BACK TO SERVER
 //        socketConnection.send(message: "The placement of the widget is " + taboolaWidget.placement)
         taboolaWidget.fetchContent()
+        
+        socketConnection.taboolaObject = taboolaWidget
     }
     
     func taboolaView(mode: String, placement: String, scrollIntercept: Bool) -> TaboolaView {
@@ -159,16 +161,15 @@ extension CollectionViewController: TaboolaViewDelegate {
 extension CollectionViewController: ConnectorDelegate {
     func received(message: Message) {
 
-        if (!firstMessage)
-        {
-            taboolaWidget.publisher = message.senderUsername
-            
-            taboolaWidget.mode = message.message
-            
-            taboolaWidget.fetchContent()
+        //
+        // EXAMPLE MSG FOR TESTING IN SERVER:
+        // msg:sdk-tester,alternating-widget-without-video,Below Article,article,www.example.com,mix
+        //
 
-        }
-        firstMessage = false
-        taboolaWidget.fetchContent()
+
+    }
+    
+    func getTaboolaObject() -> TaboolaView{
+        return taboolaWidget
     }
 }
