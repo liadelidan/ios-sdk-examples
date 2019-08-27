@@ -16,7 +16,6 @@
 		72BFDEDA2304083F0061EF61 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BFDED92304083F0061EF61 /* Message.swift */; };
 		72BFDEDC230408A70061EF61 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BFDEDB230408A70061EF61 /* MessageTableViewCell.swift */; };
 		72BFDEE0230408F10061EF61 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BFDEDF230408F10061EF61 /* StringExtension.swift */; };
-		AF20376A5CCBF2ABAAC4AD5D /* libPods-Taboola SDK Swift Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 457BC400D512B73E04860F2A /* libPods-Taboola SDK Swift Sample.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		DBCFB6F8225366F300701088 /* TBTableViewWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFB6F7225366F300701088 /* TBTableViewWidget.swift */; };
 		DBCFB6FA22536ADD00701088 /* TBTableViewChangeScrollInFeedAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFB6F922536ADD00701088 /* TBTableViewChangeScrollInFeedAuto.swift */; };
 		DC15762B222EC02600BD63FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC15762A222EC02600BD63FA /* AppDelegate.swift */; };
@@ -89,7 +88,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF20376A5CCBF2ABAAC4AD5D /* libPods-Taboola SDK Swift Sample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

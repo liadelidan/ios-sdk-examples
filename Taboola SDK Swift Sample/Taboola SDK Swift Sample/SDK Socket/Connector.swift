@@ -40,15 +40,15 @@ class Connector: NSObject {
         // 2
 //        CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,
 //                                           "localhost" as CFString,
-//                                           80,
+//                                           8080,
 //                                           &readStream,
 //                                           &writeStream)
         var addr = getWiFiAddress()!
         print(addr)
-        addr = "10.0.0.2"
+        addr = "ps001.taboolasyndication.com"
         CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,
                                            addr as CFString,
-                                           8080,
+                                           9090,
                                            &readStream,
                                            &writeStream)
         
@@ -119,30 +119,36 @@ class Connector: NSObject {
             else {
                 return nil
         }
+        taboolaObject = self.delegate?.getTaboolaObject()
             if recieved.contains("showinfo")
             {
-                taboolaObject = self.delegate?.getTaboolaObject()
-                send(message: taboolaObject.publisher)
+                var mnemonic: [String] =  [taboolaObject.publisher,taboolaObject.mode,taboolaObject.placement,taboolaObject.pageType,taboolaObject.pageUrl,taboolaObject.targetType]
+                var myJsonString = ""
+                do {
+                    let data =  try JSONSerialization.data(withJSONObject:mnemonic, options: .prettyPrinted)
+                    myJsonString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as! String
+                } catch {
+                    print(error.localizedDescription)
+                }
+                send(message: myJsonString)
             }
             else if recieved.contains("updatepublisher-")
             {
-                taboolaObject = self.delegate?.getTaboolaObject()
                 taboolaObject.publisher = recieved.replacingOccurrences(of: "updatepublisher-", with: "")
                 send(message: "Changed")
-        }
+            }
             else if recieved.contains("refresh")
             {
-                taboolaObject = self.delegate?.getTaboolaObject()
                 taboolaObject.fetchContent()
-                send(message: "Refreshed")
-        }
+                send(message: "Refreshed the WebView content")
+            }
         
         //3
         return Message(message: stringArray)
     }
     
     func send(message: String) {
-        let data = "msg:\(message)".data(using: .utf8)!
+        let data = "\(message)\n".data(using: .utf8)!
         
         _ = data.withUnsafeBytes {
             guard let pointer = $0.baseAddress?.assumingMemoryBound(to: UInt8.self) else {
