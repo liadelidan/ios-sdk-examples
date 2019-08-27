@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Taboola SDK Swift Sample/SDK Socket/Connector.swift"
-            timestampString = "588599752.06478"
+            timestampString = "588603831.468683"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "processedMessageString(buffer:length:)"
             landmarkType = "7">
          </BreakpointContent>

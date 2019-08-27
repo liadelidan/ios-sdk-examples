@@ -65,7 +65,9 @@ class Connector: NSObject {
     
     func joinConnection(publisherName: String) {
         //1
-        let data = "iam:\(publisherName)".data(using: .utf8)!
+        let uuid = UUID().uuidString
+
+        let data = "UUID number - \(uuid) with publisher-name - \(publisherName) is connected to the session\n".data(using: .utf8)!
         
         //2        
         self.publisherName = publisherName
@@ -122,11 +124,11 @@ class Connector: NSObject {
         taboolaObject = self.delegate?.getTaboolaObject()
             if recieved.contains("showinfo")
             {
-                var mnemonic: [String] =  [taboolaObject.publisher,taboolaObject.mode,taboolaObject.placement,taboolaObject.pageType,taboolaObject.pageUrl,taboolaObject.targetType]
+                let mnemonic: [String] =  [taboolaObject.publisher,taboolaObject.mode,taboolaObject.placement,taboolaObject.pageType,taboolaObject.pageUrl,taboolaObject.targetType]
                 var myJsonString = ""
                 do {
                     let data =  try JSONSerialization.data(withJSONObject:mnemonic, options: .prettyPrinted)
-                    myJsonString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as! String
+                    myJsonString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)! as String
                 } catch {
                     print(error.localizedDescription)
                 }
@@ -135,12 +137,17 @@ class Connector: NSObject {
             else if recieved.contains("updatepublisher-")
             {
                 taboolaObject.publisher = recieved.replacingOccurrences(of: "updatepublisher-", with: "")
-                send(message: "Changed")
+                send(message: "Changed publisher name")
             }
             else if recieved.contains("refresh")
             {
                 taboolaObject.fetchContent()
                 send(message: "Refreshed the WebView content")
+            }
+            else if recieved.contains("updatewidget-")
+            {
+                taboolaObject.mode = recieved.replacingOccurrences(of: "updatepublisher-", with: "")
+                send(message: "Changed widget")
             }
         
         //3

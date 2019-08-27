@@ -161,12 +161,6 @@ extension CollectionViewController: TaboolaViewDelegate {
 extension CollectionViewController: ConnectorDelegate {
     func received(message: Message) {
 
-        //
-        // EXAMPLE MSG FOR TESTING IN SERVER:
-        // msg:sdk-tester,alternating-widget-without-video,Below Article,article,www.example.com,mix
-        //
-
-
     }
     
     func getTaboolaObject() -> TaboolaView{
