@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07B03A15E0B836C26AB806EA /* libPods-Taboola SDK ObjC Samples.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B781906013D9BDA0EB4691C /* libPods-Taboola SDK ObjC Samples.a */; };
+		20784148CE08A5200407AC47 /* Pods_Taboola_SDK_ObjC_Samples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E2F32CCBC535E1DCB0021C7 /* Pods_Taboola_SDK_ObjC_Samples.framework */; };
+		72723333233792000051AB0B /* TableViewChangeScrollInFeedAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = 72723332233792000051AB0B /* TableViewChangeScrollInFeedAuto.m */; };
+		727233362338A83C0051AB0B /* TaboolaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727233352338A83C0051AB0B /* TaboolaTableViewCell.m */; };
+		727233392338AF240051AB0B /* TaboolaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727233382338AF240051AB0B /* TaboolaTableViewCell.xib */; };
 		DB7EB0E62226C9A300E189FB /* MidArticleManualScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D22226C9A300E189FB /* MidArticleManualScrollViewController.m */; };
 		DB7EB0E72226C9A300E189FB /* MidArticleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D42226C9A300E189FB /* MidArticleScrollViewController.m */; };
 		DB7EB0E82226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D92226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m */; };
@@ -33,7 +36,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B781906013D9BDA0EB4691C /* libPods-Taboola SDK ObjC Samples.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Taboola SDK ObjC Samples.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E2F32CCBC535E1DCB0021C7 /* Pods_Taboola_SDK_ObjC_Samples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taboola_SDK_ObjC_Samples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72723331233791E70051AB0B /* TableViewChangeScrollInFeedAuto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewChangeScrollInFeedAuto.h; sourceTree = "<group>"; };
+		72723332233792000051AB0B /* TableViewChangeScrollInFeedAuto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewChangeScrollInFeedAuto.m; sourceTree = "<group>"; };
+		727233352338A83C0051AB0B /* TaboolaTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaboolaTableViewCell.m; sourceTree = "<group>"; };
+		727233372338A8490051AB0B /* TaboolaTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaboolaTableViewCell.h; sourceTree = "<group>"; };
+		727233382338AF240051AB0B /* TaboolaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaboolaTableViewCell.xib; path = "Taboola SDK ObjC Samples/SDK Standard/UICollectionView/CollectionViewChangeScrollInFeedAuto/TaboolaTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		BB954357479751D1D2BE4F67 /* Pods-Taboola SDK ObjC Samples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taboola SDK ObjC Samples.release.xcconfig"; path = "Pods/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples.release.xcconfig"; sourceTree = "<group>"; };
 		BCADE0C501355F99E41392F0 /* Pods-Taboola SDK ObjC Samples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taboola SDK ObjC Samples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples.debug.xcconfig"; sourceTree = "<group>"; };
 		DB7EB0D12226C9A300E189FB /* MidArticleManualScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidArticleManualScrollViewController.h; sourceTree = "<group>"; };
@@ -81,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07B03A15E0B836C26AB806EA /* libPods-Taboola SDK ObjC Samples.a in Frameworks */,
+				20784148CE08A5200407AC47 /* Pods_Taboola_SDK_ObjC_Samples.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,23 +105,52 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		727233302337913C0051AB0B /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				727233342338A8250051AB0B /* TaboolaTableViewCell */,
+				7272333A2338AFF40051AB0B /* TableViewChangeScrollInFeedAuto */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		727233342338A8250051AB0B /* TaboolaTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				727233372338A8490051AB0B /* TaboolaTableViewCell.h */,
+				727233352338A83C0051AB0B /* TaboolaTableViewCell.m */,
+				727233382338AF240051AB0B /* TaboolaTableViewCell.xib */,
+			);
+			path = TaboolaTableViewCell;
+			sourceTree = "<group>";
+		};
+		7272333A2338AFF40051AB0B /* TableViewChangeScrollInFeedAuto */ = {
+			isa = PBXGroup;
+			children = (
+				72723331233791E70051AB0B /* TableViewChangeScrollInFeedAuto.h */,
+				72723332233792000051AB0B /* TableViewChangeScrollInFeedAuto.m */,
+			);
+			path = TableViewChangeScrollInFeedAuto;
+			sourceTree = "<group>";
+		};
 		80C01FFA10C5D3CE416CD812 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0B781906013D9BDA0EB4691C /* libPods-Taboola SDK ObjC Samples.a */,
+				0E2F32CCBC535E1DCB0021C7 /* Pods_Taboola_SDK_ObjC_Samples.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DB7EB0CE2226C9A300E189FB /* SDK Standerd */ = {
+		DB7EB0CE2226C9A300E189FB /* SDK Standard */ = {
 			isa = PBXGroup;
 			children = (
+				727233302337913C0051AB0B /* UITableView */,
 				DB7EB0D62226C9A300E189FB /* UICollectionView */,
 				DB7EB0CF2226C9A300E189FB /* UIScrollView */,
 				DBE63467222803880042B65A /* RandomColor.h */,
 				DBE63468222803880042B65A /* RandomColor.m */,
 			);
-			path = "SDK Standerd";
+			path = "SDK Standard";
 			sourceTree = "<group>";
 		};
 		DB7EB0CF2226C9A300E189FB /* UIScrollView */ = {
@@ -291,7 +328,7 @@
 			children = (
 				DCBA833621EE462C0053B37E /* AppDelegate.h */,
 				DCBA833721EE462C0053B37E /* AppDelegate.m */,
-				DB7EB0CE2226C9A300E189FB /* SDK Standerd */,
+				DB7EB0CE2226C9A300E189FB /* SDK Standard */,
 				DB7EB0EE2226C9AB00E189FB /* SDK JS */,
 				DB7EB0EF2226C9B500E189FB /* SDK API */,
 				DCBA833C21EE462C0053B37E /* Main.storyboard */,
@@ -369,6 +406,7 @@
 				DCBA834021EE46300053B37E /* Assets.xcassets in Resources */,
 				DCBA833E21EE462C0053B37E /* Main.storyboard in Resources */,
 				DB7EB12C2226CADA00E189FB /* sampleContentPageLazyLoad.html in Resources */,
+				727233392338AF240051AB0B /* TaboolaTableViewCell.xib in Resources */,
 				DBE634652227D3D90042B65A /* TaboolaCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,16 +442,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples-resources.sh",
-				"${PODS_ROOT}/TaboolaSDK/TaboolaSDK.framework/Versions/A/TaboolaResources/TaboolaVIewResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TaboolaVIewResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -435,9 +468,11 @@
 				DB7EB12E2226CADB00E189FB /* SplitFeedJsViewController.m in Sources */,
 				DB7EB0EA2226C9A300E189FB /* CollectionViewChangeScrollInFeedManual.m in Sources */,
 				DB7EB12D2226CADB00E189FB /* PageContentViewController.m in Sources */,
+				72723333233792000051AB0B /* TableViewChangeScrollInFeedAuto.m in Sources */,
 				DCBA834621EE46300053B37E /* main.m in Sources */,
 				DB7EB12B2226CADA00E189FB /* FetchOnDemandPageViewController.m in Sources */,
 				DB7EB0E72226C9A300E189FB /* MidArticleScrollViewController.m in Sources */,
+				727233362338A83C0051AB0B /* TaboolaTableViewCell.m in Sources */,
 				DBE63469222803880042B65A /* RandomColor.m in Sources */,
 				DCBA833821EE462C0053B37E /* AppDelegate.m in Sources */,
 				DB7EB13C2226CED700E189FB /* WidgetViewController.m in Sources */,
