@@ -7,7 +7,7 @@ target 'Taboola SDK ObjC Samples' do
   source 'https://github.com/taboola/taboola-cocopods.git'
   
   source 'https://github.com/CocoaPods/Specs.git'
-  pod 'TaboolaSDK', '2.3.3'
+  pod 'TaboolaSDK', '2.3.5'
   # Pods for Taboola SDK ObjC Samples
 
 end
