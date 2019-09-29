@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		20784148CE08A5200407AC47 /* Pods_Taboola_SDK_ObjC_Samples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E2F32CCBC535E1DCB0021C7 /* Pods_Taboola_SDK_ObjC_Samples.framework */; };
 		72723333233792000051AB0B /* TableViewChangeScrollInFeedAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = 72723332233792000051AB0B /* TableViewChangeScrollInFeedAuto.m */; };
-		727233362338A83C0051AB0B /* TaboolaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727233352338A83C0051AB0B /* TaboolaTableViewCell.m */; };
-		727233392338AF240051AB0B /* TaboolaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727233382338AF240051AB0B /* TaboolaTableViewCell.xib */; };
+		727631742340BDD600E254A1 /* TaboolaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727233352338A83C0051AB0B /* TaboolaTableViewCell.m */; };
+		727631752340BDEF00E254A1 /* TaboolaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727233382338AF240051AB0B /* TaboolaTableViewCell.xib */; };
 		DB7EB0E62226C9A300E189FB /* MidArticleManualScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D22226C9A300E189FB /* MidArticleManualScrollViewController.m */; };
 		DB7EB0E72226C9A300E189FB /* MidArticleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D42226C9A300E189FB /* MidArticleScrollViewController.m */; };
 		DB7EB0E82226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D92226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m */; };
@@ -400,13 +400,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				727631752340BDEF00E254A1 /* TaboolaTableViewCell.xib in Resources */,
 				DB7EB1292226CADA00E189FB /* sampleContentPage.html in Resources */,
 				DCBA834321EE46300053B37E /* LaunchScreen.storyboard in Resources */,
 				DB7EB12F2226CADB00E189FB /* sampleContentPageSplitFeed.html in Resources */,
 				DCBA834021EE46300053B37E /* Assets.xcassets in Resources */,
 				DCBA833E21EE462C0053B37E /* Main.storyboard in Resources */,
 				DB7EB12C2226CADA00E189FB /* sampleContentPageLazyLoad.html in Resources */,
-				727233392338AF240051AB0B /* TaboolaTableViewCell.xib in Resources */,
 				DBE634652227D3D90042B65A /* TaboolaCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				727631742340BDD600E254A1 /* TaboolaTableViewCell.m in Sources */,
 				DB7EB0E82226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m in Sources */,
 				DB7EB13D2226CED700E189FB /* FeedViewController.m in Sources */,
 				DB7EB0E62226C9A300E189FB /* MidArticleManualScrollViewController.m in Sources */,
@@ -472,7 +473,6 @@
 				DCBA834621EE46300053B37E /* main.m in Sources */,
 				DB7EB12B2226CADA00E189FB /* FetchOnDemandPageViewController.m in Sources */,
 				DB7EB0E72226C9A300E189FB /* MidArticleScrollViewController.m in Sources */,
-				727233362338A83C0051AB0B /* TaboolaTableViewCell.m in Sources */,
 				DBE63469222803880042B65A /* RandomColor.m in Sources */,
 				DCBA833821EE462C0053B37E /* AppDelegate.m in Sources */,
 				DB7EB13C2226CED700E189FB /* WidgetViewController.m in Sources */,

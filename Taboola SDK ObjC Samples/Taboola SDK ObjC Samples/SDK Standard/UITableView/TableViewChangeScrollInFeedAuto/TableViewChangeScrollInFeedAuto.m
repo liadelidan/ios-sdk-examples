@@ -10,90 +10,82 @@
 #import "TaboolaTableViewCell.h"
 #import <TaboolaSDK/TaboolaSDK.h>
 #import "RandomColor.h"
+#import <WebKit/WebKit.h>
 
-@interface TableViewChangeScrollInFeedAuto () <UITableViewDelegate,UITableViewDataSource, TaboolaViewDelegate>
+
+@interface TableViewChangeScrollInFeedAuto () <TaboolaViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic) TaboolaView* taboolaWidget;
-@property (nonatomic) TaboolaView* taboolaFeed;
 
-@property (nonatomic) CGFloat taboolaWidgetHeight;
-
-@property (nonatomic, strong) NSString *viewId;
-
-@property (nonatomic) BOOL didLoadFeed;
+@property (nonatomic, strong) TaboolaView *taboolaView;
+@property (nonatomic) NSUInteger taboolaSection;
 
 @end
-
-typedef NS_ENUM(NSInteger, TaboolaSection) {
-    TaboolaSectionMid = 1,
-    TaboolaSectionFeed = 3
-};
 
 @implementation TableViewChangeScrollInFeedAuto
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    int timestamp = [[NSDate date] timeIntervalSince1970];
-    _viewId = [NSString stringWithFormat:@"%d",timestamp];
-    _taboolaWidget = [self loadTaboolaWithMode:@"alternating-widget-without-video" placement:@"Below Article" scrollIntercept:NO];
-    _taboolaFeed = [self loadTaboolaWithMode:@"thumbs-feed-01" placement:@"Feed without video" scrollIntercept:YES];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    _taboolaSection = 1;
+    [self setupCollectionView];
+    _taboolaView = [[TaboolaView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
+    _taboolaView.delegate = self;
+    _taboolaView.mode = @"thumbs-feed-01";
+    _taboolaView.publisher = @"sdk-tester";
+    _taboolaView.pageType = @"article";
+    _taboolaView.pageUrl = @"http://www.example.com";
+    _taboolaView.placement = @"Feed without video";
+    _taboolaView.targetType = @"mix";
+    _taboolaView.logLevel = LogLevelDebug;
+    [_taboolaView setInterceptScroll:YES];
+    [_taboolaView setProgressBarAnimationTime:0.7];
+//    [_taboolaView setOptionalPageCommands:@{@"useOnlineTemplate":[NSNumber numberWithBool:YES]}];
+    [_taboolaView fetchContent];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    if (@available(iOS 10, *)) {
+        for (UIView *wView in _taboolaView.subviews) {
+            if ([wView isKindOfClass:[WKWebView class]]) {
+                [wView setNeedsLayout];
+            }
+        }
+    }
     
-    [_taboolaWidget fetchContent];
 }
 
-- (TaboolaView*)loadTaboolaWithMode:(NSString*)mode placement:(NSString*)placement scrollIntercept:(BOOL)scrollIntercept {
-    TaboolaView *taboolaView = [[TaboolaView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
-    taboolaView.delegate = self;
-    taboolaView.mode = mode;
-    taboolaView.publisher = @"sdk-tester";
-    taboolaView.pageType = @"article";
-    taboolaView.pageUrl = @"http://www.example.com";
-    taboolaView.placement = placement;
-    taboolaView.targetType = @"mix";
-    [taboolaView setInterceptScroll:scrollIntercept];
-    taboolaView.logLevel = LogLevelDebug;
-    taboolaView.viewID = _viewId;
-    return taboolaView;
+- (void)setupCollectionView {
+    [self.tableView registerNib:[UINib nibWithNibName:@"TaboolaTableViewCell" bundle:nil] forCellReuseIdentifier:@"TaboolaTableCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"randomCell" bundle:nil] forCellReuseIdentifier:@"randomCell"];
 }
 
-#pragma mark - UITableViewDataSource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return section == _taboolaSection ? 1 : 15;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 4){
-        return _taboolaWidgetHeight;
-    }
-    else{
-        return 200;
-    }
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == TaboolaSectionMid) {
-        TaboolaTableViewCell *cell = [tableView dequeueReusableCellWithReuseIdentifier:@"MyIdentifier"];
-
-        TaboolaTableViewCell* taboolaCell = [tableView dequeueReusableCellWithReuseIdentifier:@"TaboolaTableCell" forIndexPath:indexPath];
-        [self clearTaboolaInReusedCell:taboolaCell];
-        return taboolaCell;
-
-    } else if (indexPath.section == TaboolaSectionFeed) {
-        TaboolaTableViewCell* taboolaCell = [tableView dequeueReusableCellWithReuseIdentifier:@"TaboolaCell" forIndexPath:indexPath];
-        [self clearTaboolaInReusedCell:taboolaCell];
-        [taboolaCell.contentView addSubview:_taboolaFeed];
-        return taboolaCell;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([indexPath section] == _taboolaSection) {
+        TaboolaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaboolaTableCell" forIndexPath:indexPath];
+        [self clearTaboolaInReusedCell:cell];
+        [cell.contentView addSubview:_taboolaView];
+        [self setTaboolaConstraintsToSuper:cell.contentView];
+        return cell;
     } else {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithReuseIdentifier:@"randomCell" forIndexPath:indexPath];
-        cell.contentView.backgroundColor = [RandomColor setRandomColor];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"randomCellTable" forIndexPath:indexPath];
         return cell;
     }
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return indexPath.section == _taboolaSection ? TaboolaView.widgetHeight : 200;
+}
+
 
 -(void)clearTaboolaInReusedCell:(TaboolaTableViewCell*)cell {
     for (UIView *view in [cell.contentView subviews]) {
@@ -101,33 +93,61 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
     }
 }
 
--(void)dealloc {
-    [_taboolaWidget reset];
-    [_taboolaFeed reset];
+
+-(void)setTaboolaConstraintsToSuper:(UIView*)superView {
+    CGRect tabooleRect = _taboolaView.frame;
+    tabooleRect.size.width = self.view.frame.size.width;
+    [_taboolaView setFrame:tabooleRect];
+    _taboolaView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    //Trailing
+    NSLayoutConstraint *trailing =[NSLayoutConstraint
+                                   constraintWithItem:_taboolaView
+                                   attribute:NSLayoutAttributeTrailing
+                                   relatedBy:NSLayoutRelationEqual
+                                   toItem:superView
+                                   attribute:NSLayoutAttributeTrailing
+                                   multiplier:1.0f
+                                   constant:0.f];
+    
+    //Leading
+    
+    NSLayoutConstraint *leading = [NSLayoutConstraint
+                                   constraintWithItem:_taboolaView
+                                   attribute:NSLayoutAttributeLeading
+                                   relatedBy:NSLayoutRelationEqual
+                                   toItem:superView
+                                   attribute:NSLayoutAttributeLeading
+                                   multiplier:1.0f
+                                   constant:0.f];
+    
+    //Bottom
+    NSLayoutConstraint *bottom =[NSLayoutConstraint
+                                 constraintWithItem:_taboolaView
+                                 attribute:NSLayoutAttributeBottom
+                                 relatedBy:NSLayoutRelationEqual
+                                 toItem:superView
+                                 attribute:NSLayoutAttributeBottom
+                                 multiplier:1.0f
+                                 constant:0.f];
+    
+    
+    //Top
+    NSLayoutConstraint *top =[NSLayoutConstraint
+                              constraintWithItem:_taboolaView
+                              attribute:NSLayoutAttributeTop
+                              relatedBy:NSLayoutRelationEqual
+                              toItem:superView
+                              attribute:NSLayoutAttributeTop
+                              multiplier:1.0f
+                              constant:0.f];
+    
+    //Add constraints to the Parent
+    [superView addConstraint:trailing];
+    [superView addConstraint:bottom];
+    [superView addConstraint:leading];
+    [superView addConstraint:top];
 }
 
-#pragma mark - TaboolaViewDelegate
-
-- (void)taboolaView:(UIView *)taboolaView didLoadPlacementNamed:(NSString *)placementName withHeight:(CGFloat)height {
-    if ([placementName isEqualToString:@"Below Article"]) {
-        _taboolaWidgetHeight = height;
-        [self.tableView.setNeedsLayout];
-        [myView setNeedsLayout];
-        if (!_didLoadFeed) {
-            _didLoadFeed = YES;
-            // We are loading the feed only when the widget finished loading- for dedup.
-            [_taboolaFeed fetchContent];
-        }
-    }
-}
-
-- (void)taboolaView:(UIView *)taboolaView didFailToLoadPlacementNamed:(NSString *)placementName withErrorMessage:(NSString *)error {
-    NSLog(@"%@", error);
-}
-
--(BOOL)onItemClick:(NSString *)placementName withItemId:(NSString *)itemId withClickUrl:(NSString *)clickUrl isOrganic:(BOOL)organic {
-    return YES;
-}
 
 @end
-

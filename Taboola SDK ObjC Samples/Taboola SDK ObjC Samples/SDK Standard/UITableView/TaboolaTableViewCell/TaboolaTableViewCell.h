@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TaboolaTableViewCell : UITableView
+@interface TaboolaTableViewCell : UITableViewCell
 @end
