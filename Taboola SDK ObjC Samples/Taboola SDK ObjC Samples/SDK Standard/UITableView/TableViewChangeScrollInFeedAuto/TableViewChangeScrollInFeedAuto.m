@@ -12,7 +12,6 @@
 #import "RandomColor.h"
 #import <WebKit/WebKit.h>
 
-
 @interface TableViewChangeScrollInFeedAuto () <TaboolaViewDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -46,7 +45,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return section == _taboolaSection ? 1 : 10;
+    return section == _taboolaSection ? 1 : 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
