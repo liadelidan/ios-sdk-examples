@@ -1138,9 +1138,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eGO-1e-cxI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eGO-1e-cxI">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaboolaTableCell" rowHeight="147" id="q4r-Bf-6gU" userLabel="TaboolaCell">
@@ -1160,9 +1159,19 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Z9u-lt-Avf" id="DdE-ZU-7xD"/>
+                                    <outlet property="delegate" destination="Z9u-lt-Avf" id="Mnt-8m-aTJ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eGO-1e-cxI" firstAttribute="top" secondItem="2cz-00-tb0" secondAttribute="top" id="FHb-Pp-ggh"/>
+                            <constraint firstItem="eGO-1e-cxI" firstAttribute="bottom" secondItem="2cz-00-tb0" secondAttribute="bottom" id="TF5-0Y-nyW"/>
+                            <constraint firstItem="eGO-1e-cxI" firstAttribute="leading" secondItem="0qb-pW-kw5" secondAttribute="leading" id="g7d-Ym-uCx"/>
+                            <constraint firstAttribute="trailing" secondItem="eGO-1e-cxI" secondAttribute="trailing" id="xhq-ru-tPV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2cz-00-tb0"/>
                     </view>
                     <connections>
