@@ -8,7 +8,7 @@
 import TaboolaSDK
 import XCTest
 
-class Taboola_SDK_Swift_Sample_Tests: XCTestCase, TaboolaViewDelegate {
+class TaboolaSDKSwiftSampleTests: XCTestCase, TaboolaViewDelegate {
 
     private var didReceiveAdExpectation: XCTestExpectation!
     private var adView: UIView!
