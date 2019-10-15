@@ -26,21 +26,15 @@ class TaboolaSDKSwiftSampleTests: XCTestCase, TaboolaViewDelegate {
     func testTaboolaDidReceiveAd() {
         didReceiveAdExpectation = expectation(description: "taboolaDidReceiveAd")
         
-        let taboolaView = TaboolaView()
+        let taboolaView = TaboolaView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         taboolaView.delegate = self
-        taboolaView.autoResizeHeight = true
-        taboolaView.scrollEnable = false
-        taboolaView.enableClickHandler = true
         
-        taboolaView.mode = "thumbnails-sdk1"
-        taboolaView.publisher = "betterbytheminute-app"
+        taboolaView.mode = "alternating-1x2-widget"
+        taboolaView.publisher = "sdk-tester"
         taboolaView.pageType = "article"
         taboolaView.pageUrl = "http://www.example.com"
-        taboolaView.placement = "Mobile"
+        taboolaView.placement = "Below Article"
         taboolaView.targetType = "mix"
-        
-        let pageDict = ["referrer": "http://www.example.com/ref"]
-        taboolaView.setOptionalPageCommands(pageDict)
         
         taboolaView.fetchContent()
         
@@ -50,8 +44,8 @@ class TaboolaSDKSwiftSampleTests: XCTestCase, TaboolaViewDelegate {
         XCTAssertNotNil(self.adView)
     }
     
-    func taboolaDidReceiveAd(_ view: UIView!) {
-        adView = view
+    func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {
+        adView = taboolaView
         didReceiveAdExpectation.fulfill()
     }
     
