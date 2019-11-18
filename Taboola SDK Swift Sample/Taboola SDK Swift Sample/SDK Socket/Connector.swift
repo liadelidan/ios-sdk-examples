@@ -146,7 +146,7 @@ class Connector: NSObject {
             }
             else if recieved.contains("updatewidget-")
             {
-                taboolaObject.mode = recieved.replacingOccurrences(of: "updatepublisher-", with: "")
+                taboolaObject.mode = recieved.replacingOccurrences(of: "updatewidget-", with: "")
                 send(message: "Changed widget")
             }
         
