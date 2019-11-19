@@ -45,7 +45,8 @@ class Connector: NSObject {
 //                                           &writeStream)
         var addr = getWiFiAddress()!
         print(addr)
-        addr = "ps001.taboolasyndication.com"
+        //addr = "ps001.taboolasyndication.com"
+        addr = "localhost"
         CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,
                                            addr as CFString,
                                            9090,
@@ -117,10 +118,12 @@ class Connector: NSObject {
                 length: length,
                 encoding: .utf8,
                 freeWhenDone: true)?.components(separatedBy: ":"),
-            let recieved = stringArray.first
+            var recieved = stringArray.first
             else {
                 return nil
         }
+        
+        recieved = String(recieved.filter { !" \n\t\r".contains($0) })
         taboolaObject = self.delegate?.getTaboolaObject()
             if recieved.contains("showinfo")
             {
@@ -133,6 +136,15 @@ class Connector: NSObject {
                     print(error.localizedDescription)
                 }
                 send(message: myJsonString)
+            }
+            else if recieved.contains("showheights")
+            {
+                let taboolaWidth = taboolaObject.bounds.size.width.self
+                let taboolaHeight = taboolaObject.bounds.size.height.self
+                                
+                send(message: "The width of the widget is:  \(taboolaWidth)")
+                send(message: "The height of the widget is:  \(taboolaHeight)")
+
             }
             else if recieved.contains("updatepublisher-")
             {
@@ -149,7 +161,7 @@ class Connector: NSObject {
                 taboolaObject.mode = recieved.replacingOccurrences(of: "updatewidget-", with: "")
                 send(message: "Changed widget")
             }
-        
+            
         //3
         return Message(message: stringArray)
     }
