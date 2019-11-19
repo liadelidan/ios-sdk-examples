@@ -80,6 +80,7 @@ class Connector: NSObject {
                 return
             }
             //4
+            
             outputStream.write(pointer, maxLength: data.count)
         }
     }
