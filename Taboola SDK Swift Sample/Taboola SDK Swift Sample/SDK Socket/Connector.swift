@@ -142,7 +142,7 @@ class Connector: NSObject {
             {
                 let taboolaWidth = taboolaObject.bounds.size.width.self
                 let taboolaHeight = taboolaObject.bounds.size.height.self
-                                
+                
                 send(message: "The width of the widget is:  \(taboolaWidth)")
                 send(message: "The height of the widget is:  \(taboolaHeight)")
 

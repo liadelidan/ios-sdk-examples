@@ -14,8 +14,6 @@
 		72BFDED62304041A0061EF61 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BFDED52304041A0061EF61 /* CollectionViewController.swift */; };
 		72BFDED8230407FA0061EF61 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BFDED7230407FA0061EF61 /* Connector.swift */; };
 		72BFDEDA2304083F0061EF61 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BFDED92304083F0061EF61 /* Message.swift */; };
-		72BFDEDC230408A70061EF61 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BFDEDB230408A70061EF61 /* MessageTableViewCell.swift */; };
-		72BFDEE0230408F10061EF61 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BFDEDF230408F10061EF61 /* StringExtension.swift */; };
 		C705F59D012BCCD307EA0DA1 /* libPods-Taboola SDK Swift Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 457BC400D512B73E04860F2A /* libPods-Taboola SDK Swift Sample.a */; };
 		DBCFB6F8225366F300701088 /* TBTableViewWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFB6F7225366F300701088 /* TBTableViewWidget.swift */; };
 		DBCFB6FA22536ADD00701088 /* TBTableViewChangeScrollInFeedAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFB6F922536ADD00701088 /* TBTableViewChangeScrollInFeedAuto.swift */; };
@@ -53,8 +51,6 @@
 		72BFDED52304041A0061EF61 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		72BFDED7230407FA0061EF61 /* Connector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
 		72BFDED92304083F0061EF61 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		72BFDEDB230408A70061EF61 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
-		72BFDEDF230408F10061EF61 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		A963269005112E472ED79A21 /* Pods-Taboola SDK Swift Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taboola SDK Swift Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-Taboola SDK Swift Sample/Pods-Taboola SDK Swift Sample.release.xcconfig"; sourceTree = "<group>"; };
 		DBCFB6F7225366F300701088 /* TBTableViewWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBTableViewWidget.swift; sourceTree = "<group>"; };
 		DBCFB6F922536ADD00701088 /* TBTableViewChangeScrollInFeedAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBTableViewChangeScrollInFeedAuto.swift; sourceTree = "<group>"; };
@@ -121,8 +117,6 @@
 				72BFDED52304041A0061EF61 /* CollectionViewController.swift */,
 				72BFDED7230407FA0061EF61 /* Connector.swift */,
 				72BFDED92304083F0061EF61 /* Message.swift */,
-				72BFDEDB230408A70061EF61 /* MessageTableViewCell.swift */,
-				72BFDEDF230408F10061EF61 /* StringExtension.swift */,
 			);
 			path = "SDK Socket";
 			sourceTree = "<group>";
@@ -441,7 +435,6 @@
 				DCF03A6322393F860010FC32 /* UIColor+Random.swift in Sources */,
 				DCF03A59223920820010FC32 /* WidgetViewController.swift in Sources */,
 				DCF03A7C2242745E0010FC32 /* CollectionViewChangeScrollInFeedManual.swift in Sources */,
-				72BFDEDC230408A70061EF61 /* MessageTableViewCell.swift in Sources */,
 				DBCFB6F8225366F300701088 /* TBTableViewWidget.swift in Sources */,
 				DC157648222ED05900BD63FA /* FetchOnDemandPageViewController.swift in Sources */,
 				DCF03A77223FCD400010FC32 /* CollectionViewChangeScrollInFeedAuto.swift in Sources */,
@@ -459,7 +452,6 @@
 				DCF03A5F223923EA0010FC32 /* FeedTableViewCell.swift in Sources */,
 				72BFDED62304041A0061EF61 /* CollectionViewController.swift in Sources */,
 				7213401122E49C1300EBAB2B /* TaboolaSTDandJSCollectionView.swift in Sources */,
-				72BFDEE0230408F10061EF61 /* StringExtension.swift in Sources */,
 				DC15762B222EC02600BD63FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
