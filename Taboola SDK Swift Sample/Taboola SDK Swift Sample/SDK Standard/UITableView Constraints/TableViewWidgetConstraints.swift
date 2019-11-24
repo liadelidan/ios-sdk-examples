@@ -19,15 +19,13 @@ extension UIColor {
 }
 
 class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
-    private var firstTaboolaCell: TaboolaCellConstraints?
-    private var secondTaboolaCell: TaboolaCellConstraints?
+    private var taboolaCell: TaboolaCellConstraints?
     private var didLoadFirstTaboola: Bool = false
-    private var didLoadSecondTaboola: Bool = false
 
     private var cells: [String] {
         var data = [String]()
-        for i in 0...50 {
-            if i % 25 == 0 && i != 0 {
+        for i in 0...20 {
+            if i == 10 {
                 data.append("taboola")
             }
             data.append("cell")
@@ -60,14 +58,10 @@ class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
     }
     
     private func buildFirstTaboolaCell() {
-        firstTaboolaCell = buildTaboolaCell()
+        taboolaCell = buildTaboolaCell()
     }
     
-    private func buildSecondTaboolaCell() {
-        secondTaboolaCell = buildTaboolaCell()
-    }
-    
-    private func creareLoadingCell() -> UITableViewCell {
+    private func createLoadingCell() -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.textAlignment = .center
         cell.textLabel?.text = "Loading Taboola Web View Ad..."
@@ -79,19 +73,14 @@ class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
         let dataType = cells[index]
         
         if dataType == "taboola" {
-            if indexPath.row == 25 {
+            if indexPath.row == 10 {
                 if !didLoadFirstTaboola {
                     didLoadFirstTaboola = true
-                    firstTaboolaCell?.addTaboolaSubview()
+                    taboolaCell?.addTaboolaSubview()
                 }
-                return firstTaboolaCell ?? creareLoadingCell()
-            } else if indexPath.row == 51 {
-                if !didLoadSecondTaboola {
-                    didLoadSecondTaboola = true
-                    secondTaboolaCell?.addTaboolaSubview()
-                }
-                return secondTaboolaCell ?? creareLoadingCell()
-            } else {
+                return taboolaCell ?? createLoadingCell()
+            }
+            else {
                 fatalError("Taboola at unexpected index path")
             }
          }
@@ -104,22 +93,10 @@ class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
     }
     
     func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {
-        if let firstCell = firstTaboolaCell,
+        if let firstCell = taboolaCell,
             firstCell.customTaboolaContent?.taboolaView == taboolaView {
-            firstTaboolaCell?.customTaboolaContent?.update(height: height)
+            taboolaCell?.customTaboolaContent?.update(height: height)
 
-            
-            // Create the second taboola cell if it doesn't already exist
-            if secondTaboolaCell == nil {
-                buildSecondTaboolaCell()
-            }
-        } else {
-            secondTaboolaCell?.customTaboolaContent?.update(height: height)
-            
-//            secondTaboolaCell?.layoutIfNeeded()
-//            tableView.layoutSubviews()
-//            tableView.beginUpdates()
-//            tableView.endUpdates()
         }
         print("Taboola webview - loaded a placement with taboolaView: \(taboolaView) - height = \(height)")
         tableView.reloadData()
