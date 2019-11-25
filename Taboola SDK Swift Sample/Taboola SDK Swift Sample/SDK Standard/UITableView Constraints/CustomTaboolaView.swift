@@ -54,12 +54,12 @@ class CustomTaboolaView: UIView {
         guard let taboolaView = taboolaView else {
             return
         }
-                
-        taboolaView.publisher = "foxnews-iosapp"
-        taboolaView.placement = "Below Article - iOS Tablet"
+        
+        taboolaView.publisher = "sdk-tester"
+        taboolaView.placement = "Below Article"
         taboolaView.pageType = "article"
-        taboolaView.mode = "thumbnails-b"
-        taboolaView.pageUrl = "https://foxnews.com"
+        taboolaView.mode = "alternating-widget-without-video"
+        taboolaView.pageUrl = "http://www.example.com"
         taboolaView.fetchContent()
         print("Taboola webview - LOADING with taboolaView: \(taboolaView)")
     }

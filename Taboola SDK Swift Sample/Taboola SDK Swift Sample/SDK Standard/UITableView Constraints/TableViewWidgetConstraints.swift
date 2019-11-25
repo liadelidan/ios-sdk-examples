@@ -20,7 +20,7 @@ extension UIColor {
 
 class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
     private var taboolaCell: TaboolaCellConstraints?
-    private var didLoadFirstTaboola: Bool = false
+    private var didLoadTaboola: Bool = false
 
     private var cells: [String] {
         var data = [String]()
@@ -74,8 +74,8 @@ class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
         
         if dataType == "taboola" {
             if indexPath.row == 10 {
-                if !didLoadFirstTaboola {
-                    didLoadFirstTaboola = true
+                if !didLoadTaboola {
+                    didLoadTaboola = true
                     taboolaCell?.addTaboolaSubview()
                 }
                 return taboolaCell ?? createLoadingCell()
