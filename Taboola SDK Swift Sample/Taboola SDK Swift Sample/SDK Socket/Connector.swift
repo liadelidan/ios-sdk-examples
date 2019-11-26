@@ -179,7 +179,7 @@ class Connector: NSObject {
         }
     }
     
-    func stopChatSession() {
+    func stopSession() {
         inputStream.close()
         outputStream.close()
     }
@@ -228,7 +228,7 @@ extension Connector: StreamDelegate {
             readAvailableBytes(stream: aStream as! InputStream)
         case .endEncountered:
             print("stopping chat session")
-            stopChatSession()
+            stopSession()
         case .errorOccurred:
             print("error occurred")
         case .hasSpaceAvailable:

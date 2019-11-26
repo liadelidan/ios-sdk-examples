@@ -78,6 +78,8 @@ class CollectionViewController: UIViewController {
     deinit {
         taboolaWidget.reset()
         taboolaFeed.reset()
+        socketConnection.stopSession()
+
     }
     
     func setTaboolaConstraints(taboolaCell:UICollectionViewCell, taboolaView:inout TaboolaView) {
