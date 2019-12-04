@@ -45,8 +45,8 @@ class Connector: NSObject {
 //                                           &writeStream)
         var addr = getWiFiAddress()!
         print(addr)
-        //addr = "ps001.taboolasyndication.com"
-        addr = "localhost"
+        addr = "ps001.taboolasyndication.com"
+//        addr = "localhost"
         CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,
                                            addr as CFString,
                                            9090,
@@ -143,8 +143,7 @@ class Connector: NSObject {
                 let taboolaWidth = taboolaObject.bounds.size.width.self
                 let taboolaHeight = taboolaObject.bounds.size.height.self
                 
-                send(message: "The width of the widget is:  \(taboolaWidth)")
-                send(message: "The height of the widget is:  \(taboolaHeight)")
+                send(message: "The width of the widget is:  \(taboolaWidth) The height of the widget is:  \(taboolaHeight)")
 
             }
             else if recieved.contains("updatepublisher-")
@@ -155,6 +154,7 @@ class Connector: NSObject {
             else if recieved.contains("refresh")
             {
                 taboolaObject.fetchContent()
+                taboolaObject.fetchContent()
                 send(message: "Refreshed the WebView content")
             }
             else if recieved.contains("updatewidget-")
@@ -162,7 +162,26 @@ class Connector: NSObject {
                 taboolaObject.mode = recieved.replacingOccurrences(of: "updatewidget-", with: "")
                 send(message: "Changed widget")
             }
-            
+            else if recieved.contains("updateplacement-")
+            {
+                taboolaObject.placement = recieved.replacingOccurrences(of: "updateplacement-", with: "")
+                send(message: "Changed placement")
+            }
+            else if recieved.contains("updatepageurl-")
+            {
+                taboolaObject.pageUrl = recieved.replacingOccurrences(of: "updatepageurl-", with: "")
+                send(message: "Changed page url")
+            }
+            else if recieved.contains("updatepagetype-")
+            {
+                taboolaObject.pageType = recieved.replacingOccurrences(of: "updatepagetype-", with: "")
+                send(message: "Changed page type")
+            }
+            else if recieved.contains("updatetargettype-")
+            {
+                taboolaObject.targetType = recieved.replacingOccurrences(of: "updatetargettype-", with: "")
+                send(message: "Changed target type")
+            }
         //3
         return Message(message: stringArray)
     }
