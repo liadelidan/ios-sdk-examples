@@ -5,7 +5,7 @@ DEPENDENCIES:
   - TaboolaSDK (= 2.3.3)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - TaboolaSDK
 
 SPEC CHECKSUMS:

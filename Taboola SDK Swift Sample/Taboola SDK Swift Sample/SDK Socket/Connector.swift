@@ -13,11 +13,13 @@ import UIKit
 protocol ConnectorDelegate: class {
     func getTaboolaObject() -> TaboolaView
     func received(message: Message)
+    func getParentObject() -> NSObject
 }
 
 class Connector: NSObject {
     
     var taboolaObject: TaboolaView!
+    var parentView: NSObject!
 
     weak var delegate: ConnectorDelegate?
     
@@ -124,8 +126,9 @@ class Connector: NSObject {
                 return nil
         }
         
-        recieved = String(recieved.filter { !" \n\t\r".contains($0) })
+//        recieved = String(recieved.filter { !" \n\t\r".contains($0) })
         taboolaObject = self.delegate?.getTaboolaObject()
+        parentView = self.delegate?.getParentObject()
             if recieved.contains("showinfo")
             {
                 let mnemonic: [String] =  [taboolaObject.publisher,taboolaObject.mode,taboolaObject.placement,taboolaObject.pageType,taboolaObject.pageUrl,taboolaObject.targetType]
@@ -181,6 +184,13 @@ class Connector: NSObject {
             {
                 taboolaObject.targetType = recieved.replacingOccurrences(of: "updatetargettype-", with: "")
                 send(message: "Changed target type")
+            }
+            else if recieved.contains("parentview")
+            {
+                taboolaObject.targetType = recieved.replacingOccurrences(of: "parentview", with: "")
+                print("HEY")
+                print(parentView.description)
+                send(message: (parentView.description))
             }
         //3
         return Message(message: stringArray)

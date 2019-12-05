@@ -168,4 +168,8 @@ extension CollectionViewController: ConnectorDelegate {
     func getTaboolaObject() -> TaboolaView{
         return taboolaWidget
     }
+    
+    func getParentObject() -> NSObject{
+        return collectionView
+    }
 }
