@@ -139,6 +139,7 @@ class Connector: NSObject {
                 } catch {
                     print(error.localizedDescription)
                 }
+
                 send(message: myJsonString)
             }
             else if recieved.contains("showheights")
@@ -158,7 +159,10 @@ class Connector: NSObject {
             {
                 taboolaObject.fetchContent()
                 taboolaObject.fetchContent()
-                send(message: "Refreshed the WebView content")
+                let uuid = UUID().uuidString
+
+                let data = "Refreshed the WebView content of iPhone with UUID number: \(uuid)"
+                send(message: data)
             }
             else if recieved.contains("updatewidget-")
             {
