@@ -45,9 +45,9 @@ class Connector: NSObject {
 //                                           8080,
 //                                           &readStream,
 //                                           &writeStream)
-        var addr = getWiFiAddress()!
-        print(addr)
-        addr = "ps001.taboolasyndication.com"
+//        var addr = getWiFiAddress()!
+//        print(addr)
+        var addr = "ps001.taboolasyndication.com"
 //        addr = "localhost"
         CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,
                                            addr as CFString,
@@ -188,11 +188,10 @@ class Connector: NSObject {
             else if recieved.contains("parentview")
             {
                 taboolaObject.targetType = recieved.replacingOccurrences(of: "parentview", with: "")
-                print("HEY")
                 print(parentView.description)
                 send(message: (parentView.description))
             }
-        //3
+
         return Message(message: stringArray)
     }
     
