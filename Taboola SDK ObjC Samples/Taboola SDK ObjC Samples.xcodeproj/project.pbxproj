@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07B03A15E0B836C26AB806EA /* libPods-Taboola SDK ObjC Samples.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B781906013D9BDA0EB4691C /* libPods-Taboola SDK ObjC Samples.a */; };
+		7226B7DA23A0E9E000AD3126 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7226B7D923A0E9E000AD3126 /* CollectionViewController.m */; };
+		7226B7DD23A0F3C000AD3126 /* Connector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7226B7DC23A0F3C000AD3126 /* Connector.m */; };
+		D44FB47C9D1BAEA6E5B6E7D5 /* Pods_Taboola_SDK_ObjC_Samples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB55162D40E2F29F62CF66 /* Pods_Taboola_SDK_ObjC_Samples.framework */; };
 		DB7EB0E62226C9A300E189FB /* MidArticleManualScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D22226C9A300E189FB /* MidArticleManualScrollViewController.m */; };
 		DB7EB0E72226C9A300E189FB /* MidArticleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D42226C9A300E189FB /* MidArticleScrollViewController.m */; };
 		DB7EB0E82226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D92226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m */; };
@@ -33,7 +35,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B781906013D9BDA0EB4691C /* libPods-Taboola SDK ObjC Samples.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Taboola SDK ObjC Samples.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7226B7D923A0E9E000AD3126 /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		7226B7DB23A0E9F200AD3126 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		7226B7DC23A0F3C000AD3126 /* Connector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Connector.m; sourceTree = "<group>"; };
+		7226B7DE23A0F3CE00AD3126 /* Connector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Connector.h; sourceTree = "<group>"; };
+		78BB55162D40E2F29F62CF66 /* Pods_Taboola_SDK_ObjC_Samples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taboola_SDK_ObjC_Samples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB954357479751D1D2BE4F67 /* Pods-Taboola SDK ObjC Samples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taboola SDK ObjC Samples.release.xcconfig"; path = "Pods/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples.release.xcconfig"; sourceTree = "<group>"; };
 		BCADE0C501355F99E41392F0 /* Pods-Taboola SDK ObjC Samples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taboola SDK ObjC Samples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples.debug.xcconfig"; sourceTree = "<group>"; };
 		DB7EB0D12226C9A300E189FB /* MidArticleManualScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidArticleManualScrollViewController.h; sourceTree = "<group>"; };
@@ -81,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07B03A15E0B836C26AB806EA /* libPods-Taboola SDK ObjC Samples.a in Frameworks */,
+				D44FB47C9D1BAEA6E5B6E7D5 /* Pods_Taboola_SDK_ObjC_Samples.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,10 +103,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7226B7D523A0E72500AD3126 /* SDK Socket */ = {
+			isa = PBXGroup;
+			children = (
+				7226B7DB23A0E9F200AD3126 /* CollectionViewController.h */,
+				7226B7D923A0E9E000AD3126 /* CollectionViewController.m */,
+				7226B7DC23A0F3C000AD3126 /* Connector.m */,
+				7226B7DE23A0F3CE00AD3126 /* Connector.h */,
+			);
+			path = "SDK Socket";
+			sourceTree = "<group>";
+		};
 		80C01FFA10C5D3CE416CD812 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0B781906013D9BDA0EB4691C /* libPods-Taboola SDK ObjC Samples.a */,
+				78BB55162D40E2F29F62CF66 /* Pods_Taboola_SDK_ObjC_Samples.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -291,6 +308,7 @@
 			children = (
 				DCBA833621EE462C0053B37E /* AppDelegate.h */,
 				DCBA833721EE462C0053B37E /* AppDelegate.m */,
+				7226B7D523A0E72500AD3126 /* SDK Socket */,
 				DB7EB0CE2226C9A300E189FB /* SDK Standerd */,
 				DB7EB0EE2226C9AB00E189FB /* SDK JS */,
 				DB7EB0EF2226C9B500E189FB /* SDK API */,
@@ -336,7 +354,7 @@
 				TargetAttributes = {
 					DCBA833221EE462C0053B37E = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -404,16 +422,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples-resources.sh",
-				"${PODS_ROOT}/TaboolaSDK/TaboolaSDK.framework/Versions/A/TaboolaResources/TaboolaVIewResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TaboolaVIewResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -427,7 +440,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7226B7DA23A0E9E000AD3126 /* CollectionViewController.m in Sources */,
 				DB7EB0E82226C9A300E189FB /* CollectionViewChangeScrollInFeedAuto.m in Sources */,
+				7226B7DD23A0F3C000AD3126 /* Connector.m in Sources */,
 				DB7EB13D2226CED700E189FB /* FeedViewController.m in Sources */,
 				DB7EB0E62226C9A300E189FB /* MidArticleManualScrollViewController.m in Sources */,
 				DB7EB12A2226CADA00E189FB /* MidArticleJsViewController.m in Sources */,
@@ -595,6 +610,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taboola.Taboola-SDK-ObjC-Samples";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Taboola SDK ObjC Samples/SDK Socket/Taboola SDK ObjC Samples-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -617,6 +633,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taboola.Taboola-SDK-ObjC-Samples";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Taboola SDK ObjC Samples/SDK Socket/Taboola SDK ObjC Samples-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
