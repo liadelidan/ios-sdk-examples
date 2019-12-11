@@ -30,20 +30,34 @@
 
 @end
 
+
+@implementation Connector
+
+-(void)setupNetworkCommunicatio{
+    
+    CFReadStreamRef readStream;
+    CFWriteStreamRef writeStream;
+
+    NSString *addr = @"ps001.taboolasyndication.com";
+    //        addr = "localhost"
+    
+    CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, (__bridge CFStringRef _Null_unspecified)(addr), 9090, &readStream, &writeStream);
+
+    
+            inputStream = readStream!.takeRetainedValue()
+            outputStream = writeStream!.takeRetainedValue()
+            inputStream.delegate = self
+            inputStream.schedule(in: .current, forMode: .common)
+            outputStream.schedule(in: .current, forMode: .common)
+            
+            inputStream.open()
+            outputStream.open()
+}
+
 #pragma mark - TaboolaViewDelegate
 
-- (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)event;
-
-- (void)taboolaView:(UIView *)taboolaView didLoadPlacementNamed:(NSString *)placementName withHeight:(CGFloat)height {
-    if ([placementName isEqualToString:@"Below Article"]) {
-        _taboolaWidgetHeight = height;
-        [self.collectionView.collectionViewLayout invalidateLayout];
-        if (!_didLoadFeed) {
-            _didLoadFeed = YES;
-            // We are loading the feed only when the widget finished loading- for dedup.
-            [_taboolaFeed fetchContent];
-        }
-    }
+-(void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)event{
+    
 }
 
 extension Connector: StreamDelegate {
@@ -64,3 +78,5 @@ extension Connector: StreamDelegate {
         }
     }
 }
+
+@end
