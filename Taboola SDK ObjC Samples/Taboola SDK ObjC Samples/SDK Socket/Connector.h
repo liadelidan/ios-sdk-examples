@@ -6,8 +6,12 @@
 //  Copyright © 2019 Taboola. All rights reserved.
 //
 
-#ifndef Connector_h
-#define Connector_h
+#import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
 
-#endif /* Connector_h */
+@interface Connector : NSObject
+
+@end
+
+NS_ASSUME_NONNULL_END

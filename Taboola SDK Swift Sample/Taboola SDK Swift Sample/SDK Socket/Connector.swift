@@ -30,7 +30,6 @@ class Connector: NSObject {
     //2
     var publisherName = ""
     
-    var widgetName = "alternating-widget-without-video"
     //3
     let maxReadLength = 4096
     

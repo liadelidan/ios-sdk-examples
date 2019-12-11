@@ -35,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		720E8F1223A124A70062E9D3 /* ConnectorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectorDelegate.h; sourceTree = "<group>"; };
 		7226B7D923A0E9E000AD3126 /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		7226B7DB23A0E9F200AD3126 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		7226B7DC23A0F3C000AD3126 /* Connector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Connector.m; sourceTree = "<group>"; };
@@ -108,8 +109,9 @@
 			children = (
 				7226B7DB23A0E9F200AD3126 /* CollectionViewController.h */,
 				7226B7D923A0E9E000AD3126 /* CollectionViewController.m */,
-				7226B7DC23A0F3C000AD3126 /* Connector.m */,
 				7226B7DE23A0F3CE00AD3126 /* Connector.h */,
+				7226B7DC23A0F3C000AD3126 /* Connector.m */,
+				720E8F1223A124A70062E9D3 /* ConnectorDelegate.h */,
 			);
 			path = "SDK Socket";
 			sourceTree = "<group>";
