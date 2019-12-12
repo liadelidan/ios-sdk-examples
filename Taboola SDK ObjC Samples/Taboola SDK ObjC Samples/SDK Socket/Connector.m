@@ -12,7 +12,7 @@
 #import "Connector.h"
 #import "ConnectorDelegate.h"
 
-@interface Connector () <ConnectorDelegate>
+@interface Connector () <ConnectorDelegate, NSStreamDelegate>
 
 @property (nonatomic) TaboolaView* taboolaObject;
 
@@ -24,9 +24,9 @@
 
 @property (nonatomic) id<ConnectorDelegate> delegate;
 
-@property (nonatomic) NSInputStream* InputStream;
+@property (nonatomic, retain) NSInputStream *inputStream;
 
-@property (nonatomic) NSOutputStream* OutputStream;
+@property (nonatomic, retain) NSOutputStream *outputStream;
 
 @end
 
@@ -34,24 +34,25 @@
 @implementation Connector
 
 -(void)setupNetworkCommunicatio{
-    
     CFReadStreamRef readStream;
     CFWriteStreamRef writeStream;
 
     NSString *addr = @"ps001.taboolasyndication.com";
     //        addr = "localhost"
     
-    CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, (__bridge CFStringRef _Null_unspecified)(addr), 9090, &readStream, &writeStream);
+    CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, (__bridge CFStringRef)(addr), 9090, &readStream, &writeStream);
 
+    _inputStream = (NSInputStream *)CFBridgingRelease(readStream);
+    _outputStream = (NSOutputStream *)CFBridgingRelease(writeStream);
+
+    [_inputStream setDelegate:self];
+    [_outputStream setDelegate:self];
     
-            inputStream = readStream!.takeRetainedValue()
-            outputStream = writeStream!.takeRetainedValue()
-            inputStream.delegate = self
-            inputStream.schedule(in: .current, forMode: .common)
-            outputStream.schedule(in: .current, forMode: .common)
-            
-            inputStream.open()
-            outputStream.open()
+    [_inputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    [_outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    
+    [_inputStream open];
+    [_outputStream open];
 }
 
 #pragma mark - TaboolaViewDelegate
