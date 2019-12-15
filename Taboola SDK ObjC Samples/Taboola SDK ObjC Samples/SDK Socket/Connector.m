@@ -11,6 +11,7 @@
 #import "TaboolaCollectionViewCell.h"
 #import "Connector.h"
 #import "ConnectorDelegate.h"
+#import "Message.h"
 
 @interface Connector () <ConnectorDelegate, NSStreamDelegate>
 
@@ -81,138 +82,49 @@
                 NSString *mess = [[NSString alloc] initWithBytes:buffer length:len encoding:NSASCIIStringEncoding];
                 incoming_message = [NSString stringWithFormat:@"%@%@",incoming_message,mess];
                 
-                processedMessageString(buffer,len);
+                Message *message = [Message processedMessageString(buffer,len)];
 
-                _delegate.received(incoming_message);
+                _delegate.received(message);
             }
         }
     }
 }
 
--(Message)processedMessageString:(uint8_t*)buffer (int)length{
-    
+-(Message*)processedMessageString:(uint8_t*)buffer (int)length{
     
     NSString *stringArrayinit = [[NSString alloc] initWithBytes:buffer->utf8text
                                                  length:length
                                                encoding:NSUTF8StringEncoding];
-    
     NSString *stringArrayinit = init
 
     
     NSString stringArrayinit = (bytesNoCopy:length:encoding:freeWhenDone:)
     
-    NSString* stringArray = NSString(buffer,length,.UTF8Char,true)
+    NSString* stringArray = NSString(buffer,length,.UTF8Char,true).
     
-     let stringArray = String(
-        bytesNoCopy: buffer,
-        length: length,
-        encoding: .utf8,
-        freeWhenDone: true)?.components(separatedBy: ":"),
-    var recieved = stringArray.first
-    else {
-        return nil
-    }
 }
-    
-    
-//        recieved = String(recieved.filter { !" \n\t\r".contains($0) })
-    taboolaObject = self.delegate?.getTaboolaObject()
-    parentView = self.delegate?.getParentObject()
-        if recieved.contains("showinfo")
-        {
-            let mnemonic: [String] =  [taboolaObject.publisher,taboolaObject.mode,taboolaObject.placement,taboolaObject.pageType,taboolaObject.pageUrl,taboolaObject.targetType]
-            var myJsonString = ""
-            do {
-                let data =  try JSONSerialization.data(withJSONObject:mnemonic, options: .prettyPrinted)
-                myJsonString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)! as String
-            } catch {
-                print(error.localizedDescription)
-            }
 
-            send(message: myJsonString)
-        }
-        else if recieved.contains("showheights")
-        {
-            let taboolaWidth = taboolaObject.bounds.size.width.self
-            let taboolaHeight = taboolaObject.bounds.size.height.self
-            
-            send(message: "The width of the widget is:  \(taboolaWidth) The height of the widget is:  \(taboolaHeight)")
-
-        }
-        else if recieved.contains("updatepublisher-")
-        {
-            taboolaObject.publisher = recieved.replacingOccurrences(of: "updatepublisher-", with: "")
-            send(message: "Changed publisher name")
-        }
-        else if recieved.contains("refresh")
-        {
-            taboolaObject.fetchContent()
-            taboolaObject.fetchContent()
-            let uuid = UUID().uuidString
-
-            let data = "Refreshed the WebView content of iPhone with UUID number: \(uuid)"
-            send(message: data)
-        }
-        else if recieved.contains("updatewidget-")
-        {
-            taboolaObject.mode = recieved.replacingOccurrences(of: "updatewidget-", with: "")
-            send(message: "Changed widget")
-        }
-        else if recieved.contains("updateplacement-")
-        {
-            taboolaObject.placement = recieved.replacingOccurrences(of: "updateplacement-", with: "")
-            send(message: "Changed placement")
-        }
-        else if recieved.contains("updatepageurl-")
-        {
-            taboolaObject.pageUrl = recieved.replacingOccurrences(of: "updatepageurl-", with: "")
-            send(message: "Changed page url")
-        }
-        else if recieved.contains("updatepagetype-")
-        {
-            taboolaObject.pageType = recieved.replacingOccurrences(of: "updatepagetype-", with: "")
-            send(message: "Changed page type")
-        }
-        else if recieved.contains("updatetargettype-")
-        {
-            taboolaObject.targetType = recieved.replacingOccurrences(of: "updatetargettype-", with: "")
-            send(message: "Changed target type")
-        }
-        else if recieved.contains("parentview")
-        {
-            taboolaObject.targetType = recieved.replacingOccurrences(of: "parentview", with: "")
-            print(parentView.description)
-            send(message: (parentView.description))
-        }
-
-    return Message(message: stringArray)
+-(void)stopSession{
+    _inputStream.close;
+    _outputStream.close;
 }
+
 
 #pragma mark - TaboolaViewDelegate
 
 -(void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)event{
     switch (event) {
         case NSStreamEventHasBytesAvailable:
-             NSInputStream
-            break;
+            CFReadStreamHasBytesAvailable((InputStream*)aStream);
+        case NSStreamEventEndEncountered:
+            stopSession
+        case NSStreamEventErrorOccurred:
+        
+        case NSStreamEventHasSpaceAvailable:
             
         default:
             break;
     }
-        switch eventCode {
-        case .hasBytesAvailable:
-            print("new message received")
-            readAvailableBytes(stream: aStream as! InputStream)
-        case .endEncountered:
-            print("stopping chat session")
-            stopSession()
-        case .errorOccurred:
-            print("error occurred")
-        case .hasSpaceAvailable:
-            print("has space available")
-        default:
-            print("some other event...")
-        }
 }
 
 @end
