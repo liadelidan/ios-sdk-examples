@@ -115,7 +115,7 @@
 -(void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)event{
     switch (event) {
         case NSStreamEventHasBytesAvailable:
-            CFReadStreamHasBytesAvailable((InputStream*)aStream);
+            CFReadStreamHasBytesAvailable((_inputStream*)aStream);
         case NSStreamEventEndEncountered:
             stopSession
         case NSStreamEventErrorOccurred:

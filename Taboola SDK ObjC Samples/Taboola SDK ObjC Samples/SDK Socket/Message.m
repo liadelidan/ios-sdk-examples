@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "Message.h"
 
+
+@interface Message ()
+@property (nonatomic) NSString* publisherName;
+
+@end
+
 @implementation Message : NSObject  {
     
 }
