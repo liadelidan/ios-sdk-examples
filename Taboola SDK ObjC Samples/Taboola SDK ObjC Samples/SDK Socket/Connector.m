@@ -12,8 +12,10 @@
 #import "Connector.h"
 #import "ConnectorDelegate.h"
 #import "Message.h"
+#import "CollectionViewController.m"
 
-@interface Connector () <ConnectorDelegate, NSStreamDelegate>
+
+@interface Connector () <NSStreamDelegate, ConnectorDelegateNew>
 
 @property (nonatomic) TaboolaView* taboolaObject;
 
@@ -45,9 +47,8 @@
 
     _inputStream = (NSInputStream *)CFBridgingRelease(readStream);
     _outputStream = (NSOutputStream *)CFBridgingRelease(writeStream);
-
-    [_inputStream setDelegate:self];
-    [_outputStream setDelegate:self];
+    
+    _inputStream.delegate = self;
     
     [_inputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     [_outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
@@ -79,24 +80,23 @@
         while ([_inputStream hasBytesAvailable]) {
             len = (int)[_inputStream read:buffer maxLength:sizeof(buffer)];
             if (len > 0) {
-                NSString *mess = [[NSString alloc] initWithBytes:buffer length:len encoding:NSASCIIStringEncoding];
-                incoming_message = [NSString stringWithFormat:@"%@%@",incoming_message,mess];
                 
-                Message *message = [Message processedMessageString(buffer,len)];
-
+                Message *message = [self processedMessageString:buffer length:len];
+                
                 _delegate.received(message);
             }
         }
     }
 }
 
--(Message*)processedMessageString:(uint8_t*)buffer (int)length{
+-(Message*)processedMessageString:(uint8_t*)buffer length:(int)length{
+    
+    NSString *mess = [[NSString alloc] initWithBytes:buffer length:len encoding:NSASCIIStringEncoding];
+    incoming_message = [NSString stringWithFormat:@"%@%@",incoming_message,mess];
     
     NSString *stringArrayinit = [[NSString alloc] initWithBytes:buffer->utf8text
                                                  length:length
                                                encoding:NSUTF8StringEncoding];
-    NSString *stringArrayinit = init
-
     
     NSString stringArrayinit = (bytesNoCopy:length:encoding:freeWhenDone:)
     

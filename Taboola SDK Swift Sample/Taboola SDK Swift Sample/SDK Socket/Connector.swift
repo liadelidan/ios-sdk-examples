@@ -12,7 +12,6 @@ import UIKit
 
 protocol ConnectorDelegate: class {
     func getTaboolaObject() -> TaboolaView
-    func received(message: Message)
     func getParentObject() -> NSObject
 }
 
@@ -102,17 +101,13 @@ class Connector: NSObject {
             }
             
             // Construct the Message object
-            if let message =
-                processedMessageString(buffer: buffer, length: numberOfBytesRead) {
-                // Notify interested parties
-                delegate?.received(message: message)
-            }
-            
+            processedMessageString(buffer: buffer, length: numberOfBytesRead)
+
         }
     }
     
     private func processedMessageString(buffer: UnsafeMutablePointer<UInt8>,
-                                        length: Int) -> Message? {
+                                        length: Int) {
         //1
         guard
              let stringArray = String(
@@ -122,8 +117,8 @@ class Connector: NSObject {
                 freeWhenDone: true)?.components(separatedBy: ":"),
             var recieved = stringArray.first
             else {
-                return nil
-        }
+                return
+            }
         
 //        recieved = String(recieved.filter { !" \n\t\r".contains($0) })
         taboolaObject = self.delegate?.getTaboolaObject()
@@ -194,8 +189,6 @@ class Connector: NSObject {
                 print(parentView.description)
                 send(message: (parentView.description))
             }
-
-        return Message(message: stringArray)
     }
     
     func send(message: String) {

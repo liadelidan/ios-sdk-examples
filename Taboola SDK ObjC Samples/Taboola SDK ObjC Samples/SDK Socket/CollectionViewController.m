@@ -11,16 +11,20 @@
 #import "TaboolaCollectionViewCell.h"
 #import <TaboolaSDK/TaboolaSDK.h>
 #import "RandomColor.h"
+#import "ConnectorDelegate.h"
 
-@interface CollectionViewController () <UICollectionViewDelegate,UICollectionViewDataSource, TaboolaViewDelegate>
+@protocol ConnectorDelegateNew
+
+<#methods#>
+
+@end
+
+@interface CollectionViewController () <UICollectionViewDelegate,UICollectionViewDataSource, TaboolaViewDelegate, ConnectorDelegateNew>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic) TaboolaView* taboolaWidget;
 @property (nonatomic) TaboolaView* taboolaFeed;
-
 @property (nonatomic) CGFloat taboolaWidgetHeight;
-
 @property (nonatomic, strong) NSString *viewId;
-
 @property (nonatomic) BOOL didLoadFeed;
 
 @end
@@ -130,5 +134,16 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
     return YES;
 }
 
+-(void)received:(Message*)message{
+    
+}
+
+-(TaboolaView*)getTaboolaObject{
+    return _taboolaWidget;
+}
+
+-(NSObject*)getParentObject{
+    return _collectionView;
+}
 
 @end

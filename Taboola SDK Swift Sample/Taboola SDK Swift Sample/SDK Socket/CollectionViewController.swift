@@ -161,9 +161,6 @@ extension CollectionViewController: TaboolaViewDelegate {
 }
 
 extension CollectionViewController: ConnectorDelegate {
-    func received(message: Message) {
-
-    }
     
     func getTaboolaObject() -> TaboolaView{
         return taboolaWidget

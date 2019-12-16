@@ -7,13 +7,13 @@
 //
 
 #import <TaboolaSDK/TaboolaSDK.h>
-
+#import "Message.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol ConnectorDelegate <NSObject>
     
 @required
--(void)received:(Message)message;
+-(void)received:(Message*)message;
 -(TaboolaView*)getTaboolaObject;
 -(NSObject*)getParentObject;
 @end
