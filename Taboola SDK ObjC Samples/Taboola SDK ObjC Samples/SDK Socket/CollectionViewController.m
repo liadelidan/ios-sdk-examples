@@ -13,13 +13,7 @@
 #import "RandomColor.h"
 #import "ConnectorDelegate.h"
 
-@protocol ConnectorDelegateNew
-
-<#methods#>
-
-@end
-
-@interface CollectionViewController () <UICollectionViewDelegate,UICollectionViewDataSource, TaboolaViewDelegate, ConnectorDelegateNew>
+@interface CollectionViewController () <UICollectionViewDelegate,UICollectionViewDataSource, TaboolaViewDelegate, ConnectorDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic) TaboolaView* taboolaWidget;
 @property (nonatomic) TaboolaView* taboolaFeed;

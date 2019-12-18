@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7226B7DA23A0E9E000AD3126 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7226B7D923A0E9E000AD3126 /* CollectionViewController.m */; };
 		7226B7DD23A0F3C000AD3126 /* Connector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7226B7DC23A0F3C000AD3126 /* Connector.m */; };
-		728E5D2523A65FC300AA3E09 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E5D2423A65FC300AA3E09 /* Message.m */; };
 		D44FB47C9D1BAEA6E5B6E7D5 /* Pods_Taboola_SDK_ObjC_Samples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB55162D40E2F29F62CF66 /* Pods_Taboola_SDK_ObjC_Samples.framework */; };
 		DB7EB0E62226C9A300E189FB /* MidArticleManualScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D22226C9A300E189FB /* MidArticleManualScrollViewController.m */; };
 		DB7EB0E72226C9A300E189FB /* MidArticleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EB0D42226C9A300E189FB /* MidArticleScrollViewController.m */; };
@@ -41,8 +40,6 @@
 		7226B7DB23A0E9F200AD3126 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		7226B7DC23A0F3C000AD3126 /* Connector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Connector.m; sourceTree = "<group>"; };
 		7226B7DE23A0F3CE00AD3126 /* Connector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Connector.h; sourceTree = "<group>"; };
-		728E5D2423A65FC300AA3E09 /* Message.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
-		728E5D2623A666C800AA3E09 /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		78BB55162D40E2F29F62CF66 /* Pods_Taboola_SDK_ObjC_Samples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taboola_SDK_ObjC_Samples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB954357479751D1D2BE4F67 /* Pods-Taboola SDK ObjC Samples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taboola SDK ObjC Samples.release.xcconfig"; path = "Pods/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples.release.xcconfig"; sourceTree = "<group>"; };
 		BCADE0C501355F99E41392F0 /* Pods-Taboola SDK ObjC Samples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taboola SDK ObjC Samples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taboola SDK ObjC Samples/Pods-Taboola SDK ObjC Samples.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,8 +112,6 @@
 				7226B7DE23A0F3CE00AD3126 /* Connector.h */,
 				7226B7DC23A0F3C000AD3126 /* Connector.m */,
 				720E8F1223A124A70062E9D3 /* ConnectorDelegate.h */,
-				728E5D2623A666C800AA3E09 /* Message.h */,
-				728E5D2423A65FC300AA3E09 /* Message.m */,
 			);
 			path = "SDK Socket";
 			sourceTree = "<group>";
@@ -454,7 +449,6 @@
 				DB7EB0E62226C9A300E189FB /* MidArticleManualScrollViewController.m in Sources */,
 				DB7EB12A2226CADA00E189FB /* MidArticleJsViewController.m in Sources */,
 				DB7EB13E2226CED700E189FB /* FeedTableViewCell.m in Sources */,
-				728E5D2523A65FC300AA3E09 /* Message.m in Sources */,
 				DB7EB12E2226CADB00E189FB /* SplitFeedJsViewController.m in Sources */,
 				DB7EB0EA2226C9A300E189FB /* CollectionViewChangeScrollInFeedManual.m in Sources */,
 				DB7EB12D2226CADB00E189FB /* PageContentViewController.m in Sources */,

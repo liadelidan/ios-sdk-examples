@@ -15,7 +15,7 @@
 #import "CollectionViewController.m"
 
 
-@interface Connector () <NSStreamDelegate, ConnectorDelegateNew>
+@interface Connector () <NSStreamDelegate, ConnectorDelegate>
 
 @property (nonatomic) TaboolaView* taboolaObject;
 
@@ -80,28 +80,29 @@
         while ([_inputStream hasBytesAvailable]) {
             len = (int)[_inputStream read:buffer maxLength:sizeof(buffer)];
             if (len > 0) {
-                
-                Message *message = [self processedMessageString:buffer length:len];
-                
-                _delegate.received(message);
+                [self processedMessageString:buffer length:len];
             }
         }
     }
 }
 
--(Message*)processedMessageString:(uint8_t*)buffer length:(int)length{
+-(void)processedMessageString: (uint8_t*)buffer length:(int)len{
     
-    NSString *mess = [[NSString alloc] initWithBytes:buffer length:len encoding:NSASCIIStringEncoding];
-    incoming_message = [NSString stringWithFormat:@"%@%@",incoming_message,mess];
+//    NSString *mess = [[NSString alloc] initWithBytesNoCopy:buffer length:len encoding:NSUTF8StringEncoding freeWhenDone:TRUE];
+//    NSString *incoming_message = [NSString stringWithFormat:@"%@%@",incoming_message,mess];
+//
+//    NSString *stringArrayinit = [[NSString alloc] initWithBytes:buffer
+//                                                 length:len
+//                                               encoding:NSUTF8StringEncoding];
     
-    NSString *stringArrayinit = [[NSString alloc] initWithBytes:buffer->utf8text
-                                                 length:length
-                                               encoding:NSUTF8StringEncoding];
+    NSString *stringArrayinit = [[NSString alloc] initWithBytesNoCopy:buffer length:len encoding:NSUTF8StringEncoding freeWhenDone:TRUE];
     
-    NSString stringArrayinit = (bytesNoCopy:length:encoding:freeWhenDone:)
+    NSString *recieved = (NSString *)[stringArrayinit objectAtIndex:0];
     
-    NSString* stringArray = NSString(buffer,length,.UTF8Char,true).
+    TaboolaView* taboolaObject = _delegate.getTaboolaObject;
+    NSObject* parentView = _delegate.getParentObject;
     
+    if stringArrayinit
 }
 
 -(void)stopSession{

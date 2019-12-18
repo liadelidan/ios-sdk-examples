@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol ConnectorDelegate <NSObject>
     
 @required
--(void)received:(Message*)message;
 -(TaboolaView*)getTaboolaObject;
 -(NSObject*)getParentObject;
 @end
