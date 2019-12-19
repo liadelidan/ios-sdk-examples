@@ -95,14 +95,59 @@
 //                                                 length:len
 //                                               encoding:NSUTF8StringEncoding];
     
-    NSString *stringArrayinit = [[NSString alloc] initWithBytesNoCopy:buffer length:len encoding:NSUTF8StringEncoding freeWhenDone:TRUE];
+    NSString *stringInit = [[NSString alloc] initWithBytesNoCopy:buffer length:len encoding:NSUTF8StringEncoding freeWhenDone:TRUE];
     
-    NSString *recieved = (NSString *)[stringArrayinit objectAtIndex:0];
+    NSArray *stringArray = [stringInit componentsSeparatedByString:@":"];
+    
+    NSString *recieved = [stringArray objectAtIndex:0];
     
     TaboolaView* taboolaObject = _delegate.getTaboolaObject;
     NSObject* parentView = _delegate.getParentObject;
     
-    if stringArrayinit
+    if ([recieved containsString:@"showinfo"])
+    {
+
+    }
+    else if ([recieved containsString:@"showheights"])
+    {
+        
+    }
+    else if ([recieved containsString:@"updatepublisher-"])
+    {
+        
+    }
+    else if ([recieved containsString:@"refresh"])
+    {
+        
+    }
+    else if ([recieved containsString:@"updatewidget-"])
+    {
+        
+    }
+    else if ([recieved containsString:@"updateplacement-"])
+    {
+        
+    }
+    else if ([recieved containsString:@"updatepageurl-"])
+    {
+        
+    }
+    else if ([recieved containsString:@"updatepagetype-"])
+    {
+        
+    }
+    else if ([recieved containsString:@"updatetargettype-"])
+    {
+        
+    }
+    else if ([recieved containsString:@"parentview-"])
+    {
+        
+    }
+}
+
+-(void)send:(NSStream *)message{
+    
 }
 
 -(void)stopSession{
