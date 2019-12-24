@@ -10,22 +10,14 @@
 #import "CollectionViewController.h"
 #import "TaboolaCollectionViewCell.h"
 #import "Connector.h"
-#import "ConnectorDelegate.h"
 
-@interface Connector () <NSStreamDelegate, ConnectorDelegate>
+@interface Connector () <NSStreamDelegate>
 
 @property (nonatomic) TaboolaView* taboolaObject;
-
 @property (nonatomic) int maxReadLength;
-
 @property (nonatomic) NSString* publisherName;
-
 @property (nonatomic) NSObject* parentView;
-
-@property (nonatomic) id<ConnectorDelegate> delegate;
-
 @property (nonatomic, retain) NSInputStream *inputStream;
-
 @property (nonatomic, retain) NSOutputStream *outputStream;
 
 @end
@@ -33,7 +25,7 @@
 
 @implementation Connector
 
--(void)setupNetworkCommunicatio{
+-(void)setupNetworkCommunication{
     CFReadStreamRef readStream;
     CFWriteStreamRef writeStream;
 
@@ -196,7 +188,7 @@
 -(void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)event{
     switch (event) {
         case NSStreamEventHasBytesAvailable:
-            [self readAvailableBytes:aStream];
+            [self readAvailableBytes:_inputStream];
         case NSStreamEventEndEncountered:
             [self stopSession];
         case NSStreamEventErrorOccurred:

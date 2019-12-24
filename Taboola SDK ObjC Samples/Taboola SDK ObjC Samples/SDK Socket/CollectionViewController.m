@@ -11,6 +11,7 @@
 #import "TaboolaCollectionViewCell.h"
 #import <TaboolaSDK/TaboolaSDK.h>
 #import "RandomColor.h"
+#import "Connector.h"
 #import "ConnectorDelegate.h"
 
 @interface CollectionViewController () <UICollectionViewDelegate,UICollectionViewDataSource, TaboolaViewDelegate, ConnectorDelegate>
@@ -20,6 +21,7 @@
 @property (nonatomic) CGFloat taboolaWidgetHeight;
 @property (nonatomic, strong) NSString *viewId;
 @property (nonatomic) BOOL didLoadFeed;
+@property (nonatomic) Connector* socketConnection;
 
 @end
 
@@ -32,6 +34,12 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.socketConnection = [[Connector alloc] init];
+    _socketConnection.delegate = self;
+    [_socketConnection setupNetworkCommunication];
+    [_socketConnection joinConnection:@"sdk-tester"];
+    
+    
     int timestamp = [[NSDate date] timeIntervalSince1970];
     _viewId = [NSString stringWithFormat:@"%d",timestamp];
     _taboolaWidget = [self loadTaboolaWithMode:@"alternating-widget-without-video" placement:@"Below Article" scrollIntercept:NO];

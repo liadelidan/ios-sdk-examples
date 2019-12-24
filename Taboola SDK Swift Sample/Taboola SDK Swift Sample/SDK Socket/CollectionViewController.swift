@@ -52,8 +52,6 @@ class CollectionViewController: UIViewController {
                                   placement: TaboolaSection.feed.placement,
                                   scrollIntercept: TaboolaSection.feed.scrollIntercept)
         
-        //SOCKET SENDING INFO BACK TO SERVER
-//        socketConnection.send(message: "The placement of the widget is " + taboolaWidget.placement)
         taboolaWidget.fetchContent()
         
         socketConnection.taboolaObject = taboolaWidget
