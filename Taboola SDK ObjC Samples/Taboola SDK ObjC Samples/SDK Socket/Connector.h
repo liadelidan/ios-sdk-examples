@@ -17,7 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)joinConnection: (NSString*)publisherName;
 
+-(void)stopSession;
+
 @property (nonatomic, weak) id<ConnectorDelegate> delegate;
+@property (nonatomic) TaboolaView* taboolaObject;
 
 @end
 

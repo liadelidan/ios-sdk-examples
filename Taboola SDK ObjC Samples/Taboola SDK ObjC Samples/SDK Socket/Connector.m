@@ -13,7 +13,6 @@
 
 @interface Connector () <NSStreamDelegate>
 
-@property (nonatomic) TaboolaView* taboolaObject;
 @property (nonatomic) int maxReadLength;
 @property (nonatomic) NSString* publisherName;
 @property (nonatomic) NSObject* parentView;

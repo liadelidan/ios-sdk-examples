@@ -46,6 +46,9 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
     _taboolaFeed = [self loadTaboolaWithMode:@"thumbs-feed-01" placement:@"Feed without video" scrollIntercept:YES];
     
     [_taboolaWidget fetchContent];
+    
+    _socketConnection.taboolaObject = _taboolaWidget;
+
 }
 
 - (TaboolaView*)loadTaboolaWithMode:(NSString*)mode placement:(NSString*)placement scrollIntercept:(BOOL)scrollIntercept {
@@ -112,6 +115,7 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
 -(void)dealloc {
     [_taboolaWidget reset];
     [_taboolaFeed reset];
+    [_socketConnection stopSession];
 }
 
 #pragma mark - TaboolaViewDelegate
