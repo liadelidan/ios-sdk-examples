@@ -138,7 +138,6 @@ class Connector: NSObject {
             let taboolaHeight = taboolaObject.bounds.size.height.self
             
             send(message: "The width of the widget is:  \(taboolaWidth) The height of the widget is:  \(taboolaHeight)")
-
         }
         else if recieved.contains("updatepublisher-")
         {

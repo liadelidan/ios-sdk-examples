@@ -11,9 +11,6 @@
 #import "TaboolaCollectionViewCell.h"
 #import "Connector.h"
 #import "ConnectorDelegate.h"
-#import "Message.h"
-#import "CollectionViewController.m"
-
 
 @interface Connector () <NSStreamDelegate, ConnectorDelegate>
 
@@ -76,7 +73,6 @@
     if (stream == _inputStream) {
         int len;
         uint8_t buffer[1024];
-        NSString* incoming_message = @"";
         while ([_inputStream hasBytesAvailable]) {
             len = (int)[_inputStream read:buffer maxLength:sizeof(buffer)];
             if (len > 0) {
@@ -104,66 +100,105 @@
     TaboolaView* taboolaObject = _delegate.getTaboolaObject;
     NSObject* parentView = _delegate.getParentObject;
     
-    if ([recieved containsString:@"showinfo"])
+    if([recieved containsString:@"showinfo"])
     {
+        NSMutableArray* mnemonic;
 
+        [mnemonic addObject:taboolaObject.publisher];
+        [mnemonic addObject:taboolaObject.mode];
+        [mnemonic addObject:taboolaObject.placement];
+        [mnemonic addObject:taboolaObject.pageType];
+        [mnemonic addObject:taboolaObject.pageUrl];
+        [mnemonic addObject:taboolaObject.targetType];
+                
+        NSError *jsonError = nil;
+        
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:mnemonic options:NSJSONWritingPrettyPrinted error:&jsonError];
+
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+
+        [self send:jsonString];
     }
     else if ([recieved containsString:@"showheights"])
     {
+        CGFloat taboolaWidth = taboolaObject.bounds.size.width;
+                
+        CGFloat taboolaHeight = taboolaObject.bounds.size.height;
         
+        NSString *stringData = [NSString stringWithFormat:@"The width of the widget is: %f The height of the widget is: %f\n", taboolaWidth, taboolaHeight];
+        
+        [self send:stringData];
     }
     else if ([recieved containsString:@"updatepublisher-"])
     {
-        
+        taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"updatepublisher-" withString:@""];
+        [self send:@"Changed publisher name"];
     }
     else if ([recieved containsString:@"refresh"])
     {
+        [taboolaObject fetchContent];
+        [taboolaObject fetchContent];
         
+        NSString *uuid = [[NSUUID UUID] UUIDString];
+        
+        NSString *stringData = [NSString stringWithFormat:@"Refreshed the WebView content of iPhone with UUID number: %@\n", uuid];
+        [self send:stringData];
     }
     else if ([recieved containsString:@"updatewidget-"])
     {
-        
+        taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"updatewidget-" withString:@""];
+        [self send:@"Changed widget"];
     }
     else if ([recieved containsString:@"updateplacement-"])
     {
-        
+        taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"updateplacement-" withString:@""];
+        [self send:@"Changed placement"];
     }
     else if ([recieved containsString:@"updatepageurl-"])
     {
-        
+        taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"updatepageurl-" withString:@""];
+        [self send:@"Changed page url"];
     }
     else if ([recieved containsString:@"updatepagetype-"])
     {
-        
+        taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"updatewidget-" withString:@""];
+        [self send:@"Changed page type"];
     }
     else if ([recieved containsString:@"updatetargettype-"])
     {
-        
+        taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"updatewidget-" withString:@""];
+        [self send:@"Changed target type"];
     }
     else if ([recieved containsString:@"parentview-"])
     {
-        
+        taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"parentview" withString:@""];
+        [self send:parentView.description];
     }
 }
 
--(void)send:(NSStream *)message{
+-(void)send:(NSString *)message{
     
+    NSString *stringData = [NSString stringWithFormat:@"%@\n", message];
+    
+    NSData *data = [[NSData alloc] initWithData:[stringData dataUsingEncoding:NSASCIIStringEncoding]];
+    
+    [_outputStream write:[data bytes] maxLength:[data length]];
 }
 
 -(void)stopSession{
-    _inputStream.close;
-    _outputStream.close;
+    [_inputStream close];
+    [_outputStream close];
 }
 
 
-#pragma mark - TaboolaViewDelegate
+//#pragma mark - TaboolaViewDelegate
 
 -(void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)event{
     switch (event) {
         case NSStreamEventHasBytesAvailable:
-            CFReadStreamHasBytesAvailable((_inputStream*)aStream);
+            [self readAvailableBytes:aStream];
         case NSStreamEventEndEncountered:
-            stopSession
+            [self stopSession];
         case NSStreamEventErrorOccurred:
         
         case NSStreamEventHasSpaceAvailable:
