@@ -48,7 +48,6 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
     [_taboolaWidget fetchContent];
     
     _socketConnection.taboolaObject = _taboolaWidget;
-
 }
 
 - (TaboolaView*)loadTaboolaWithMode:(NSString*)mode placement:(NSString*)placement scrollIntercept:(BOOL)scrollIntercept {

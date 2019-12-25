@@ -61,16 +61,20 @@
 }
 
 -(void)readAvailableBytes: (NSInputStream*)stream{
-    if (stream == _inputStream) {
-        int len;
-        uint8_t buffer[1024];
-        while ([_inputStream hasBytesAvailable]) {
-            len = (int)[_inputStream read:buffer maxLength:sizeof(buffer)];
-            if (len > 0) {
-                [self processedMessageString:buffer length:len];
-            }
-        }
-    }
+    
+    
+    
+    
+//    if (stream == _inputStream) {
+//        int len;
+//        uint8_t buffer[4096];
+//        while ([_inputStream hasBytesAvailable]) {
+//            len = (int)[_inputStream read:buffer maxLength:sizeof(buffer)];
+//            if (len > 0) {
+//                [self processedMessageString:buffer length:len];
+//            }
+//        }
+//    }
 }
 
 -(void)processedMessageString: (uint8_t*)buffer length:(int)len{
@@ -186,15 +190,23 @@
 
 -(void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)event{
     switch (event) {
+        case NSStreamEventHasSpaceAvailable: {
+            if(aStream == _outputStream) {
+                NSLog(@"outputStream is ready.");
+            }
+                break;
+        }
         case NSStreamEventHasBytesAvailable:
-            [self readAvailableBytes:_inputStream];
+            if(aStream == _inputStream) {
+                NSLog(@"inputStream is ready.");
+                [self readAvailableBytes:_inputStream];
+            }
         case NSStreamEventEndEncountered:
-            [self stopSession];
+//            [self stopSession];
         case NSStreamEventErrorOccurred:
         
-        case NSStreamEventHasSpaceAvailable:
-            
         default:
+            NSLog(@"Stream is sending an Event: %i", event);
             break;
     }
 }
