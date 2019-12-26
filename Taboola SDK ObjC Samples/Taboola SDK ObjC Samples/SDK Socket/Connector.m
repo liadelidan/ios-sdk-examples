@@ -19,8 +19,6 @@
 @property (nonatomic, retain) NSInputStream *inputStream;
 @property (nonatomic, retain) NSOutputStream *outputStream;
 
-@property (nonatomic) NSString* stringData;
-@property (nonatomic) NSData* data;
 
 @end
 
@@ -33,7 +31,7 @@
     
 
     NSString *addr = @"ps001.taboolasyndication.com";
-    //        addr = "localhost"
+//    NSString *addr = @"localhost";
     
     CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, (__bridge CFStringRef)(addr), 9090, &readStream, &writeStream);
     
@@ -46,7 +44,7 @@
 //    _outputStream = (NSOutputStream *)CFRetain(writeStream);
     
     _inputStream.delegate = self;
-    _outputStream.delegate = self;
+//    _outputStream.delegate = self;
     
     [_inputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     [_outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
@@ -59,17 +57,17 @@
     
     NSString *uuid = [[NSUUID UUID] UUIDString];
     
-    _stringData = [NSString stringWithFormat:@"UUID number - %@ with publisher-name - %@ is connected to the session\n", uuid, publisherName];
+    NSString *stringData = [NSString stringWithFormat:@"UUID number - %@ with publisher-name - %@ is connected to the session\n", uuid, publisherName];
     
 //    const char *dataUTF = [stringData UTF8String];
     self.publisherName = publisherName;
     
-    _data = [[NSData alloc] initWithData:[_stringData dataUsingEncoding:NSUTF8StringEncoding]];
+//    _data = [[NSData alloc] initWithData:[_stringData dataUsingEncoding:NSUTF8StringEncoding]];
     
-//    NSData* dataToWrite = [stringData dataUsingEncoding:NSUTF8StringEncoding];
+    NSData* dataToWrite = [stringData dataUsingEncoding:NSUTF8StringEncoding];
 
     
-    [_outputStream write:[_data bytes] maxLength:[_data length]];
+    [_outputStream write:[dataToWrite bytes] maxLength:[dataToWrite length]];
 }
 
 -(void)readAvailableBytes: (NSInputStream*)stream{
@@ -82,8 +80,6 @@
                 [self processedMessageString:buffer length:len];
             }
         }
-        NSLog(@"After readAvailableBytes loop");
-
     }
 }
 
@@ -167,7 +163,7 @@
         taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"updatewidget-" withString:@""];
         [self send:@"Changed target type"];
     }
-    else if ([recieved containsString:@"parentview-"])
+    else if ([recieved containsString:@"parentview"])
     {
         taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"parentview" withString:@""];
         [self send:parentView.description];
@@ -178,17 +174,14 @@
     
     NSString *stringData = [NSString stringWithFormat:@"%@\n", message];
     
-    NSData *data = [[NSData alloc] initWithData:[stringData dataUsingEncoding:NSASCIIStringEncoding]];
+    NSData *data = [[NSData alloc] initWithData:[stringData dataUsingEncoding:NSUTF8StringEncoding]];
     
     [_outputStream write:[data bytes] maxLength:[data length]];
-    NSLog(@"Finished send");
-
 }
 
 -(void)stopSession{
     [_inputStream close];
     [_outputStream close];
-    NSLog(@"Stopped Session");
 }
 
 
@@ -208,9 +201,9 @@
         }
         case NSStreamEventHasBytesAvailable:
             if(aStream == _inputStream) {
-                NSLog(@"inputStream is ready.");
-                [self readAvailableBytes:_inputStream];
-                
+                NSLog(@"New message received");
+                [self readAvailableBytes:aStream];
+                 break;
             }
             break;
         case NSStreamEventEndEncountered:
