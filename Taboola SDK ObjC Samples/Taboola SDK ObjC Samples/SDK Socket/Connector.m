@@ -19,6 +19,9 @@
 @property (nonatomic, retain) NSInputStream *inputStream;
 @property (nonatomic, retain) NSOutputStream *outputStream;
 
+@property (nonatomic) NSString* stringData;
+@property (nonatomic) NSData* data;
+
 @end
 
 
@@ -27,16 +30,23 @@
 -(void)setupNetworkCommunication{
     CFReadStreamRef readStream;
     CFWriteStreamRef writeStream;
+    
 
     NSString *addr = @"ps001.taboolasyndication.com";
     //        addr = "localhost"
     
     CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, (__bridge CFStringRef)(addr), 9090, &readStream, &writeStream);
-
+    
     _inputStream = (NSInputStream *)CFBridgingRelease(readStream);
     _outputStream = (NSOutputStream *)CFBridgingRelease(writeStream);
     
+//    _inputStream = (__bridge_transfer NSInputStream *)(readStream);
+//    _outputStream = (__bridge_transfer NSOutputStream *)(writeStream);
+//    _inputStream = (NSInputStream *)CFRetain(readStream);
+//    _outputStream = (NSOutputStream *)CFRetain(writeStream);
+    
     _inputStream.delegate = self;
+    _outputStream.delegate = self;
     
     [_inputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     [_outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
@@ -49,44 +59,37 @@
     
     NSString *uuid = [[NSUUID UUID] UUIDString];
     
-    NSString *stringData = [NSString stringWithFormat:@"UUID number - %@ with publisher-name - %@ is connected to the session\n", uuid, publisherName];
+    _stringData = [NSString stringWithFormat:@"UUID number - %@ with publisher-name - %@ is connected to the session\n", uuid, publisherName];
     
 //    const char *dataUTF = [stringData UTF8String];
     self.publisherName = publisherName;
     
-    NSData *data = [[NSData alloc] initWithData:[stringData dataUsingEncoding:NSASCIIStringEncoding]];
+    _data = [[NSData alloc] initWithData:[_stringData dataUsingEncoding:NSUTF8StringEncoding]];
     
-    [_outputStream write:[data bytes] maxLength:[data length]];
+//    NSData* dataToWrite = [stringData dataUsingEncoding:NSUTF8StringEncoding];
+
     
+    [_outputStream write:[_data bytes] maxLength:[_data length]];
 }
 
 -(void)readAvailableBytes: (NSInputStream*)stream{
-    
-    
-    
-    
-//    if (stream == _inputStream) {
-//        int len;
-//        uint8_t buffer[4096];
-//        while ([_inputStream hasBytesAvailable]) {
-//            len = (int)[_inputStream read:buffer maxLength:sizeof(buffer)];
-//            if (len > 0) {
-//                [self processedMessageString:buffer length:len];
-//            }
-//        }
-//    }
+    if (stream == _inputStream) {
+        int len;
+        uint8_t buffer[4096];
+        while ([_inputStream hasBytesAvailable]) {
+            len = (int)[_inputStream read:buffer maxLength:sizeof(buffer)];
+            if (len > 0) {
+                [self processedMessageString:buffer length:len];
+            }
+        }
+        NSLog(@"After readAvailableBytes loop");
+
+    }
 }
 
 -(void)processedMessageString: (uint8_t*)buffer length:(int)len{
     
-//    NSString *mess = [[NSString alloc] initWithBytesNoCopy:buffer length:len encoding:NSUTF8StringEncoding freeWhenDone:TRUE];
-//    NSString *incoming_message = [NSString stringWithFormat:@"%@%@",incoming_message,mess];
-//
-//    NSString *stringArrayinit = [[NSString alloc] initWithBytes:buffer
-//                                                 length:len
-//                                               encoding:NSUTF8StringEncoding];
-    
-    NSString *stringInit = [[NSString alloc] initWithBytesNoCopy:buffer length:len encoding:NSUTF8StringEncoding freeWhenDone:TRUE];
+    NSString *stringInit = [[NSString alloc] initWithBytesNoCopy:buffer length:len encoding:NSUTF8StringEncoding freeWhenDone:FALSE];
     
     NSArray *stringArray = [stringInit componentsSeparatedByString:@":"];
     
@@ -97,7 +100,7 @@
     
     if([recieved containsString:@"showinfo"])
     {
-        NSMutableArray* mnemonic;
+        NSMutableArray* mnemonic = [[NSMutableArray alloc] init];
 
         [mnemonic addObject:taboolaObject.publisher];
         [mnemonic addObject:taboolaObject.mode];
@@ -178,11 +181,14 @@
     NSData *data = [[NSData alloc] initWithData:[stringData dataUsingEncoding:NSASCIIStringEncoding]];
     
     [_outputStream write:[data bytes] maxLength:[data length]];
+    NSLog(@"Finished send");
+
 }
 
 -(void)stopSession{
     [_inputStream close];
     [_outputStream close];
+    NSLog(@"Stopped Session");
 }
 
 
@@ -190,6 +196,10 @@
 
 -(void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)event{
     switch (event) {
+        case NSStreamEventOpenCompleted:
+            NSLog(@"Connected");
+            break;
+            
         case NSStreamEventHasSpaceAvailable: {
             if(aStream == _outputStream) {
                 NSLog(@"outputStream is ready.");
@@ -200,11 +210,16 @@
             if(aStream == _inputStream) {
                 NSLog(@"inputStream is ready.");
                 [self readAvailableBytes:_inputStream];
+                
             }
+            break;
         case NSStreamEventEndEncountered:
-//            [self stopSession];
+            [self stopSession];
+            NSLog(@"Event end.");
+
         case NSStreamEventErrorOccurred:
-        
+            NSLog(@"Finished send");
+
         default:
             NSLog(@"Stream is sending an Event: %i", event);
             break;
