@@ -28,15 +28,14 @@
 -(void)setupNetworkCommunication{
     CFReadStreamRef readStream;
     CFWriteStreamRef writeStream;
-    
 
     NSString *addr = @"ps001.taboolasyndication.com";
 //    NSString *addr = @"localhost";
     
     CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, (__bridge CFStringRef)(addr), 9090, &readStream, &writeStream);
     
-    _inputStream = (NSInputStream *)CFBridgingRelease(readStream);
-    _outputStream = (NSOutputStream *)CFBridgingRelease(writeStream);
+    _inputStream = (NSInputStream *)CFRetain(readStream);
+    _outputStream = (NSOutputStream *)CFRetain(writeStream);
     
 //    _inputStream = (__bridge_transfer NSInputStream *)(readStream);
 //    _outputStream = (__bridge_transfer NSOutputStream *)(writeStream);
@@ -140,32 +139,31 @@
     }
     else if ([recieved containsString:@"updatewidget-"])
     {
-        taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"updatewidget-" withString:@""];
+        taboolaObject.mode = [recieved stringByReplacingOccurrencesOfString:@"updatewidget-" withString:@""];
         [self send:@"Changed widget"];
     }
     else if ([recieved containsString:@"updateplacement-"])
     {
-        taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"updateplacement-" withString:@""];
+        taboolaObject.placement = [recieved stringByReplacingOccurrencesOfString:@"updateplacement-" withString:@""];
         [self send:@"Changed placement"];
     }
     else if ([recieved containsString:@"updatepageurl-"])
     {
-        taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"updatepageurl-" withString:@""];
+        taboolaObject.pageUrl = [recieved stringByReplacingOccurrencesOfString:@"updatepageurl-" withString:@""];
         [self send:@"Changed page url"];
     }
     else if ([recieved containsString:@"updatepagetype-"])
     {
-        taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"updatewidget-" withString:@""];
+        taboolaObject.pageType = [recieved stringByReplacingOccurrencesOfString:@"updatepagetype-" withString:@""];
         [self send:@"Changed page type"];
     }
     else if ([recieved containsString:@"updatetargettype-"])
     {
-        taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"updatewidget-" withString:@""];
+        taboolaObject.targetType = [recieved stringByReplacingOccurrencesOfString:@"updatetargettype-" withString:@""];
         [self send:@"Changed target type"];
     }
     else if ([recieved containsString:@"parentview"])
     {
-        taboolaObject.publisher = [recieved stringByReplacingOccurrencesOfString:@"parentview" withString:@""];
         [self send:parentView.description];
     }
 }
