@@ -50,18 +50,30 @@ class CustomTaboolaView: UIView {
         addSubviewAndConstrain(self.taboolaView ?? TaboolaView())
     }
     
-    func loadAd() {
+    func loadAd(_ modeFlag: Bool) {
         guard let taboolaView = taboolaView else {
             return
         }
         
-        taboolaView.publisher = "sdk-tester"
-        taboolaView.placement = "Below Article"
-        taboolaView.pageType = "article"
-        taboolaView.mode = "alternating-widget-without-video"
-        taboolaView.pageUrl = "http://www.example.com"
-        taboolaView.fetchContent()
-        print("Taboola webview - LOADING with taboolaView: \(taboolaView)")
+        if !modeFlag {
+            taboolaView.publisher = "sdk-tester"
+            taboolaView.placement = "Below Article"
+            taboolaView.pageType = "article"
+            taboolaView.mode = "alternating-widget-without-video"
+            taboolaView.pageUrl = "http://www.example.com"
+            taboolaView.fetchContent()
+            print("Taboola webview - LOADING with taboolaView: \(taboolaView)")
+        }
+        else {
+            taboolaView.publisher = "sdk-tester"
+            taboolaView.placement = "Feed without video"
+            taboolaView.pageType = "article"
+            taboolaView.mode = "thumbs-feed-01"
+            taboolaView.pageUrl = "http://www.example.com"
+            taboolaView.fetchContent()
+            print("Taboola webview - LOADING with taboolaView: \(taboolaView)")
+        }
+
     }
         
     func update(height: CGFloat) {

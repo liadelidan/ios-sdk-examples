@@ -30,8 +30,8 @@ class TaboolaCellConstraints: UITableViewCell {
         setupCell()
     }
     
-    func loadAd() {
-        customTaboolaContent?.loadAd()
+    func loadAd(_ modeFlag: Bool) {
+        customTaboolaContent?.loadAd(modeFlag)
     }
     
     func addTaboolaSubview() {
