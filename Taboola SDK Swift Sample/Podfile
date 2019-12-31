@@ -9,12 +9,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'Taboola SDK Swift Sample' do
 use_frameworks!
-pod 'TaboolaSDK', '2.3.7-26-beta'
+pod 'TaboolaSDK', '2.3.8'
 end
 
 target 'TaboolaSDKSwiftSampleTests' do
 use_frameworks!
-pod 'TaboolaSDK', '2.3.7-26-beta'
+pod 'TaboolaSDK', '2.3.8'
 end
 
 
