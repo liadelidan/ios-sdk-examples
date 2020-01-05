@@ -28,8 +28,8 @@
     //load mid tabolaView
     self.midTaboolaView.delegate = self;
     self.midTaboolaView.ownerViewController = self;
-    self.midTaboolaView.publisher = @"sdk-tester";
-    self.midTaboolaView.mode = @"alternating-widget-without-video-1-on-1";
+    self.midTaboolaView.publisher = @"sdk-tester-demo";
+    self.midTaboolaView.mode = @"alternating-widget-without-video-1x4";
     self.midTaboolaView.pageType = @"article";
     self.midTaboolaView.pageUrl = @"http://www.example.com";
     self.midTaboolaView.placement = @"Mid Article";
@@ -41,7 +41,7 @@
     //load feed tabolaView
     self.feedTaboolaView.delegate = self;
     self.feedTaboolaView.ownerViewController = self;
-    self.feedTaboolaView.publisher = @"sdk-tester";
+    self.feedTaboolaView.publisher = @"sdk-tester-demo";
     self.feedTaboolaView.mode = @"thumbs-feed-01";
     self.feedTaboolaView.pageType = @"article";
     self.feedTaboolaView.pageUrl = @"http://www.example.com";

@@ -10,4 +10,4 @@ target 'Taboola SDK ObjC Samples' do
   pod 'TaboolaSDK', '2.3.8'
   # Pods for Taboola SDK ObjC Samples
 
-enר
+end

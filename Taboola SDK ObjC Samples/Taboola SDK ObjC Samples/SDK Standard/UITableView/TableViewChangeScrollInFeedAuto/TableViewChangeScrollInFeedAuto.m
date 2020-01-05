@@ -28,7 +28,7 @@
     _taboolaView = [[TaboolaView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     _taboolaView.delegate = self;
     _taboolaView.mode = @"thumbs-feed-01";
-    _taboolaView.publisher = @"sdk-tester";
+    _taboolaView.publisher = @"sdk-tester-demo";
     _taboolaView.pageType = @"article";
     _taboolaView.pageUrl = @"http://www.example.com";
     _taboolaView.placement = @"Feed without video";
