@@ -29,7 +29,7 @@ class CollectionViewChangeScrollInFeedAuto: UIViewController {
         let index: Int
         let scrollIntercept: Bool
         
-        static let widget = TaboolaSection(placement: "Below Article", mode: "alternating-widget-without-video", index: 1, scrollIntercept: false)
+        static let widget = TaboolaSection(placement: "Below Article", mode: "alternating-widget-without-video-1x4", index: 1, scrollIntercept: false)
         static let feed = TaboolaSection(placement: "Feed without video", mode: "thumbs-feed-01", index: 3, scrollIntercept: true)
     }
     
@@ -48,7 +48,7 @@ class CollectionViewChangeScrollInFeedAuto: UIViewController {
         let taboolaView = TaboolaView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 200))
         taboolaView.delegate = self
         taboolaView.mode = mode
-        taboolaView.publisher = "sdk-tester"
+        taboolaView.publisher = "sdk-tester-demo"
         taboolaView.pageType = "article"
         taboolaView.pageUrl = "http://www.example.com"
         taboolaView.placement = placement
