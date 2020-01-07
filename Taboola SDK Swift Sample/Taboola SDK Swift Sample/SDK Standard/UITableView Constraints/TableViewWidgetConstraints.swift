@@ -114,15 +114,10 @@ class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
         if let firstCell = taboolaCellWidget,
             firstCell.customTaboolaContent?.taboolaView == taboolaView {
             taboolaCellWidget?.customTaboolaContent?.update(height: height)
-
+            let indexPath = IndexPath(row: 1, section: 0)
+            print("Taboola webview - loaded a placement with taboolaView: \(taboolaView) - height = \(height)")
+            tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.none)
         }
-        if let secondCell = taboolaCellFeed,
-            secondCell.customTaboolaContent?.taboolaView == taboolaView {
-            taboolaCellFeed?.customTaboolaContent?.update(height: height)
-        }
-        print("Taboola webview - loaded a placement with taboolaView: \(taboolaView) - height = \(height)")
-        tableView.reloadData()
-        
     }
 }
 
