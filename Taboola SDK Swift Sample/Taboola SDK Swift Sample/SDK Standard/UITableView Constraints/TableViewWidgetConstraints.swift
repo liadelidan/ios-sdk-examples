@@ -22,6 +22,7 @@ class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
     private var taboolaCellWidget: TaboolaCellConstraints?
     private var taboolaCellFeed: TaboolaCellConstraints?
     private var didLoadTaboola: Bool = false
+    var taboolaWidgetHeight: CGFloat = 0.0
 
     private var cells: [String] {
         var data = [String]()
@@ -30,6 +31,10 @@ class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
                 data.append("cell")
                 data.append("cell")
                 data.append("cell")
+                data.append("cell")
+                data.append("cell")
+                data.append("cell")
+                
             }
             else if i == 1{
                 data.append("taboola")
@@ -53,6 +58,7 @@ class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
         tableView.estimatedRowHeight = 200
         tableView.register(RandomColorCell.self, forCellReuseIdentifier: "regularCell")
         buildFirstTaboolaCell()
+        
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -82,19 +88,36 @@ class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+
+        switch indexPath.row {
+        case 6:
+            if taboolaWidgetHeight > 0 {
+                return taboolaWidgetHeight
+            }
+            else {
+                return 0
+            }
+        case 9:
+            return TaboolaView.widgetHeight()
+        default:
+            return 200
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let index = indexPath.row
         let dataType = cells[index]
         
         if dataType == "taboola" {
-            if indexPath.row == 3 {
+            if indexPath.row == 6 {
                 if !didLoadTaboola {
                     didLoadTaboola = true
                     taboolaCellWidget?.addTaboolaSubview()
                 }
                 return taboolaCellWidget ?? createLoadingCell()
             }
-            else if indexPath.row == 6{
+            else if indexPath.row == 9{
                 taboolaCellFeed?.addTaboolaSubview()
                 return taboolaCellFeed ?? createLoadingCell()
             }
@@ -113,8 +136,10 @@ class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
     func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {
         if let firstCell = taboolaCellWidget,
             firstCell.customTaboolaContent?.taboolaView == taboolaView {
+            taboolaWidgetHeight = height
+
             taboolaCellWidget?.customTaboolaContent?.update(height: height)
-            let indexPath = IndexPath(row: 1, section: 0)
+            let indexPath = IndexPath(row: 3, section: 0)
             print("Taboola webview - loaded a placement with taboolaView: \(taboolaView) - height = \(height)")
             tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.none)
         }

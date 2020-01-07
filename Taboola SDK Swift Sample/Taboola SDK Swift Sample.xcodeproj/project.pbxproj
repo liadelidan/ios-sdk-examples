@@ -268,10 +268,10 @@
 		DCF03A61223926410010FC32 /* SDK Standard */ = {
 			isa = PBXGroup;
 			children = (
-				72BE5CB0238AA26F00D2D8AA /* UITableView Constraints */,
 				DBCFB6F6225366E200701088 /* UITableView */,
 				DCF03A6C223FC6510010FC32 /* UICollectionView */,
 				DCF03A64223941F30010FC32 /* UIScrollView */,
+				72BE5CB0238AA26F00D2D8AA /* UITableView Constraints */,
 				DCF03A6222393F860010FC32 /* UIColor+Random.swift */,
 			);
 			path = "SDK Standard";

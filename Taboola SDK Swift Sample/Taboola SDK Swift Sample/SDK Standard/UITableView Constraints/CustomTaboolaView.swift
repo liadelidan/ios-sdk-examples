@@ -71,7 +71,9 @@ class CustomTaboolaView: UIView {
             taboolaView.mode = "thumbs-feed-01"
             taboolaView.pageUrl = "http://www.example.com"
             taboolaView.fetchContent()
+            taboolaView.setInterceptScroll(true)
             print("Taboola webview - LOADING with taboolaView: \(taboolaView)")
+            
         }
 
     }
