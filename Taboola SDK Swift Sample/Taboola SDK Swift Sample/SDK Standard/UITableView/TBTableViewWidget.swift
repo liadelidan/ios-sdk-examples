@@ -25,8 +25,8 @@ class TBTableViewWidget: UITableViewController {
         taboolaView = TaboolaView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 200))
         taboolaView.delegate = self
         taboolaView.ownerViewController = self
-        taboolaView.mode = "alternating-widget-without-video";
-        taboolaView.publisher = "sdk-tester";
+        taboolaView.mode = "alternating-widget-without-video-1x4";
+        taboolaView.publisher = "sdk-tester-demo";
         taboolaView.pageType = "article";
         taboolaView.pageUrl = "http://www.example.com";
         taboolaView.placement = "Below Article";

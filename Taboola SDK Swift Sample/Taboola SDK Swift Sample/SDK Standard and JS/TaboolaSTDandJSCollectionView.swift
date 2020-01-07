@@ -58,7 +58,7 @@ class TaboolaSTDandJSCollectionView: UIViewController, WKNavigationDelegate, Tab
     
         taboolaView.delegate = self
         taboolaView.mode = "thumbs-feed-01"
-        taboolaView.publisher = "sdk-tester"
+        taboolaView.publisher = "sdk-tester-demo"
         taboolaView.pageType = "article"
         taboolaView.pageUrl = "http://www.example.com"
         taboolaView.placement = "Feed without video"

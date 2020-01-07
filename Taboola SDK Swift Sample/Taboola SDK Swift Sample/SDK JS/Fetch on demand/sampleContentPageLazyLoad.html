@@ -12,7 +12,7 @@
                 }
             }(document.createElement('script'),
               document.getElementsByTagName('script')[0],
-              'https://cdn.taboola.com/libtrc/betterbytheminute-app/mobile-loader.js','tb-mobile-loader-script');
+              'https://cdn.taboola.com/libtrc/sdk-tester-demo/mobile-loader.js','tb-mobile-loader-script');
             </script>
     </head>
     
@@ -53,7 +53,7 @@
                           });
                           
                           _taboola.push({
-                                        mode: 'alternating-1x2-widget',
+                                        mode: 'alternating-widget-without-video-1x4',
                                         container: 'taboola1',
                                         placement: 'Mid Article',
                                         target_type: 'mix'
@@ -62,7 +62,7 @@
                                         _taboola.push({
                                                       mode: 'thumbs-feed-01',
                                                       container: 'taboola2',
-                                                      placement: 'Feed with video',
+                                                      placement: 'Feed without video',
                                                       target_type: 'mix'
                                                       });
                                                       
@@ -72,7 +72,7 @@
                                                                               lazyFetch:true,
                                                                               taboola_view_id:new Date().getTime(),
                                                                               // override publisher from script url
-                                                                              publisher:"sdk-tester"
+                                                                              publisher:"sdk-tester-demo"
                                                                               });
                                                                               
                                                                               _taboola.push({

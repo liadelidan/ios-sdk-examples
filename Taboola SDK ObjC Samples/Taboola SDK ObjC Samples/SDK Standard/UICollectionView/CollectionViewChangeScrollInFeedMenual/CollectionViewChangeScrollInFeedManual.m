@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
     [super viewDidLoad];
     int timestamp = [[NSDate date] timeIntervalSince1970];
     _viewId = [NSString stringWithFormat:@"%d",timestamp];
-    _taboolaWidget = [self loadTaboolaWithMode:@"alternating-widget-without-video-1-on-1" placement:@"Mid Article" overrideScrollIntercept:NO];
+    _taboolaWidget = [self loadTaboolaWithMode:@"alternating-widget-without-video-1x4" placement:@"Mid Article" overrideScrollIntercept:NO];
     _taboolaFeed = [self loadTaboolaWithMode:@"thumbs-feed-01" placement:@"Feed without video" overrideScrollIntercept:YES];
     [_taboolaWidget fetchContent];
 }
@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, TaboolaSection) {
     TaboolaView *taboolaView = [[TaboolaView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     taboolaView.delegate = self;
     taboolaView.mode = mode;
-    taboolaView.publisher = @"sdk-tester";
+    taboolaView.publisher = @"sdk-tester-demo";
     taboolaView.pageType = @"article";
     taboolaView.pageUrl = @"http://www.example.com";
     taboolaView.placement = placement;
