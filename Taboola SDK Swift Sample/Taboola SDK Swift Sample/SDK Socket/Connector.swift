@@ -66,7 +66,7 @@ class Connector: NSObject {
     
     func joinConnection(publisherName: String) {
         //1
-        let uuid = UUID().uuidString
+        let uuid = UIDevice.current.identifierForVendor!.uuidString
 
         let data = "UUID number - \(uuid) with publisher-name - \(publisherName) is connected to the session\n".data(using: .utf8)!
         
@@ -148,8 +148,7 @@ class Connector: NSObject {
         {
             taboolaObject.fetchContent()
             taboolaObject.fetchContent()
-            let uuid = UUID().uuidString
-
+            let uuid = UIDevice.current.identifierForVendor!.uuidString
             let data = "Refreshed the WebView content of iPhone with UUID number: \(uuid)"
             send(message: data)
         }
