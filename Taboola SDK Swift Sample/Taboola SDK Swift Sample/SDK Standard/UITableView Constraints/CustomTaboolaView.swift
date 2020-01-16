@@ -15,7 +15,7 @@ class CustomTaboolaView: UIView {
         static let enabledConstraintsModeKey = "enabledConstraints"
     }
 
-    var taboolaView: TaboolaView?
+    var taboolaView: TaboolaView!
     private var heightConstraint: NSLayoutConstraint!
 
     weak var taboolaViewDelegate: TaboolaViewDelegate? {
