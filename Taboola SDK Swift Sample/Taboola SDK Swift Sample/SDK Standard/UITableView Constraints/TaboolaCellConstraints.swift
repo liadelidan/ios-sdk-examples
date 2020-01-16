@@ -3,10 +3,8 @@
 //  Taboola SDK Swift Sample
 //
 //  Created by Liad Elidan on 24/11/2019.
-//  Copyright © 2019 Taboola LTD. All rights reserved.
-//
+//  Copyright © 2019 Taboola LTD. All rights
 
-import Foundation
 import UIKit
 import TaboolaSDK
 
