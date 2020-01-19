@@ -20,7 +20,7 @@ extension UIColor {
     }
 }
 
-class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
+class TableViewWidgetConstraints: UITableViewController {
     private var taboolaCellWidget: TaboolaCellConstraints?
     private var taboolaCellFeed: TaboolaCellConstraints?
     private var didLoadTaboola: Bool = false
@@ -145,6 +145,10 @@ class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
         return cell
     }
     
+}
+
+extension TableViewWidgetConstraints: TaboolaViewDelegate {
+    
     func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {
         if let firstCell = taboolaCellWidget,
             firstCell.customTaboolaContent?.taboolaView == taboolaView {
@@ -154,7 +158,14 @@ class TableViewWidgetConstraints: UITableViewController, TaboolaViewDelegate {
             let indexPath = IndexPath(row: widgetCellLocation, section: 0)
             print("Taboola webview - loaded a placement with taboolaView: \(taboolaView) - height = \(height)")
             tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.none)
-        }
+        }    }
+
+    func taboolaView(_ taboolaView: UIView!, didFailToLoadPlacementNamed placementName: String!, withErrorMessage error: String!) {
+        //
+    }
+
+    func onItemClick(_ placementName: String!, withItemId itemId: String!, withClickUrl clickUrl: String!, isOrganic organic: Bool) -> Bool {
+        return true
     }
 }
 

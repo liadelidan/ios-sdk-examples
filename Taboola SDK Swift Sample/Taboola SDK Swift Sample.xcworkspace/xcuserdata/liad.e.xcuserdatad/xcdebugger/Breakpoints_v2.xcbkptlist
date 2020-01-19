@@ -46,10 +46,10 @@
             filePath = "Taboola SDK Swift Sample/SDK Standard/UITableView Constraints/TableViewWidgetConstraints.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
-            landmarkName = "taboolaView(_:didLoadPlacementNamed:withHeight:)"
-            landmarkType = "7">
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "TableViewWidgetConstraints"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
