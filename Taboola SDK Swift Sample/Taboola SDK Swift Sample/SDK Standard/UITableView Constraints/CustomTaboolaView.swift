@@ -15,8 +15,8 @@ class CustomTaboolaView: UIView {
         static let enabledConstraintsModeKey = "enabledConstraints"
     }
 
-    var taboolaView: TaboolaView!
-    private var heightConstraint: NSLayoutConstraint!
+    var taboolaView: TaboolaView?
+    private var heightConstraint: NSLayoutConstraint?
 
     weak var taboolaViewDelegate: TaboolaViewDelegate? {
         didSet {
@@ -41,7 +41,7 @@ class CustomTaboolaView: UIView {
         taboolaView.setOptionalPageCommands([Constants.enabledConstraintsModeKey: true])
 
         heightConstraint = taboolaView.heightAnchor.constraint(equalToConstant: 100)
-        heightConstraint.isActive = true
+        heightConstraint?.isActive = true
         self.taboolaView = taboolaView
     }
     
