@@ -6,7 +6,6 @@
 //  Copyright © 2019 Taboola LTD. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UIColor {
