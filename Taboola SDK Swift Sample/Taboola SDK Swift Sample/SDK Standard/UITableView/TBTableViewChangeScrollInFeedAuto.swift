@@ -52,7 +52,7 @@ class TBTableViewChangeScrollInFeedAuto: UITableViewController {
         case 4:
             return TaboolaView.widgetHeight()
         default:
-            return TaboolaView.widgetHeight()
+            return 200
         }
     }
 

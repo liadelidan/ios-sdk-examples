@@ -39,17 +39,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ED3D2DDD-9BA0-4C13-9858-55E2340EDD0C"
+            uuid = "C7DB333E-342C-4801-ABFE-82DE7752A8DB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Taboola SDK Swift Sample/SDK Standard/UITableView Constraints/TableViewWidgetConstraints.swift"
+            filePath = "Taboola SDK Swift Sample/SDK Standard/UICollectionView/CollectionViewChangeScrollInFeedAuto/CollectionViewChangeScrollInFeedAuto.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "TableViewWidgetConstraints"
-            landmarkType = "3">
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
