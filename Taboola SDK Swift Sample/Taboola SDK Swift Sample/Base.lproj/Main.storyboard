@@ -706,77 +706,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQ5-rv-dEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2186" y="-564"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="9Lh-06-YzJ">
-            <objects>
-                <tableViewController id="ORi-kX-YZ1" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pz3-aS-ue7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="326" id="XyR-yt-XyL">
-                                <rect key="frame" x="0.0" y="28" width="375" height="326"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XyR-yt-XyL" id="h2K-ce-iAt">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="326"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hZq-PA-MFE" customClass="TBImageView">
-                                            <rect key="frame" x="10" y="10" width="355" height="240"/>
-                                            <accessibility key="accessibilityConfiguration" label="api_imageView1"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="240" id="0Lz-Yp-eau"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhB-01-kTz" customClass="TBTitleLabel">
-                                            <rect key="frame" x="10" y="260" width="42" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ec5-ZZ-TX5" customClass="TBBrandingLabel">
-                                            <rect key="frame" x="10" y="284.5" width="28.5" height="13.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsi-5p-7cM" customClass="TBDescriptionLabel">
-                                            <rect key="frame" x="10" y="302" width="28.5" height="13.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fsi-5p-7cM" secondAttribute="trailing" constant="10" id="0uQ-G0-QK3"/>
-                                        <constraint firstAttribute="bottom" secondItem="fsi-5p-7cM" secondAttribute="bottom" constant="10" id="FpK-lr-Fgk"/>
-                                        <constraint firstItem="nhB-01-kTz" firstAttribute="leading" secondItem="h2K-ce-iAt" secondAttribute="leading" constant="10" id="GfV-cK-IaY"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ec5-ZZ-TX5" secondAttribute="trailing" constant="10" id="HNY-N3-6kc"/>
-                                        <constraint firstItem="hZq-PA-MFE" firstAttribute="leading" secondItem="h2K-ce-iAt" secondAttribute="leading" constant="10" id="P2P-2S-evS"/>
-                                        <constraint firstItem="fsi-5p-7cM" firstAttribute="top" secondItem="ec5-ZZ-TX5" secondAttribute="bottom" constant="4" id="Qj4-Dl-fcb"/>
-                                        <constraint firstItem="nhB-01-kTz" firstAttribute="top" secondItem="hZq-PA-MFE" secondAttribute="bottom" constant="10" id="UT1-ji-0qL"/>
-                                        <constraint firstAttribute="trailing" secondItem="hZq-PA-MFE" secondAttribute="trailing" constant="10" id="YZy-7J-Kfa"/>
-                                        <constraint firstItem="fsi-5p-7cM" firstAttribute="leading" secondItem="h2K-ce-iAt" secondAttribute="leading" constant="10" id="Zqe-47-dsz"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nhB-01-kTz" secondAttribute="trailing" constant="10" id="d30-G0-7SB"/>
-                                        <constraint firstItem="hZq-PA-MFE" firstAttribute="top" secondItem="h2K-ce-iAt" secondAttribute="top" constant="10" id="hzK-Xf-Vyd"/>
-                                        <constraint firstItem="ec5-ZZ-TX5" firstAttribute="leading" secondItem="h2K-ce-iAt" secondAttribute="leading" constant="10" id="jhn-se-53p"/>
-                                        <constraint firstItem="ec5-ZZ-TX5" firstAttribute="top" secondItem="nhB-01-kTz" secondAttribute="bottom" constant="4" id="pBA-YA-m1I"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ORi-kX-YZ1" id="evi-84-qVI"/>
-                            <outlet property="delegate" destination="ORi-kX-YZ1" id="ubc-wi-0dQ"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iHz-BG-1LQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2334" y="-1455"/>
+            <point key="canvasLocation" x="3668" y="162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rx5-PP-MoD">
@@ -870,7 +800,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AD0-4d-2Ul" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2185" y="173"/>
+            <point key="canvasLocation" x="2185" y="868"/>
         </scene>
         <!--Collection View Change Scroll In Feed Auto-->
         <scene sceneID="6ru-eo-rio">
@@ -941,7 +871,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kc6-nW-FYp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2167.1999999999998" y="887.40629685157433"/>
+            <point key="canvasLocation" x="2185" y="-564"/>
         </scene>
         <!--Collection View Change Scroll In Feed Manual-->
         <scene sceneID="RWw-RI-Yn9">
@@ -1012,7 +942,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okZ-rn-8x2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2157.5999999999999" y="2362.6686656671668"/>
+            <point key="canvasLocation" x="2937" y="-564"/>
         </scene>
         <!--Mid Article Js View Controller-->
         <scene sceneID="nrA-eC-E2Y">
@@ -1042,7 +972,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ZP-gg-IWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2937" y="-525"/>
+            <point key="canvasLocation" x="2937" y="868"/>
         </scene>
         <!--Split Feed Js View Controller-->
         <scene sceneID="Rk2-Rv-bnb">
@@ -1072,7 +1002,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhg-9e-DMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2936.8000000000002" y="165.96701649175412"/>
+            <point key="canvasLocation" x="3668" y="868"/>
         </scene>
         <!--Fetch On Demand Page View Controller-->
         <scene sceneID="U0y-oN-52b">
@@ -1080,11 +1010,12 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zZc-NN-Dp4" customClass="FetchOnDemandPageViewController" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RwC-9t-f4C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2937" y="918"/>
+            <point key="canvasLocation" x="2185" y="1605"/>
         </scene>
         <!--Page Content View Controller-->
         <scene sceneID="AWs-5r-PEl">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5UG-8U-ha4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PageContentViewController" id="zX7-d8-ZaQ" customClass="PageContentViewController" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fvl-qd-jY7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1120,9 +1051,8 @@
                         <outlet property="webViewContainer" destination="2rW-Ee-gSI" id="VcG-II-C91"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5UG-8U-ha4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3881" y="918"/>
+            <point key="canvasLocation" x="479" y="1532"/>
         </scene>
         <!--Widget View Controller-->
         <scene sceneID="phY-oD-6h8">
@@ -1231,7 +1161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1J-Dc-DsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3766" y="139"/>
+            <point key="canvasLocation" x="2937" y="1604"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="qvj-XR-nHB">
@@ -1307,7 +1237,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHm-I3-28U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3766" y="-573"/>
+            <point key="canvasLocation" x="3668" y="1604"/>
         </scene>
         <!--TableView-->
         <scene sceneID="Drk-fA-2Od">
@@ -1344,12 +1274,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaG-oj-TtJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="-213"/>
+            <point key="canvasLocation" x="2185" y="163"/>
         </scene>
         <!--TableView-->
         <scene sceneID="4cw-2a-7f0">
             <objects>
-                <tableViewController id="zb5-48-K7d" customClass="TBTableViewChangeScrollInFeedAuto" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="zb5-48-K7d" customClass="TBTableViewChangeScrollInFeedAuto" customModule="Taboola_SDK_Swift_Sample" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ev2-d8-qEM" customClass="TBTableViewController">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1381,7 +1311,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJP-Oy-rXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="746" y="-224"/>
+            <point key="canvasLocation" x="3668" y="-564"/>
         </scene>
         <!--TaboolaST DandJS Collection View-->
         <scene sceneID="0Y6-Xm-0Jh">
@@ -1509,7 +1439,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9D-Ac-08h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2167" y="1603"/>
+            <point key="canvasLocation" x="2185" y="2317"/>
         </scene>
         <!--Table View Widget Constraints-->
         <scene sceneID="sBa-EU-dhJ">
@@ -1528,7 +1458,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvf-zA-F6r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1396" y="-894"/>
+            <point key="canvasLocation" x="2937" y="163"/>
         </scene>
     </scenes>
 </document>
