@@ -32,6 +32,8 @@ class TBTableViewChangeScrollInFeedAuto: UITableViewController {
         taboolaView.targetType = "mix"
         taboolaView.viewID = viewId
         taboolaView.setInterceptScroll(true)
+        //Forcing Dark-Mode
+        taboolaView.setOptionalPageCommands(["darkMode": true])
     }
 
     // MARK: - Table view data source
