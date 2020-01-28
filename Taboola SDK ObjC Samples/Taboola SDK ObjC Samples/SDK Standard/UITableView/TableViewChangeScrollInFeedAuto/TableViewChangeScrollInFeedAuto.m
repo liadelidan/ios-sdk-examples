@@ -38,6 +38,8 @@
     [_taboolaView setProgressBarAnimationTime:0.7];
     [_taboolaView setOptionalPageCommands:@{@"useOnlineTemplate":[NSNumber numberWithBool:YES]}];
     [_taboolaView fetchContent];
+    //Forcing Dark-Mode
+    [_taboolaView setOptionalPageCommands:@{@"darkMode":[NSNumber numberWithBool:YES]}];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
