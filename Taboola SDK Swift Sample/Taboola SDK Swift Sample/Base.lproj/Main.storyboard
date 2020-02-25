@@ -538,11 +538,11 @@
                                         <rect key="frame" x="0.0" y="624" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IAt-NX-Dfl" id="lLA-xA-Gaz">
-                                            <rect key="frame" x="0.0" y="0.0" width="356" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G00-gE-sHL">
-                                                    <rect key="frame" x="15" y="0.0" width="333" height="44"/>
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -563,7 +563,7 @@
                                         <rect key="frame" x="0.0" y="724" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="whl-jE-rIm" id="45y-xJ-ShL">
-                                            <rect key="frame" x="0.0" y="0.0" width="356" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YOx-lb-F1K">
@@ -620,6 +620,28 @@
                                         <color key="backgroundColor" red="0.41743757349999999" green="0.4820767078" blue="0.87487856220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="N2X-xw-ibQ" kind="show" id="0Kf-UW-iJ0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="TBL" id="tJ2-Xe-A2i" userLabel="TBL">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TypeCell" id="fjE-9n-dE7">
+                                        <rect key="frame" x="0.0" y="824" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fjE-9n-dE7" id="4BP-7R-U1m">
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qQJ-yU-FRg">
+                                                    <rect key="frame" x="0.0" y="5" width="356" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </stackView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.41743757349999999" green="0.4820767078" blue="0.87487856220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ktl-O6-2Uw" kind="show" id="gvf-la-b86"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1015,7 +1037,6 @@
         <!--Page Content View Controller-->
         <scene sceneID="AWs-5r-PEl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5UG-8U-ha4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PageContentViewController" id="zX7-d8-ZaQ" customClass="PageContentViewController" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fvl-qd-jY7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1051,6 +1072,7 @@
                         <outlet property="webViewContainer" destination="2rW-Ee-gSI" id="VcG-II-C91"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5UG-8U-ha4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2937" y="2317"/>
         </scene>
@@ -1459,6 +1481,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvf-zA-F6r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2937" y="163"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MFR-Nt-2i3">
+            <objects>
+                <viewController id="ktl-O6-2Uw" customClass="TBLViewController" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rzx-1L-k1u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="67y-xH-75S"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cYU-IC-fLO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cr1-R3-hHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="689" y="1338"/>
         </scene>
     </scenes>
 </document>
