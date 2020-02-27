@@ -1015,7 +1015,6 @@
         <!--Page Content View Controller-->
         <scene sceneID="AWs-5r-PEl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5UG-8U-ha4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PageContentViewController" id="zX7-d8-ZaQ" customClass="PageContentViewController" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fvl-qd-jY7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1051,6 +1050,7 @@
                         <outlet property="webViewContainer" destination="2rW-Ee-gSI" id="VcG-II-C91"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5UG-8U-ha4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2937" y="2317"/>
         </scene>
@@ -1441,10 +1441,10 @@
             </objects>
             <point key="canvasLocation" x="2185" y="2317"/>
         </scene>
-        <!--Table View Change Scroll In Feed Auto-->
+        <!--Table View Widget Constraints-->
         <scene sceneID="sBa-EU-dhJ">
             <objects>
-                <tableViewController id="ptp-pH-YvP" customClass="TBTableViewChangeScrollInFeedAuto" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ptp-pH-YvP" customClass="TableViewWidgetConstraints" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HN9-lI-E4P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
