@@ -1,20 +1,16 @@
 //
-//  TBTableViewController.swift
-//  TaboolaDemoSwiftApp
+//  TestPPlusViewController.swift
+//  Taboola SDK Swift Sample
 //
-//  Created by Yuta Amakawa on 2019/02/15.
-//  Copyright © 2019 Taboola. All rights reserved.
+//  Created by Liad Elidan on 01/03/2020.
+//  Copyright © 2020 Taboola LTD. All rights reserved.
 //
 
 import UIKit
 import TaboolaSDK
 import WebKit
 
-class TaboolaCell: UITableViewCell {
-
-}
-
-class TBTableViewWidget: UITableViewController {
+class TestPPlusViewController: UITableViewController {
     
     var didLoadTaboolaView = false
     
@@ -26,8 +22,8 @@ class TBTableViewWidget: UITableViewController {
         taboolaView = TaboolaView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 200))
         taboolaView.delegate = self
         taboolaView.ownerViewController = self
-        taboolaView.mode = "alternating-thumbnails-d";
-        taboolaView.publisher = "ynet-ynet-appsdkios";
+        taboolaView.mode = "alternating-thumbnails-a";
+        taboolaView.publisher = "ynet-pplus";
         taboolaView.pageType = "article";
         taboolaView.pageUrl = "http://www.example.com";
         taboolaView.placement = "Mobile Below Article Thumbnails";
@@ -112,10 +108,14 @@ class TBTableViewWidget: UITableViewController {
         }
     }
     
+    @objc func buttonAction(sender: UIButton!) {
+      print("Button tapped")
+    }
+    
 }
 
 
-extension TBTableViewWidget: TaboolaViewDelegate {
+extension TestPPlusViewController: TaboolaViewDelegate {
 
     func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {
         print("did height \(height)")
@@ -126,6 +126,7 @@ extension TBTableViewWidget: TaboolaViewDelegate {
 
     func taboolaView(_ taboolaView: UIView!, didFailToLoadPlacementNamed placementName: String!, withErrorMessage error: String!) {
         print("FAILED")
+
     }
 
     func onItemClick(_ placementName: String!, withItemId itemId: String!, withClickUrl clickUrl: String!, isOrganic organic: Bool) -> Bool {

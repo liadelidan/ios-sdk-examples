@@ -11,6 +11,7 @@
 		7213401322E49E9700EBAB2B /* NormalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7213401222E49E9700EBAB2B /* NormalViewCell.swift */; };
 		7213401722E49F3600EBAB2B /* TaboolaCollectionJSViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7213401622E49F3600EBAB2B /* TaboolaCollectionJSViewCell.swift */; };
 		7213401922E49F5C00EBAB2B /* sampleContentPageSTDJS.html in Resources */ = {isa = PBXBuildFile; fileRef = 7213401822E49F5C00EBAB2B /* sampleContentPageSTDJS.html */; };
+		7251DC48240BDED200CF1A01 /* TestPPlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7251DC47240BDED200CF1A01 /* TestPPlusViewController.swift */; };
 		72BE5CB2238AA37800D2D8AA /* TableViewWidgetConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE5CB1238AA37800D2D8AA /* TableViewWidgetConstraints.swift */; };
 		72BE5CB4238AAF0100D2D8AA /* TaboolaCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE5CB3238AAF0100D2D8AA /* TaboolaCellConstraints.swift */; };
 		72BE5CB6238AB10700D2D8AA /* CustomTaboolaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE5CB5238AB10700D2D8AA /* CustomTaboolaView.swift */; };
@@ -64,6 +65,7 @@
 		7213401222E49E9700EBAB2B /* NormalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalViewCell.swift; sourceTree = "<group>"; };
 		7213401622E49F3600EBAB2B /* TaboolaCollectionJSViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaboolaCollectionJSViewCell.swift; sourceTree = "<group>"; };
 		7213401822E49F5C00EBAB2B /* sampleContentPageSTDJS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sampleContentPageSTDJS.html; sourceTree = "<group>"; };
+		7251DC47240BDED200CF1A01 /* TestPPlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPPlusViewController.swift; sourceTree = "<group>"; };
 		72BE5CB1238AA37800D2D8AA /* TableViewWidgetConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWidgetConstraints.swift; sourceTree = "<group>"; };
 		72BE5CB3238AAF0100D2D8AA /* TaboolaCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaboolaCellConstraints.swift; sourceTree = "<group>"; };
 		72BE5CB5238AB10700D2D8AA /* CustomTaboolaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTaboolaView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				DBCFB6F922536ADD00701088 /* TBTableViewChangeScrollInFeedAuto.swift */,
 				DBCFB6F7225366F300701088 /* TBTableViewWidget.swift */,
+				7251DC47240BDED200CF1A01 /* TestPPlusViewController.swift */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				DCF03A5E223923EA0010FC32 /* FeedViewController.swift in Sources */,
 				DCF03A5F223923EA0010FC32 /* FeedTableViewCell.swift in Sources */,
 				7213401122E49C1300EBAB2B /* TaboolaSTDandJSCollectionView.swift in Sources */,
+				7251DC48240BDED200CF1A01 /* TestPPlusViewController.swift in Sources */,
 				72BE5CB2238AA37800D2D8AA /* TableViewWidgetConstraints.swift in Sources */,
 				DC15762B222EC02600BD63FA /* AppDelegate.swift in Sources */,
 			);
@@ -783,7 +787,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P4YBSJEM3U;
+				DEVELOPMENT_TEAM = ZZMSXYL4ND;
 				INFOPLIST_FILE = "Taboola SDK Swift Sample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
