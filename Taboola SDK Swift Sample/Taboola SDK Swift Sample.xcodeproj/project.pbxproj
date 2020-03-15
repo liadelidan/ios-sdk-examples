@@ -11,6 +11,7 @@
 		7213401322E49E9700EBAB2B /* NormalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7213401222E49E9700EBAB2B /* NormalViewCell.swift */; };
 		7213401722E49F3600EBAB2B /* TaboolaCollectionJSViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7213401622E49F3600EBAB2B /* TaboolaCollectionJSViewCell.swift */; };
 		7213401922E49F5C00EBAB2B /* sampleContentPageSTDJS.html in Resources */ = {isa = PBXBuildFile; fileRef = 7213401822E49F5C00EBAB2B /* sampleContentPageSTDJS.html */; };
+		724906D0241E5794002B8B79 /* WebTBLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724906CF241E5794002B8B79 /* WebTBLViewController.swift */; };
 		72AF89D1240515980061D160 /* TBLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF89D0240515980061D160 /* TBLViewController.swift */; };
 		72BE5CB2238AA37800D2D8AA /* TableViewWidgetConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE5CB1238AA37800D2D8AA /* TableViewWidgetConstraints.swift */; };
 		72BE5CB4238AAF0100D2D8AA /* TaboolaCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE5CB3238AAF0100D2D8AA /* TaboolaCellConstraints.swift */; };
@@ -65,6 +66,7 @@
 		7213401222E49E9700EBAB2B /* NormalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalViewCell.swift; sourceTree = "<group>"; };
 		7213401622E49F3600EBAB2B /* TaboolaCollectionJSViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaboolaCollectionJSViewCell.swift; sourceTree = "<group>"; };
 		7213401822E49F5C00EBAB2B /* sampleContentPageSTDJS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sampleContentPageSTDJS.html; sourceTree = "<group>"; };
+		724906CF241E5794002B8B79 /* WebTBLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebTBLViewController.swift; sourceTree = "<group>"; };
 		72AF89D0240515980061D160 /* TBLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLViewController.swift; sourceTree = "<group>"; };
 		72BE5CB1238AA37800D2D8AA /* TableViewWidgetConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWidgetConstraints.swift; sourceTree = "<group>"; };
 		72BE5CB3238AAF0100D2D8AA /* TaboolaCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaboolaCellConstraints.swift; sourceTree = "<group>"; };
@@ -146,10 +148,27 @@
 			path = "SDK Standard and JS";
 			sourceTree = "<group>";
 		};
-		72AF89CF2405155B0061D160 /* TBL */ = {
+		724906CD241E575D002B8B79 /* InApp */ = {
 			isa = PBXGroup;
 			children = (
 				72AF89D0240515980061D160 /* TBLViewController.swift */,
+			);
+			path = InApp;
+			sourceTree = "<group>";
+		};
+		724906CE241E576D002B8B79 /* WebTab */ = {
+			isa = PBXGroup;
+			children = (
+				724906CF241E5794002B8B79 /* WebTBLViewController.swift */,
+			);
+			path = WebTab;
+			sourceTree = "<group>";
+		};
+		72AF89CF2405155B0061D160 /* TBL */ = {
+			isa = PBXGroup;
+			children = (
+				724906CE241E576D002B8B79 /* WebTab */,
+				724906CD241E575D002B8B79 /* InApp */,
 			);
 			path = TBL;
 			sourceTree = "<group>";
@@ -588,6 +607,7 @@
 				DBCFB6FA22536ADD00701088 /* TBTableViewChangeScrollInFeedAuto.swift in Sources */,
 				DC15764A222ED65000BD63FA /* PageContentViewController.swift in Sources */,
 				DCF03A6A22395B650010FC32 /* MidArticleManualScrollViewController.swift in Sources */,
+				724906D0241E5794002B8B79 /* WebTBLViewController.swift in Sources */,
 				72BE5CBA238AB18E00D2D8AA /* RandomColorCell.swift in Sources */,
 				DC157643222ECC3C00BD63FA /* MidArticleJsViewController.swift in Sources */,
 				72BE5CB8238AB14B00D2D8AA /* UIView+Extension.swift in Sources */,

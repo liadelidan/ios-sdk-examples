@@ -637,11 +637,18 @@
                                                     <rect key="frame" x="0.0" y="5" width="356" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </stackView>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Taboola Labs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zDC-MQ-Ia8" userLabel="Taboola Labs">
+                                                    <rect key="frame" x="12" y="0.0" width="324" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.41743757349999999" green="0.4820767078" blue="0.87487856220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="ktl-O6-2Uw" kind="show" id="gvf-la-b86"/>
+                                            <segue destination="WSD-gu-6bx" kind="show" id="Og3-Dv-Dv5"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1497,6 +1504,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cr1-R3-hHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="689" y="1338"/>
+        </scene>
+        <!--Taboola Labs Buttons View Controller-->
+        <scene sceneID="S47-om-THK">
+            <objects>
+                <viewController id="WSD-gu-6bx" customClass="TaboolaLabsButtonsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uw9-ML-Piv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Sg-cz-Yt3">
+                                <rect key="frame" x="111" y="382" width="152" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="WebTab"/>
+                                <connections>
+                                    <segue destination="ore-wc-o3a" kind="show" id="Pwv-Oa-BaA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyG-gS-8yd">
+                                <rect key="frame" x="130" y="221" width="114" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="InApp"/>
+                                <connections>
+                                    <segue destination="ktl-O6-2Uw" kind="show" id="FJ2-IA-EhK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Sg-cz-Yt3" firstAttribute="top" secondItem="PyG-gS-8yd" secondAttribute="bottom" constant="95" id="0Lw-EX-8RM"/>
+                            <constraint firstItem="5Sg-cz-Yt3" firstAttribute="leading" secondItem="kAa-bv-7OY" secondAttribute="leading" constant="111" id="3EL-jO-7c7"/>
+                            <constraint firstItem="PyG-gS-8yd" firstAttribute="centerX" secondItem="uw9-ML-Piv" secondAttribute="centerX" id="dvm-HA-2lA"/>
+                            <constraint firstItem="PyG-gS-8yd" firstAttribute="centerX" secondItem="5Sg-cz-Yt3" secondAttribute="centerX" id="p8G-4p-VfV"/>
+                            <constraint firstItem="PyG-gS-8yd" firstAttribute="leading" secondItem="kAa-bv-7OY" secondAttribute="leading" constant="130" id="q6z-tf-LN6"/>
+                            <constraint firstItem="PyG-gS-8yd" firstAttribute="top" secondItem="kAa-bv-7OY" secondAttribute="top" constant="177" id="qKC-bI-3Ak"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kAa-bv-7OY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="W0N-8F-f2x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ah-Ru-eS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="1336.2818590704649"/>
+        </scene>
+        <!--WebTBL View Controller-->
+        <scene sceneID="0ht-5J-hiF">
+            <objects>
+                <viewController id="ore-wc-o3a" customClass="WebTBLViewController" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sji-mY-TKZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7lI-Al-zh0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ylR-5e-7TW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tLD-HH-ih0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-649" y="1336"/>
         </scene>
     </scenes>
 </document>

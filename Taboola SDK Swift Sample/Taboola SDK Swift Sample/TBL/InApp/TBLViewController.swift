@@ -19,7 +19,8 @@ class TBLViewController: UIViewController, WKNavigationDelegate{
     }
     
     override func viewDidLoad() {
-        let url = URL(string: "https://www.hackingwithswift.com")!
+        let dummy_id = "Ops_Testing"
+        let url = URL(string: "https://www.thestartmagazine.com/feed/summary?publisherId=" + dummy_id + "&key=0QzhwJKBfOxouyYgW3woxhwv04inkqWH&vendor=Reuters,BangShowbiz,Independent_UK&countryCode=GB&language=en")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
     }
