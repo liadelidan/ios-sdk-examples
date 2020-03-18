@@ -34,6 +34,7 @@ class PageContentViewController: UIViewController {
         }
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         if !didLoadTaboola {
             didLoadTaboola = true

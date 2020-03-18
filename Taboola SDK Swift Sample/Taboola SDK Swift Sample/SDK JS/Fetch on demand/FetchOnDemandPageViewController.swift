@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import TaboolaSDK
 
 class FetchOnDemandPageViewController: UIPageViewController {
     let pageQnty = 5
-    var pageViewControllers = [UIViewController]()
+    var pageViewControllers = [PageContentViewController]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,17 @@ class FetchOnDemandPageViewController: UIPageViewController {
             pageViewControllers.append(vc)
         }
     }
+    
+        override func viewWillDisappear(_ animated: Bool) {
+            
+            if (self.isMovingFromParent || self.isBeingDismissed) {
+                for pageContentViewController in pageViewControllers{
+                    TaboolaJS.sharedInstance()?.unregisterWebView(pageContentViewController.webView, completion: nil)
+                }
+
+            }
+    //TaboolaJS.sharedInstance()?.unregisterWebView(pageContentViewController.webView, completion: nil)
+        }
     
     func viewController(at index: Int) -> PageContentViewController? {
         guard index >= 0, index < pageQnty else {
