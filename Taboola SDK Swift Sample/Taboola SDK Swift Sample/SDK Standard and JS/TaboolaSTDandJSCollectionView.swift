@@ -64,7 +64,7 @@ class TaboolaSTDandJSCollectionView: UIViewController, WKNavigationDelegate, Tab
         taboolaView.placement = "Feed without video"
         taboolaView.targetType = "mix"
         taboolaView.setInterceptScroll(true)
-        taboolaView.setOptionalModeCommands(["useOnlineTemplate": true])
+        taboolaView.setExtraProperties(["useOnlineTemplate": true])
         taboolaView.viewID = viewId
         taboolaView.fetchContent()
         return taboolaView

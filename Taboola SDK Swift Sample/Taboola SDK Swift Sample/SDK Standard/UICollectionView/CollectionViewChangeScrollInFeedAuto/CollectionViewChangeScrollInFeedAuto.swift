@@ -55,7 +55,7 @@ class CollectionViewChangeScrollInFeedAuto: UIViewController {
         taboolaView.targetType = "mix"
         taboolaView.setInterceptScroll(scrollIntercept)
         taboolaView.logLevel = .debug
-        taboolaView.setOptionalModeCommands(["useOnlineTemplate": true])
+        taboolaView.setExtraProperties(["useOnlineTemplate": true])
         taboolaView.viewID = viewId
         return taboolaView
     }
