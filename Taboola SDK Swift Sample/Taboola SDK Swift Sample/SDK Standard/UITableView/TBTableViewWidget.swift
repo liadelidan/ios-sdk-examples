@@ -32,7 +32,7 @@ class TBTableViewWidget: UITableViewController {
         taboolaView.placement = "Below Article";
         taboolaView.targetType = "mix";
         //Forcing Dark-Mode
-        taboolaView.setOptionalPageCommands(["darkMode": true])
+        taboolaView.setExtraProperties(["darkMode": true])
     }
     
     func setTaboolaView(taboolaCell:TaboolaCell) {

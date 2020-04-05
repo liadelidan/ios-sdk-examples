@@ -38,7 +38,7 @@ class CustomTaboolaView: UIView {
         let taboolaView =  TaboolaView()
         taboolaView.delegate = taboolaViewDelegate
         taboolaView.logLevel = .debug
-        taboolaView.setOptionalPageCommands([Constants.enabledConstraintsModeKey: true])
+        taboolaView.setExtraProperties([Constants.enabledConstraintsModeKey: true])
 
         heightConstraint = taboolaView.heightAnchor.constraint(equalToConstant: 100)
         heightConstraint?.isActive = true
