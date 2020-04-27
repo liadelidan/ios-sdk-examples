@@ -14,7 +14,7 @@ class TaboolaCell: UITableViewCell {
 
 }
 
-class TBTableViewWidget: UITableViewController {
+class TableViewWidget: UITableViewController {
     
     var didLoadTaboolaView = false
     
@@ -114,7 +114,7 @@ class TBTableViewWidget: UITableViewController {
 }
 
 
-extension TBTableViewWidget: TaboolaViewDelegate {
+extension TableViewWidget: TaboolaViewDelegate {
 
     func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {
         print("did height \(height)")

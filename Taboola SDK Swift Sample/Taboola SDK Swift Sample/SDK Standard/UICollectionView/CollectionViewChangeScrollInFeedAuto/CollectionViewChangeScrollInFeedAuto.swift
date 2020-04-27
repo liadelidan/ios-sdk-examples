@@ -56,6 +56,9 @@ class CollectionViewChangeScrollInFeedAuto: UIViewController {
         taboolaView.setInterceptScroll(scrollIntercept)
         taboolaView.logLevel = .debug
         taboolaView.setExtraProperties(["useOnlineTemplate": true])
+        // Show detailed error reasons
+        taboolaView.setExtraProperties(["detailedErrorCodes": true])
+
         taboolaView.viewID = viewId
         return taboolaView
     }

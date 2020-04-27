@@ -19,8 +19,8 @@
 		7FAF72F5C17F34BEF5B7D60A /* Pods_Taboola_SDK_Swift_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73294584A37B6BD8C65BEEF /* Pods_Taboola_SDK_Swift_Sample.framework */; };
 		C4318BBBAF6930D4C737028D /* Pods_TaboolaSDKSwiftSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F656852B0A915FD7DF06EC35 /* Pods_TaboolaSDKSwiftSampleTests.framework */; };
 		DB0B46B123463540007C66B9 /* TaboolaSDKSwiftSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B46B023463540007C66B9 /* TaboolaSDKSwiftSampleTests.swift */; };
-		DBCFB6F8225366F300701088 /* TBTableViewWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFB6F7225366F300701088 /* TBTableViewWidget.swift */; };
-		DBCFB6FA22536ADD00701088 /* TBTableViewChangeScrollInFeedAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFB6F922536ADD00701088 /* TBTableViewChangeScrollInFeedAuto.swift */; };
+		DBCFB6F8225366F300701088 /* TableViewWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFB6F7225366F300701088 /* TableViewWidget.swift */; };
+		DBCFB6FA22536ADD00701088 /* TableViewChangeScrollInFeedAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCFB6F922536ADD00701088 /* TableViewChangeScrollInFeedAuto.swift */; };
 		DC15762B222EC02600BD63FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC15762A222EC02600BD63FA /* AppDelegate.swift */; };
 		DC15762D222EC02600BD63FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC15762C222EC02600BD63FA /* ViewController.swift */; };
 		DC157630222EC02600BD63FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC15762E222EC02600BD63FA /* Main.storyboard */; };
@@ -75,8 +75,8 @@
 		DB0B46AE23463540007C66B9 /* TaboolaSDKSwiftSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaboolaSDKSwiftSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0B46B023463540007C66B9 /* TaboolaSDKSwiftSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaboolaSDKSwiftSampleTests.swift; sourceTree = "<group>"; };
 		DB0B46B223463540007C66B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBCFB6F7225366F300701088 /* TBTableViewWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBTableViewWidget.swift; sourceTree = "<group>"; };
-		DBCFB6F922536ADD00701088 /* TBTableViewChangeScrollInFeedAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBTableViewChangeScrollInFeedAuto.swift; sourceTree = "<group>"; };
+		DBCFB6F7225366F300701088 /* TableViewWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewWidget.swift; sourceTree = "<group>"; };
+		DBCFB6F922536ADD00701088 /* TableViewChangeScrollInFeedAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewChangeScrollInFeedAuto.swift; sourceTree = "<group>"; };
 		DC157627222EC02600BD63FA /* Taboola SDK Swift Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taboola SDK Swift Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC15762A222EC02600BD63FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC15762C222EC02600BD63FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -168,8 +168,8 @@
 		DBCFB6F6225366E200701088 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
-				DBCFB6F922536ADD00701088 /* TBTableViewChangeScrollInFeedAuto.swift */,
-				DBCFB6F7225366F300701088 /* TBTableViewWidget.swift */,
+				DBCFB6F922536ADD00701088 /* TableViewChangeScrollInFeedAuto.swift */,
+				DBCFB6F7225366F300701088 /* TableViewWidget.swift */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -563,7 +563,7 @@
 				DCF03A6322393F860010FC32 /* UIColor+Random.swift in Sources */,
 				DCF03A59223920820010FC32 /* WidgetViewController.swift in Sources */,
 				DCF03A7C2242745E0010FC32 /* CollectionViewChangeScrollInFeedManual.swift in Sources */,
-				DBCFB6F8225366F300701088 /* TBTableViewWidget.swift in Sources */,
+				DBCFB6F8225366F300701088 /* TableViewWidget.swift in Sources */,
 				DC157648222ED05900BD63FA /* FetchOnDemandPageViewController.swift in Sources */,
 				72BE5CB4238AAF0100D2D8AA /* TaboolaCellConstraints.swift in Sources */,
 				DCF03A77223FCD400010FC32 /* CollectionViewChangeScrollInFeedAuto.swift in Sources */,
@@ -573,7 +573,7 @@
 				72BE5CB6238AB10700D2D8AA /* CustomTaboolaView.swift in Sources */,
 				7213401722E49F3600EBAB2B /* TaboolaCollectionJSViewCell.swift in Sources */,
 				DC15762D222EC02600BD63FA /* ViewController.swift in Sources */,
-				DBCFB6FA22536ADD00701088 /* TBTableViewChangeScrollInFeedAuto.swift in Sources */,
+				DBCFB6FA22536ADD00701088 /* TableViewChangeScrollInFeedAuto.swift in Sources */,
 				DC15764A222ED65000BD63FA /* PageContentViewController.swift in Sources */,
 				DCF03A6A22395B650010FC32 /* MidArticleManualScrollViewController.swift in Sources */,
 				72BE5CBA238AB18E00D2D8AA /* RandomColorCell.swift in Sources */,

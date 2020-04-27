@@ -9,7 +9,7 @@
 import UIKit
 import TaboolaSDK
 
-class TBTableViewChangeScrollInFeedAuto: UITableViewController {
+class TableViewChangeScrollInFeedAuto: UITableViewController {
     
     var taboolaView:TaboolaView!
     var didLoadTaboolaView = false
@@ -88,7 +88,7 @@ class TBTableViewChangeScrollInFeedAuto: UITableViewController {
 }
 
 
-extension TBTableViewChangeScrollInFeedAuto: TaboolaViewDelegate {
+extension TableViewChangeScrollInFeedAuto: TaboolaViewDelegate {
     
 
     func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {

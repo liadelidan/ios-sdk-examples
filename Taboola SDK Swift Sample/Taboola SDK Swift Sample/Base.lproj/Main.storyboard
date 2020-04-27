@@ -1243,7 +1243,7 @@
         <!--TableView-->
         <scene sceneID="Drk-fA-2Od">
             <objects>
-                <tableViewController id="oUa-yO-ErZ" customClass="TBTableViewWidget" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="oUa-yO-ErZ" customClass="TableViewWidget" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Uol-fQ-U1t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1280,7 +1280,7 @@
         <!--TableView-->
         <scene sceneID="4cw-2a-7f0">
             <objects>
-                <tableViewController id="zb5-48-K7d" customClass="TBTableViewChangeScrollInFeedAuto" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="zb5-48-K7d" customClass="TableViewChangeScrollInFeedAuto" customModule="Taboola_SDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ev2-d8-qEM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
